@@ -1,0 +1,18 @@
+$accent-border: #b8860b;
+$panel-bg: #fffbeb;
+
+.scss-demo-box {
+  border-left: 4px solid $accent-border;
+  background-color: $panel-bg;
+  padding: 1rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  &__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $accent-border;
+  }
+}

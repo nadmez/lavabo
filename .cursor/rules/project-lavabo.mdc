@@ -1,0 +1,34 @@
+---
+description: Lavabo Turkish product catalogue scope, stack, data architecture, and phase workflow
+alwaysApply: true
+---
+
+# Lavabo Project Rules
+
+## Scope
+
+- **Type**: Read-only Turkish lighting & bathroom/fixture product catalogue modelled on `https://parbek.com.tr/` (listing, category tree, attribute/swatch/stock filtering, sorting, pagination, product detail with variant selection, quick view modal, live search).
+- **Language**: Turkish (`lang="tr"`, `tr-TR` currency formatting in `TRY`).
+- **Omitted features**:
+  - All shopping/e-commerce features (no cart, checkout, buy buttons, payment/installment tabs, order tracking, accounts, wishlist, product comparison, or shop link in the mobile hamburger menu). Keep the "In Stock" badge and "Sadece stoktakiler" filter checkbox.
+  - No floating WhatsApp button and no CTA button on product detail pages.
+  - No catalogue PDF links, no static catalogue download page, and no legal links in the footer.
+  - No customer reference photos section.
+  - No blog, About, FAQ, or Contact pages.
+  - Google reviews and admin panel are deferred to a later stage.
+
+## Tech Stack & Conventions
+
+- **Runtime & UI**: Vite + React 18 (`18.3.x`) + JavaScript (`.js` files, no TypeScript).
+- **Routing**: React Router v7 in declarative mode (`BrowserRouter`). Filter, sort, and pagination state lives in URL search params.
+- **Data & Caching**: Single static JSON file (`public/data/catalog.json`) fetched once via TanStack React Query v5 (`["catalog"]`, `staleTime: Infinity`), indexed into in-memory hashmaps (`productsBySlug`, `categoriesBySlug`, category descendant sets) as the single source of truth. Filtered/sorted/paginated views and facet counts are derived from that cached catalog.
+- **Images**: Stored under `public/assets/<product-slug>/` and referenced in `catalog.json` via relative paths (`<product-slug>/main.webp`). Resolve at render time with `${import.meta.env.BASE_URL}assets/${relativePath}` and fall back to `https://picsum.photos/<width>/<height>` if missing or broken.
+- **Styling**: Tailwind CSS v4 (`@tailwindcss/vite`) as primary styling, plus native `.scss` (`sass-embedded`) when Tailwind utilities are not enough.
+- **Testing**: Vitest + jsdom + `@testing-library/react` + `@testing-library/jest-dom` (`src/**/*.test.js`). Never write or run Playwright / e2e tests automatically.
+- **Dev Server**: Do not start, stop, or restart `pnpm dev` in the background unless verifying a build step; let the user run `pnpm dev` for interactive preview.
+
+## Phase & TDD Workflow
+
+- Execute one phase at a time when the user commands it, producing visible output at the end of every phase and pausing for feedback.
+- From Phase 2 onward, implement features through `.cursor/skills/tdd-pipeline/SKILL.md` using three isolated fresh `generalPurpose` subagents (Spec-writer -> Test-writer -> Code-writer -> PM verifier).
+- Never run `git commit` or `git push`. End every phase with one plain-English commit message line.
