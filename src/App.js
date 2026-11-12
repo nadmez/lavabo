@@ -1,7 +1,8 @@
-import { Link, Route, Routes, useSearchParams } from "react-router";
+import { Link, Route, Routes } from "react-router";
 import Layout from "@/components/layout/Layout";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import ProductListingPage from "@/pages/ProductListingPage";
+import SearchResultsPage from "@/pages/SearchResultsPage";
 import "./styles/placeholder.scss";
 
 function HomePlaceholder() {
@@ -35,24 +36,6 @@ function HomePlaceholder() {
   );
 }
 
-function SearchResultsPlaceholder() {
-  const [searchParams] = useSearchParams();
-  const rawQuery = searchParams.get("q");
-  const query = typeof rawQuery === "string" ? rawQuery.trim() : "";
-
-  return (
-    <section
-      data-testid="search-results-placeholder"
-      className="mx-auto max-w-4xl px-6 py-12"
-    >
-      <h1 className="text-2xl font-bold text-stone-900">Arama Sonuçları</h1>
-      <p className="mt-2 text-stone-600">
-        {query ? `"${query}" için arama sonuçları` : "Arama terimi giriniz."}
-      </p>
-    </section>
-  );
-}
-
 function NotFoundPage() {
   return (
     <section
@@ -83,7 +66,7 @@ export default function App() {
         <Route path="/urunlerimiz" element={<ProductListingPage />} />
         <Route path="/kategori/:slug" element={<ProductListingPage />} />
         <Route path="/urun/:slug" element={<ProductDetailPage />} />
-        <Route path="/arama" element={<SearchResultsPlaceholder />} />
+        <Route path="/arama" element={<SearchResultsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

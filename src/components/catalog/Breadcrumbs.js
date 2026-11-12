@@ -93,7 +93,7 @@ export default function Breadcrumbs({
       ? activeCategory.name
       : normalizedSlug
         ? fallbackLabel || normalizedSlug
-        : "Ürünlerimiz";
+        : fallbackLabel || "Ürünlerimiz";
   }
 
   return (

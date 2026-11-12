@@ -373,7 +373,11 @@ function ProductDetailContent({ product, catalog }) {
           </h2>
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {similarProducts.map((simProduct) => (
-              <ProductCard key={simProduct.id} product={simProduct} />
+              <ProductCard
+                key={simProduct.id}
+                product={simProduct}
+                catalog={catalog}
+              />
             ))}
           </ul>
         </section>

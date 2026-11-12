@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { MAIN_NAV_CATEGORIES } from "@/data/navigation";
+import HeaderSearch from "@/components/layout/HeaderSearch";
 import MobileDrawer from "@/components/layout/MobileDrawer";
 
 export default function Header() {
@@ -75,15 +76,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            to="/arama"
-            data-testid="header-search-trigger"
-            aria-label="Ürün ara"
-            className="inline-flex items-center gap-2 rounded-full border border-stone-200 px-3.5 py-1.5 text-sm font-medium text-stone-700 transition-colors hover:border-stone-300 hover:bg-stone-100"
-          >
-            <span aria-hidden="true">⌕</span>
-            <span className="hidden sm:inline">Ara</span>
-          </Link>
+          <HeaderSearch />
         </div>
       </div>
 

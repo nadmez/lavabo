@@ -1,17 +1,35 @@
+import { QueryClientContext } from "@tanstack/react-query";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
+import QuickViewModal from "@/components/catalog/QuickViewModal";
 import { formatProductPriceRange } from "@/utils/format-price";
 import { handleImageError, resolveAssetUrl } from "@/utils/image-url";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, catalog = null, onQuickView }) {
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+  const queryClient = useContext(QueryClientContext);
+  const resolvedCatalog =
+    catalog || queryClient?.getQueryData?.(["catalog"]) || null;
+
   if (!product) return null;
 
   const isInStock = product.inStock === true;
   const productUrl = `/urun/${product.slug}`;
 
+  function handleQuickViewClick(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (typeof onQuickView === "function") {
+      onQuickView(product);
+      return;
+    }
+    setIsQuickViewOpen(true);
+  }
+
   return (
     <li
       data-testid="product-card"
-      className="group flex flex-col overflow-hidden rounded-lg border border-stone-200 bg-white shadow-xs transition hover:shadow-md"
+      className="group relative flex flex-col overflow-hidden rounded-lg border border-stone-200 bg-white shadow-xs transition hover:shadow-md"
     >
       <Link
         to={productUrl}
@@ -61,6 +79,27 @@ export default function ProductCard({ product }) {
           </p>
         </div>
       </Link>
+
+      <div className="px-4 pb-4">
+        <button
+          type="button"
+          data-testid={`quick-view-trigger-${product.slug}`}
+          aria-label={`${product.name} hızlı görünüm`}
+          onClick={handleQuickViewClick}
+          className="w-full rounded-md border border-stone-200 bg-stone-50 px-3 py-1.5 text-xs font-medium text-stone-700 transition hover:border-stone-400 hover:bg-stone-100 hover:text-stone-900"
+        >
+          Hızlı görünüm
+        </button>
+      </div>
+
+      {typeof onQuickView !== "function" ? (
+        <QuickViewModal
+          isOpen={isQuickViewOpen}
+          product={product}
+          catalog={resolvedCatalog}
+          onClose={() => setIsQuickViewOpen(false)}
+        />
+      ) : null}
     </li>
   );
 }
