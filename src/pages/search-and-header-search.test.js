@@ -199,7 +199,7 @@ describe("HeaderSearch and Header live search integration", () => {
     expect(screen.queryByTestId("header-search-clear")).not.toBeInTheDocument();
   });
 
-  it("does not throw when Header or HeaderSearch is rendered inside MemoryRouter without QueryClientProvider, and clicking header-search-trigger when empty navigates to '/arama'", () => {
+  it("does not throw without QueryClientProvider, and clicking the search icon opens the text box without navigating", () => {
     const { unmount } = render(
       <MemoryRouter initialEntries={["/"]}>
         <HeaderSearch />
@@ -211,6 +211,7 @@ describe("HeaderSearch and Header live search integration", () => {
     );
 
     const input = screen.getByTestId("header-search-input");
+    expect(input).not.toBeVisible();
     fireEvent.change(input, { target: { value: "istanbul" } });
     fireEvent.change(input, { target: { value: "   " } });
 
@@ -220,6 +221,11 @@ describe("HeaderSearch and Header live search integration", () => {
     expect(screen.queryByTestId("header-search-clear")).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByTestId("header-search-trigger"));
+    expect(input).toBeVisible();
+    expect(screen.getByTestId("route-home")).toBeInTheDocument();
+    expect(screen.queryByTestId("route-search")).not.toBeInTheDocument();
+
+    fireEvent.submit(screen.getByTestId("header-search-form"));
     expect(screen.getByTestId("route-search")).toBeInTheDocument();
     unmount();
 
@@ -230,8 +236,11 @@ describe("HeaderSearch and Header live search integration", () => {
       </MemoryRouter>
     );
 
+    const headerInput = screen.getByTestId("header-search-input");
+    expect(headerInput).not.toBeVisible();
     fireEvent.click(screen.getByTestId("header-search-trigger"));
-    expect(screen.getByTestId("location-probe")).toHaveTextContent(/^\/arama$/);
+    expect(headerInput).toBeVisible();
+    expect(screen.getByTestId("location-probe")).toHaveTextContent(/^\/$/);
   });
 
   it("opens live dropdown on Turkish and SKU queries, displaying thumbnail, title, SKU, formatted price, and view-all link", () => {
@@ -366,6 +375,7 @@ describe("HeaderSearch and Header live search integration", () => {
     renderWithProviders(<Header />, { queryClient });
 
     const input = screen.getByTestId("header-search-input");
+    expect(input).toHaveClass("hide-search-cancel");
     expect(screen.queryByTestId("header-search-clear")).not.toBeInTheDocument();
 
     fireEvent.change(input, { target: { value: "aplik" } });
@@ -661,7 +671,10 @@ describe("SearchResultsPage integrated in App on /arama", () => {
     const sidebar = screen.getByTestId("desktop-filter-sidebar");
     expect(sidebar).toHaveAttribute("aria-label", "Ürün filtreleri");
     expect(
-      within(sidebar).getByTestId("filter-category-tree")
+      within(sidebar).queryByTestId("filter-category-tree")
+    ).not.toBeInTheDocument();
+    expect(
+      within(sidebar).getByTestId("filter-in-stock-checkbox")
     ).toBeInTheDocument();
 
     // ProductCard grid & Pagination (14 items -> 12 on page 1, 2 on page 2)

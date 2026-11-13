@@ -188,13 +188,13 @@ describe("src/utils/format-price.js", () => {
 });
 
 describe("Breadcrumbs component", () => {
-  it("renders nav[aria-label='Sayfa yolu'][data-testid='catalog-breadcrumbs'] with Anasayfa ('/') and current page 'Ürünlerimiz' on /urunlerimiz", () => {
+  it("renders nav[aria-label='Sayfa yolu'][data-testid='catalog-breadcrumbs'] with Anasayfa ('/') and current page 'Ürünlerimiz' when no category is given", () => {
     const indexed = indexCatalog(createFixtureCatalog());
     const queryClient = createTestQueryClient();
     queryClient.setQueryData(["catalog"], indexed);
 
     renderWithProviders(<Breadcrumbs catalog={indexed} />, {
-      initialEntries: ["/urunlerimiz"],
+      initialEntries: ["/"],
       queryClient,
     });
 
@@ -556,42 +556,7 @@ describe("Pagination component", () => {
   });
 });
 
-describe("ProductListingPage integrated in App on /urunlerimiz and /kategori/:slug", () => {
-  it("renders 'Ürünlerimiz' heading, breadcrumbs, product cards, and omits category-seo-content on /urunlerimiz", async () => {
-    const queryClient = createTestQueryClient();
-    queryClient.setQueryData(["catalog"], indexCatalog(createFixtureCatalog()));
-
-    renderWithProviders(<App />, {
-      initialEntries: ["/urunlerimiz"],
-      queryClient,
-    });
-
-    expect(await screen.findByTestId("debug-result-count")).toHaveTextContent(
-      "14 ürün bulundu"
-    );
-
-    const heading = screen.getByRole("heading", {
-      level: 1,
-      name: "Ürünlerimiz",
-    });
-    expect(heading).toBeInTheDocument();
-
-    const breadcrumbs = screen.getByTestId("catalog-breadcrumbs");
-    expect(within(breadcrumbs).getByText("Ürünlerimiz")).toHaveAttribute(
-      "aria-current",
-      "page"
-    );
-
-    const productList = screen.getByTestId("debug-product-list");
-    const cards = within(productList).getAllByTestId("product-card");
-    expect(cards).toHaveLength(12);
-
-    expect(screen.getByTestId("catalog-pagination")).toBeInTheDocument();
-    expect(
-      screen.queryByTestId("category-seo-content")
-    ).not.toBeInTheDocument();
-  });
-
+describe("ProductListingPage integrated in App on /kategori/:slug", () => {
   it("renders category Turkish name heading, ancestor breadcrumbs, and sanitized category-seo-content on /kategori/led-avizeler", async () => {
     const queryClient = createTestQueryClient();
     queryClient.setQueryData(["catalog"], indexCatalog(createFixtureCatalog()));
@@ -665,7 +630,7 @@ describe("ProductListingPage integrated in App on /urunlerimiz and /kategori/:sl
     queryClient.setQueryData(["catalog"], indexCatalog(createFixtureCatalog()));
 
     renderWithProviders(<App />, {
-      initialEntries: ["/urunlerimiz"],
+      initialEntries: ["/kategori/aydinlatma"],
       queryClient,
       includeLocationProbe: true,
     });
@@ -685,7 +650,7 @@ describe("ProductListingPage integrated in App on /urunlerimiz and /kategori/:sl
     cards = await screen.findAllByTestId("product-card");
     expect(cards).toHaveLength(2);
     expect(screen.getByTestId("location-probe")).toHaveTextContent(
-      "/urunlerimiz?sayfa=2"
+      "/kategori/aydinlatma?sayfa=2"
     );
 
     // Changing sort to fiyat-artan resets page to 1 and updates sirala param

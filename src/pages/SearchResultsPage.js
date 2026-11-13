@@ -3,11 +3,13 @@ import ActiveFilterChips from "@/components/catalog/ActiveFilterChips";
 import Breadcrumbs from "@/components/catalog/Breadcrumbs";
 import FilterSidebar, { termsMatch } from "@/components/catalog/FilterSidebar";
 import ListingToolbar from "@/components/catalog/ListingToolbar";
+import LoadingSkeleton from "@/components/catalog/LoadingSkeleton";
 import MobileFilterDrawer from "@/components/catalog/MobileFilterDrawer";
 import Pagination from "@/components/catalog/Pagination";
 import ProductCard from "@/components/catalog/ProductCard";
 import { queryProducts } from "@/data/catalog-query";
 import { useCatalogSearchParams } from "@/hooks/use-catalog-search-params";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { useCatalog, useProducts } from "@/hooks/use-products";
 
 export default function SearchResultsPage() {
@@ -19,8 +21,19 @@ export default function SearchResultsPage() {
     setSearchInput(params.search);
   }, [params.search]);
 
-  const { data: catalog } = useCatalog();
-  const { data: productsData, isPending, isError, error } = useProducts(params);
+  const {
+    data: catalog,
+    isError: isCatalogError,
+    error: catalogError,
+    refetch: refetchCatalog,
+  } = useCatalog();
+  const {
+    data: productsData,
+    isPending,
+    isError,
+    error,
+    refetch: refetchProducts,
+  } = useProducts(params);
 
   const data = useMemo(() => {
     if (catalog) {
@@ -33,21 +46,30 @@ export default function SearchResultsPage() {
     ? `"${params.search}" için arama sonuçları`
     : "Arama Sonuçları";
 
+  const metaTitle = params.search
+    ? `"${params.search}" Arama Sonuçları`
+    : "Arama Sonuçları";
+
+  usePageMeta({
+    title: metaTitle,
+  });
+
   if (isPending && !data) {
     return (
       <div
         data-testid="search-results-placeholder"
-        className="mx-auto max-w-6xl px-6 py-12"
+        className="mx-auto max-w-6xl space-y-6 px-6 py-12"
       >
         <h1 className="text-2xl font-bold tracking-tight text-stone-900 sm:text-3xl">
           {headingTitle}
         </h1>
-        <p className="mt-2 text-stone-600">Yükleniyor...</p>
+        <LoadingSkeleton count={6} variant="grid" />
       </div>
     );
   }
 
-  if (isError) {
+  if ((isError || isCatalogError) && !data) {
+    const resolvedError = error || catalogError;
     return (
       <div
         data-testid="search-results-placeholder"
@@ -55,9 +77,24 @@ export default function SearchResultsPage() {
       >
         <div
           role="alert"
+          data-testid="catalog-error-state"
           className="rounded border border-red-300 bg-red-50 p-4 text-red-800"
         >
-          Katalog verileri yüklenemedi: {error?.message || "Bilinmeyen hata"}
+          <p>
+            Katalog verileri yüklenemedi:{" "}
+            {resolvedError?.message || "Bilinmeyen hata"}
+          </p>
+          <button
+            type="button"
+            data-testid="catalog-retry-button"
+            onClick={() => {
+              refetchCatalog();
+              refetchProducts();
+            }}
+            className="mt-3 inline-flex items-center rounded-md bg-red-800 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-700"
+          >
+            Tekrar Dene
+          </button>
         </div>
       </div>
     );

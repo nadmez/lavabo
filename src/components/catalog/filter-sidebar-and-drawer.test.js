@@ -173,151 +173,17 @@ afterEach(() => {
 });
 
 describe("FilterSidebar component", () => {
-  it("renders hierarchical category tree with 'Tüm Ürünler' link, dynamic facet counts, and aria-current='page' on the active category", () => {
+  it("does not render a Kategoriler tree and lists Sadece stoktakiler above the current category's attribute filters", () => {
     const catalog = indexCatalog(createPhase6FixtureCatalog());
-    const { facets } = queryProducts(catalog, {});
-
-    const { rerender } = renderWithProviders(
-      <FilterSidebar
-        catalog={catalog}
-        facets={facets}
-        categorySlug=""
-        inStockOnly={false}
-        attributes={{}}
-        onToggleInStock={vi.fn()}
-        onToggleAttributeTerm={vi.fn()}
-      />
-    );
-
-    const tree = screen.getByTestId("filter-category-tree");
-    expect(tree).toBeInTheDocument();
-
-    const allProductsLink = within(tree).getByRole("link", {
-      name: /Tüm Ürünler/i,
+    const { facets } = queryProducts(catalog, {
+      categorySlug: "led-avizeler",
     });
-    expect(allProductsLink).toHaveAttribute("href", "/urunlerimiz");
-    expect(allProductsLink).toHaveAttribute("aria-current", "page");
-
-    const aydinlatmaLink = within(tree).getByTestId(
-      "filter-category-link-aydinlatma"
-    );
-    expect(aydinlatmaLink).toHaveAttribute("href", "/kategori/aydinlatma");
-    expect(aydinlatmaLink).toHaveTextContent("Aydınlatma");
-    expect(aydinlatmaLink).toHaveTextContent("(14)");
-    expect(aydinlatmaLink).not.toHaveAttribute("aria-current");
-
-    const avizeLink = within(tree).getByTestId("filter-category-link-avize");
-    expect(avizeLink).toHaveAttribute("href", "/kategori/avize");
-    expect(avizeLink).toHaveTextContent("Avize");
-    expect(avizeLink).toHaveTextContent("(13)");
-    expect(avizeLink).not.toHaveAttribute("aria-current");
-
-    const ledAvizelerLink = within(tree).getByTestId(
-      "filter-category-link-led-avizeler"
-    );
-    expect(ledAvizelerLink).toHaveAttribute("href", "/kategori/led-avizeler");
-    expect(ledAvizelerLink).toHaveTextContent("Led Avizeler");
-    expect(ledAvizelerLink).toHaveTextContent("(13)");
-    expect(ledAvizelerLink).not.toHaveAttribute("aria-current");
-
-    const apliklerLink = within(tree).getByTestId(
-      "filter-category-link-aplikler"
-    );
-    expect(apliklerLink).toHaveAttribute("href", "/kategori/aplikler");
-    expect(apliklerLink).toHaveTextContent("Aplikler");
-    expect(apliklerLink).toHaveTextContent("(1)");
-
-    const masaLambalariLink = within(tree).getByTestId(
-      "filter-category-link-masa-lambalari"
-    );
-    expect(masaLambalariLink).toHaveAttribute(
-      "href",
-      "/kategori/masa-lambalari"
-    );
-    expect(masaLambalariLink).toHaveTextContent("Masa Lambaları");
-    expect(masaLambalariLink).toHaveTextContent("(0)");
-
-    // Hierarchical order: Aydınlatma -> Avize -> Led Avizeler
-    const treeText = tree.textContent || "";
-    expect(treeText.indexOf("Aydınlatma")).toBeLessThan(
-      treeText.indexOf("Avize")
-    );
-    expect(treeText.indexOf("Avize")).toBeLessThan(
-      treeText.indexOf("Led Avizeler")
-    );
-
-    // Rerender with active categorySlug="led-avizeler"
-    rerender(
-      <QueryClientProvider client={createTestQueryClient()}>
-        <MemoryRouter initialEntries={["/kategori/led-avizeler"]}>
-          <FilterSidebar
-            catalog={catalog}
-            facets={facets}
-            categorySlug="led-avizeler"
-            inStockOnly={false}
-            attributes={{}}
-            onToggleInStock={vi.fn()}
-            onToggleAttributeTerm={vi.fn()}
-          />
-        </MemoryRouter>
-      </QueryClientProvider>
-    );
-
-    const updatedTree = screen.getByTestId("filter-category-tree");
-    expect(
-      within(updatedTree).getByRole("link", { name: /Tüm Ürünler/i })
-    ).not.toHaveAttribute("aria-current");
-    expect(
-      within(updatedTree).getByTestId("filter-category-link-led-avizeler")
-    ).toHaveAttribute("aria-current", "page");
-    expect(
-      within(updatedTree).getByTestId("filter-category-link-aydinlatma")
-    ).not.toHaveAttribute("aria-current");
-  });
-
-  it("guards against circular childrenByCategoryId / parentId references without an infinite loop", () => {
-    const catA = {
-      id: 10,
-      slug: "kat-a",
-      name: "Kategori A",
-      parentId: null,
-      count: 3,
-    };
-    const catB = {
-      id: 20,
-      slug: "kat-b",
-      name: "Kategori B",
-      parentId: 10,
-      count: 2,
-    };
-    const catC = {
-      id: 30,
-      slug: "kat-c",
-      name: "Kategori C",
-      parentId: 20,
-      count: 1,
-    };
-
-    const cyclicCatalog = indexCatalog({
-      version: "2026-11-12-cycle",
-      categories: [catA, catB, catC],
-      attributes: [],
-      products: [],
-    });
-
-    // Inject circular reference: catC -> catA and catB -> catB in childrenByCategoryId
-    cyclicCatalog.childrenByCategoryId.set(30, [catA, catB]);
 
     renderWithProviders(
       <FilterSidebar
-        catalog={cyclicCatalog}
-        facets={{
-          categories: { "kat-a": 3, "kat-b": 2, "kat-c": 1 },
-          attributes: {},
-          availableAttributes: [],
-          inStockCount: 0,
-        }}
-        categorySlug="kat-b"
+        catalog={catalog}
+        facets={facets}
+        categorySlug="led-avizeler"
         inStockOnly={false}
         attributes={{}}
         onToggleInStock={vi.fn()}
@@ -325,16 +191,25 @@ describe("FilterSidebar component", () => {
       />
     );
 
-    const tree = screen.getByTestId("filter-category-tree");
     expect(
-      within(tree).getByTestId("filter-category-link-kat-a")
-    ).toHaveTextContent("Kategori A");
+      screen.queryByTestId("filter-category-tree")
+    ).not.toBeInTheDocument();
     expect(
-      within(tree).getByTestId("filter-category-link-kat-b")
-    ).toHaveAttribute("aria-current", "page");
+      screen.queryByRole("heading", { name: "Kategoriler" })
+    ).not.toBeInTheDocument();
     expect(
-      within(tree).getByTestId("filter-category-link-kat-c")
-    ).toHaveTextContent("Kategori C");
+      screen.queryByTestId("filter-category-link-led-avizeler")
+    ).not.toBeInTheDocument();
+
+    const stockCheckbox = screen.getByTestId("filter-in-stock-checkbox");
+    const colorGroup = screen.getByTestId("filter-attribute-group-avize-rengi");
+    expect(
+      stockCheckbox.compareDocumentPosition(colorGroup) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
+    expect(stockCheckbox.closest("label")).toHaveTextContent(
+      "Sadece stoktakiler"
+    );
   });
 
   it("renders 'Sadece stoktakiler' checkbox with inStockCount, disables when inStockCount === 0 and !inStockOnly, and calls onToggleInStock(!inStockOnly)", () => {
@@ -565,7 +440,9 @@ describe("FilterSidebar component", () => {
       />
     );
 
-    expect(screen.getByTestId("filter-category-tree")).toBeInTheDocument();
+    expect(
+      screen.queryByTestId("filter-category-tree")
+    ).not.toBeInTheDocument();
     const inStockCheckbox = screen.getByTestId("filter-in-stock-checkbox");
     expect(inStockCheckbox).toBeDisabled();
     expect(inStockCheckbox.closest("label")).toHaveTextContent("(0)");
@@ -738,7 +615,10 @@ describe("MobileFilterDrawer component", () => {
     expect(dialog).toHaveAttribute("aria-label", "Filtreler");
 
     expect(
-      within(dialog).getByTestId("filter-category-tree")
+      within(dialog).queryByTestId("filter-category-tree")
+    ).not.toBeInTheDocument();
+    expect(
+      within(dialog).getByTestId("filter-in-stock-checkbox")
     ).toBeInTheDocument();
     expect(
       within(dialog).getByTestId("filter-in-stock-checkbox")
@@ -799,7 +679,7 @@ describe("ProductListingPage full filter integration via <App />", () => {
     );
 
     renderWithProviders(<App />, {
-      initialEntries: ["/urunlerimiz"],
+      initialEntries: ["/kategori/aydinlatma"],
       queryClient,
     });
 
@@ -813,7 +693,10 @@ describe("ProductListingPage full filter integration via <App />", () => {
     expect(desktopSidebar.className).toContain("lg:sticky");
     expect(desktopSidebar.className).toContain("lg:top-6");
     expect(
-      within(desktopSidebar).getByTestId("filter-category-tree")
+      within(desktopSidebar).queryByTestId("filter-category-tree")
+    ).not.toBeInTheDocument();
+    expect(
+      within(desktopSidebar).getByTestId("filter-in-stock-checkbox")
     ).toBeInTheDocument();
 
     // Mobile drawer is closed initially
@@ -845,7 +728,7 @@ describe("ProductListingPage full filter integration via <App />", () => {
     );
 
     renderWithProviders(<App />, {
-      initialEntries: ["/urunlerimiz?sayfa=2"],
+      initialEntries: ["/kategori/aydinlatma?sayfa=2"],
       queryClient,
       includeLocationProbe: true,
     });
@@ -855,7 +738,7 @@ describe("ProductListingPage full filter integration via <App />", () => {
     );
     expect(screen.getAllByTestId("product-card")).toHaveLength(2);
     expect(screen.getByTestId("location-probe")).toHaveTextContent(
-      "/urunlerimiz?sayfa=2"
+      "/kategori/aydinlatma?sayfa=2"
     );
 
     const sidebar = screen.getByTestId("desktop-filter-sidebar");
@@ -954,7 +837,7 @@ describe("ProductListingPage full filter integration via <App />", () => {
     // Start with short alias renk=siyah, boyut=60-cm, stok=1, sirala=fiyat-artan, goster=9
     renderWithProviders(<App />, {
       initialEntries: [
-        "/urunlerimiz?renk=siyah&boyut=60-cm&stok=1&sirala=fiyat-artan&goster=9",
+        "/kategori/aydinlatma?renk=siyah&boyut=60-cm&stok=1&sirala=fiyat-artan&goster=9",
       ],
       queryClient,
       includeLocationProbe: true,

@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link, useParams } from "react-router";
 import Breadcrumbs from "@/components/catalog/Breadcrumbs";
 import { termsMatch } from "@/components/catalog/FilterSidebar";
+import LoadingSkeleton from "@/components/catalog/LoadingSkeleton";
 import ProductCard from "@/components/catalog/ProductCard";
 import ProductGallery from "@/components/catalog/ProductGallery";
 import VariantSelector, {
   resolveAttributeTerm,
 } from "@/components/catalog/VariantSelector";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { useCatalog } from "@/hooks/use-products";
 import {
   formatProductPriceRange,
@@ -177,7 +179,7 @@ function ProductDetailContent({ product, catalog }) {
           className="flex flex-wrap items-center gap-3 text-xs font-medium text-stone-600"
         >
           <Link
-            to="/urunlerimiz"
+            to="/"
             data-testid="back-to-products-link"
             className="rounded border border-stone-200 bg-white px-2.5 py-1 hover:border-stone-400 hover:text-stone-900"
           >
@@ -389,7 +391,33 @@ function ProductDetailContent({ product, catalog }) {
 export default function ProductDetailPage() {
   const { slug } = useParams();
   const normalizedSlug = typeof slug === "string" ? slug.trim() : "";
-  const { data: catalog, isPending, isError, error } = useCatalog();
+  const { data: catalog, isPending, isError, error, refetch } = useCatalog();
+
+  const product =
+    normalizedSlug && catalog?.productsBySlug instanceof Map
+      ? catalog.productsBySlug.get(normalizedSlug)
+      : null;
+
+  const pageTitle = product ? product.name : catalog ? "Ürün Bulunamadı" : "";
+
+  const firstHighlight = Array.isArray(product?.highlights)
+    ? product.highlights.find(
+        (item) => typeof item === "string" && item.trim().length > 0
+      )
+    : "";
+
+  const plainProductDescription = product?.descriptionHtml
+    ? stripEmbedShortcodes(product.descriptionHtml)
+        .replace(/<[^>]*>/g, " ")
+        .replace(/&nbsp;/gi, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    : "";
+
+  usePageMeta({
+    title: pageTitle,
+    description: firstHighlight || plainProductDescription || undefined,
+  });
 
   if (isPending && !catalog) {
     return (
@@ -397,7 +425,7 @@ export default function ProductDetailPage() {
         data-testid="product-detail-placeholder"
         className="mx-auto max-w-6xl px-6 py-12"
       >
-        <p>Yükleniyor...</p>
+        <LoadingSkeleton count={2} variant="detail" />
         <span className="sr-only">{normalizedSlug}</span>
       </section>
     );
@@ -411,19 +439,25 @@ export default function ProductDetailPage() {
       >
         <div
           role="alert"
+          data-testid="catalog-error-state"
           className="rounded border border-red-300 bg-red-50 p-4 text-red-800"
         >
-          Katalog verileri yüklenemedi: {error?.message || "Bilinmeyen hata"}
+          <p>
+            Katalog verileri yüklenemedi: {error?.message || "Bilinmeyen hata"}
+          </p>
+          <button
+            type="button"
+            data-testid="catalog-retry-button"
+            onClick={() => refetch()}
+            className="mt-3 inline-flex items-center rounded-md bg-red-800 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-700"
+          >
+            Tekrar Dene
+          </button>
         </div>
         <span className="sr-only">{normalizedSlug}</span>
       </section>
     );
   }
-
-  const product =
-    normalizedSlug && catalog?.productsBySlug instanceof Map
-      ? catalog.productsBySlug.get(normalizedSlug)
-      : null;
 
   if (!product) {
     return (
@@ -441,10 +475,10 @@ export default function ProductDetailPage() {
           </p>
           <div className="mt-6">
             <Link
-              to="/urunlerimiz"
+              to="/"
               className="inline-flex items-center rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
             >
-              Tüm Ürünlere Dön
+              Anasayfaya Dön
             </Link>
           </div>
         </div>

@@ -23,14 +23,6 @@ export default function Footer() {
             Kategoriler
           </h2>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>
-              <Link
-                to="/urunlerimiz"
-                className="transition-colors hover:text-white"
-              >
-                Ürünlerimiz
-              </Link>
-            </li>
             {MAIN_NAV_CATEGORIES.map((category) => (
               <li key={category.slug}>
                 <Link

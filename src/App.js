@@ -1,42 +1,17 @@
 import { Link, Route, Routes } from "react-router";
 import Layout from "@/components/layout/Layout";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import HomePage from "@/pages/HomePage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import ProductListingPage from "@/pages/ProductListingPage";
 import SearchResultsPage from "@/pages/SearchResultsPage";
 import "./styles/placeholder.scss";
 
-function HomePlaceholder() {
-  return (
-    <div className="mx-auto max-w-4xl px-6 py-12">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900">
-          Lavabo Aydınlatma Katalog
-        </h1>
-        <p className="mt-2 text-stone-600">
-          Faz 1 kurulum doğrulaması: React 18, React Router 7, TanStack Query 5,
-          Tailwind CSS 4 ve yerel SCSS.
-        </p>
-      </header>
-
-      <section
-        data-testid="scss-demo-box"
-        className="scss-demo-box shadow-sm"
-        aria-label="Katalog önizleme kutusu"
-      >
-        <span className="scss-demo-box__badge">Katalog Önizleme</span>
-        <p className="mt-1 text-sm text-stone-800">
-          Yerli Üretim LED Aydınlatma Kataloğu — 101 ürün fotoğrafı{" "}
-          <code className="rounded bg-stone-200/70 px-1.5 py-0.5 text-xs">
-            assets/
-          </code>{" "}
-          klasöründe hazır.
-        </p>
-      </section>
-    </div>
-  );
-}
-
 function NotFoundPage() {
+  usePageMeta({
+    title: "Sayfa Bulunamadı",
+  });
+
   return (
     <section
       data-testid="not-found-page"
@@ -62,8 +37,7 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<HomePlaceholder />} />
-        <Route path="/urunlerimiz" element={<ProductListingPage />} />
+        <Route index element={<HomePage />} />
         <Route path="/kategori/:slug" element={<ProductListingPage />} />
         <Route path="/urun/:slug" element={<ProductDetailPage />} />
         <Route path="/arama" element={<SearchResultsPage />} />

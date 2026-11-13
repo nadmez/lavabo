@@ -10,9 +10,11 @@ export default function HeaderSearch() {
   const navigate = useNavigate();
   const queryClient = useContext(QueryClientContext);
   const formRef = useRef(null);
+  const inputRef = useRef(null);
 
   const [value, setValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [isFieldOpen, setIsFieldOpen] = useState(false);
   const [, setCacheVersion] = useState(0);
 
   useEffect(() => {
@@ -29,17 +31,24 @@ export default function HeaderSearch() {
   }, [queryClient]);
 
   useEffect(() => {
-    if (!isOpen) return undefined;
+    if (!isFieldOpen) return undefined;
+    inputRef.current?.focus();
+  }, [isFieldOpen]);
+
+  useEffect(() => {
+    if (!isOpen && !isFieldOpen) return undefined;
 
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         setIsOpen(false);
+        setIsFieldOpen(false);
       }
     };
 
     const handlePointerOutside = (event) => {
       if (formRef.current && !formRef.current.contains(event.target)) {
         setIsOpen(false);
+        setIsFieldOpen(false);
       }
     };
 
@@ -52,7 +61,7 @@ export default function HeaderSearch() {
       document.removeEventListener("mousedown", handlePointerOutside);
       document.removeEventListener("click", handlePointerOutside);
     };
-  }, [isOpen]);
+  }, [isOpen, isFieldOpen]);
 
   const ensureCatalogLoaded = () => {
     if (queryClient && !queryClient.getQueryData(["catalog"])) {
@@ -85,6 +94,7 @@ export default function HeaderSearch() {
     ensureCatalogLoaded();
     if (nextValue.trim().length > 0) {
       setIsOpen(true);
+      setIsFieldOpen(true);
     } else {
       setIsOpen(false);
     }
@@ -102,9 +112,19 @@ export default function HeaderSearch() {
     setIsOpen(false);
   };
 
+  const closeField = () => {
+    setIsOpen(false);
+    setIsFieldOpen(false);
+  };
+
+  const handleOpenField = () => {
+    setIsFieldOpen(true);
+    ensureCatalogLoaded();
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    setIsOpen(false);
+    closeField();
     if (trimmedQuery.length > 0) {
       navigate(`/arama?q=${encodeURIComponent(trimmedQuery)}`);
     } else {
@@ -122,8 +142,13 @@ export default function HeaderSearch() {
       onSubmit={handleSubmit}
       className="relative flex items-center"
     >
-      <div className="relative flex items-center">
+      <div
+        data-testid="header-search-panel"
+        hidden={!isFieldOpen}
+        className="absolute top-0 right-full z-10 mr-2"
+      >
         <input
+          ref={inputRef}
           type="search"
           data-testid="header-search-input"
           aria-label="Ürün veya stok kodu ara"
@@ -131,7 +156,7 @@ export default function HeaderSearch() {
           value={value}
           onChange={handleChange}
           onFocus={handleFocus}
-          className="w-44 rounded-l-full border border-r-0 border-stone-200 bg-stone-50 py-1.5 pr-7 pl-3.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-stone-400 focus:bg-white focus:outline-none sm:w-64"
+          className="hide-search-cancel h-[42px] w-72 rounded-full border border-[rgba(0,0,0,0.106)] bg-white pr-9 pl-4 text-sm text-[#333] outline-none placeholder:text-[#767676]"
         />
 
         {trimmedQuery.length > 0 ? (
@@ -140,7 +165,7 @@ export default function HeaderSearch() {
             data-testid="header-search-clear"
             aria-label="Aramayı temizle"
             onClick={handleClear}
-            className="absolute right-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full text-xs text-stone-400 hover:bg-stone-200 hover:text-stone-700"
+            className="absolute top-1/2 right-2 inline-flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full text-xs text-[#767676] hover:bg-stone-100 hover:text-[#333]"
           >
             ✕
           </button>
@@ -148,13 +173,26 @@ export default function HeaderSearch() {
       </div>
 
       <button
-        type="submit"
+        type="button"
         data-testid="header-search-trigger"
         aria-label="Ürün ara"
-        className="inline-flex items-center gap-1.5 rounded-r-full border border-stone-200 bg-white px-3.5 py-1.5 text-sm font-medium text-stone-700 transition-colors hover:border-stone-300 hover:bg-stone-100"
+        aria-expanded={isFieldOpen}
+        onClick={handleOpenField}
+        className="inline-flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full border border-[rgba(0,0,0,0.106)] bg-white text-[#333] hover:bg-stone-50"
       >
-        <span aria-hidden="true">⌕</span>
-        <span className="hidden sm:inline">Ara</span>
+        <svg
+          aria-hidden="true"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <path d="M20 20l-3.5-3.5" />
+        </svg>
       </button>
 
       {showDropdown ? (
@@ -175,7 +213,7 @@ export default function HeaderSearch() {
                     <Link
                       to={`/urun/${product.slug}`}
                       data-testid={`header-search-result-link-${product.slug}`}
-                      onClick={() => setIsOpen(false)}
+                      onClick={closeField}
                       className="flex items-center gap-3 p-3 transition-colors hover:bg-stone-50"
                     >
                       <img
@@ -206,7 +244,7 @@ export default function HeaderSearch() {
                   <Link
                     to={`/arama?q=${encodeURIComponent(trimmedQuery)}`}
                     data-testid="header-search-view-all"
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeField}
                     className="text-xs font-semibold text-amber-800 hover:underline"
                   >
                     Tüm sonuçları gör ({total})

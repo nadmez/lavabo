@@ -524,6 +524,22 @@ describe("public/data/catalog.json static file and asset integrity", () => {
     expect(catalog.products.length).toBeGreaterThanOrEqual(100);
   });
 
+  it("marks at least one third of products out of stock, including every variant of those products", () => {
+    const catalog = loadStaticCatalog();
+    const outOfStock = catalog.products.filter(
+      (product) => product.inStock !== true
+    );
+
+    expect(outOfStock.length).toBeGreaterThanOrEqual(
+      Math.ceil(catalog.products.length / 3)
+    );
+
+    for (const product of outOfStock) {
+      const variants = Array.isArray(product.variants) ? product.variants : [];
+      expect(variants.every((variant) => variant.inStock !== true)).toBe(true);
+    }
+  });
+
   it("ensures every product has at least one image, main.* is first when present, and all product/variant image paths exist on disk", () => {
     const catalog = loadStaticCatalog();
 

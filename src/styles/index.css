@@ -5,3 +5,14 @@
   --color-brand-gold: #b8860b;
   --color-brand-dark: #18181b;
 }
+
+.hide-search-cancel {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.hide-search-cancel::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}

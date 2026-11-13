@@ -785,9 +785,9 @@ describe("ProductDetailPage integrated in App on /urun/:slug", () => {
     expect(notFoundBox).toHaveTextContent("Ürün Bulunamadı");
 
     const backAllLink = within(notFoundBox).getByRole("link", {
-      name: /Tüm Ürünlere Dön/i,
+      name: /Anasayfaya Dön/i,
     });
-    expect(backAllLink).toHaveAttribute("href", "/urunlerimiz");
+    expect(backAllLink).toHaveAttribute("href", "/");
   });
 
   it("renders back / previous / next navigation and omits prev-product-link on first product and next-product-link on last product", () => {
@@ -803,7 +803,7 @@ describe("ProductDetailPage integrated in App on /urun/:slug", () => {
 
     const firstNav = screen.getByTestId("product-prev-next-nav");
     const backLink = within(firstNav).getByTestId("back-to-products-link");
-    expect(backLink).toHaveAttribute("href", "/urunlerimiz");
+    expect(backLink).toHaveAttribute("href", "/");
     expect(backLink).toHaveTextContent(/Ürünlere geri dön/i);
 
     expect(

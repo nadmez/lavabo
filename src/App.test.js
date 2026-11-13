@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import App from "./App";
 
 describe("App scaffold smoke test", () => {
-  it("renders the Turkish catalogue heading and the SCSS-styled preview box", () => {
+  it("renders the layout shell on the home route without the home-hero section", () => {
     const queryClient = new QueryClient();
 
     render(
@@ -16,15 +16,9 @@ describe("App scaffold smoke test", () => {
       </QueryClientProvider>
     );
 
-    expect(
-      screen.getByRole("heading", {
-        level: 1,
-        name: /Lavabo Aydınlatma Katalog/i,
-      })
-    ).toBeInTheDocument();
-
-    const scssBox = screen.getByTestId("scss-demo-box");
-    expect(scssBox).toHaveClass("scss-demo-box");
-    expect(scssBox).toHaveTextContent(/Yerli Üretim LED Aydınlatma Kataloğu/i);
+    expect(screen.getByTestId("site-header")).toBeInTheDocument();
+    expect(screen.getByTestId("layout-main")).toBeInTheDocument();
+    expect(screen.queryByTestId("home-hero")).not.toBeInTheDocument();
+    expect(screen.getByTestId("site-footer")).toBeInTheDocument();
   });
 });

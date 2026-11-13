@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 function stripRenkSuffix(slug) {
   return slug.endsWith("-renk") && slug.length > 5 ? slug.slice(0, -5) : slug;
 }
@@ -12,85 +10,13 @@ export function termsMatch(slugA, slugB) {
   return a === b || stripRenkSuffix(a) === stripRenkSuffix(b);
 }
 
-function renderCategoryBranch({
-  parentId,
-  childrenByCategoryId,
-  facets,
-  categorySlug,
-  visited,
-  depth = 0,
-}) {
-  if (!(childrenByCategoryId instanceof Map)) {
-    return null;
-  }
-
-  const children = childrenByCategoryId.get(parentId) || [];
-  const unvisitedChildren = children.filter(
-    (cat) => cat && !visited.has(cat.id)
-  );
-
-  if (unvisitedChildren.length === 0) {
-    return null;
-  }
-
-  return (
-    <ul className={depth > 0 ? "mt-1 space-y-1 pl-3" : "space-y-1"}>
-      {unvisitedChildren.map((cat) => {
-        if (visited.has(cat.id)) {
-          return null;
-        }
-        visited.add(cat.id);
-
-        const isActive = Boolean(categorySlug) && cat.slug === categorySlug;
-        const count = facets?.categories?.[cat.slug] ?? cat.count ?? 0;
-
-        return (
-          <li key={cat.id ?? cat.slug}>
-            <Link
-              to={`/kategori/${cat.slug}`}
-              data-testid={`filter-category-link-${cat.slug}`}
-              aria-current={isActive ? "page" : undefined}
-              className={`flex items-center justify-between rounded px-2 py-1 text-sm transition ${
-                isActive
-                  ? "bg-stone-900 font-semibold text-white"
-                  : "text-stone-700 hover:bg-stone-100"
-              }`}
-            >
-              <span>{cat.name}</span>
-              <span
-                className={`text-xs ${
-                  isActive ? "text-stone-200" : "text-stone-500"
-                }`}
-              >
-                ({count})
-              </span>
-            </Link>
-            {renderCategoryBranch({
-              parentId: cat.id,
-              childrenByCategoryId,
-              facets,
-              categorySlug,
-              visited,
-              depth: depth + 1,
-            })}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
 export default function FilterSidebar({
-  catalog,
   facets,
-  categorySlug = "",
   inStockOnly = false,
   attributes = {},
   onToggleInStock,
   onToggleAttributeTerm,
 }) {
-  const visitedCategories = new Set();
-  const isAllProductsActive = !categorySlug;
   const inStockCount = facets?.inStockCount ?? 0;
   const isInStockDisabled = inStockCount === 0 && !inStockOnly;
   const availableAttributes = Array.isArray(facets?.availableAttributes)
@@ -99,34 +25,7 @@ export default function FilterSidebar({
 
   return (
     <div className="space-y-6 rounded-lg border border-stone-200 bg-white p-4">
-      <div data-testid="filter-category-tree">
-        <h2 className="mb-2 text-xs font-semibold tracking-wider text-stone-500 uppercase">
-          Kategoriler
-        </h2>
-        <div className="mb-1">
-          <Link
-            to="/urunlerimiz"
-            aria-current={isAllProductsActive ? "page" : undefined}
-            className={`flex items-center justify-between rounded px-2 py-1 text-sm transition ${
-              isAllProductsActive
-                ? "bg-stone-900 font-semibold text-white"
-                : "text-stone-700 hover:bg-stone-100"
-            }`}
-          >
-            <span>Tüm Ürünler</span>
-          </Link>
-        </div>
-        {renderCategoryBranch({
-          parentId: null,
-          childrenByCategoryId: catalog?.childrenByCategoryId,
-          facets,
-          categorySlug,
-          visited: visitedCategories,
-          depth: 0,
-        })}
-      </div>
-
-      <div className="border-t border-stone-200 pt-4">
+      <div>
         <label
           className={`flex items-center justify-between gap-2 text-sm ${
             isInStockDisabled

@@ -466,7 +466,7 @@ describe("src/hooks/use-catalog-search-params.js", () => {
       const wrapper = ({ children }) => (
         <MemoryRouter
           initialEntries={[
-            "/urunlerimiz?renk=siyah-renk&sirala=fiyat-artan&sayfa=2",
+            "/kategori/led-avizeler?renk=siyah-renk&sirala=fiyat-artan&sayfa=2",
           ]}
         >
           {children}
@@ -595,14 +595,16 @@ describe("src/hooks/use-products.js", () => {
 });
 
 describe("src/App.js temporary debug listing routes", () => {
-  it("renders filtered and sorted products on /urunlerimiz?renk=siyah-renk&sirala=fiyat-artan", async () => {
+  it("renders filtered and sorted products on /kategori/aydinlatma?renk=siyah-renk&sirala=fiyat-artan", async () => {
     const queryClient = createTestQueryClient();
     queryClient.setQueryData(["catalog"], indexCatalog(createFixtureCatalog()));
 
     render(
       <QueryClientProvider client={queryClient}>
         <MemoryRouter
-          initialEntries={["/urunlerimiz?renk=siyah-renk&sirala=fiyat-artan"]}
+          initialEntries={[
+            "/kategori/aydinlatma?renk=siyah-renk&sirala=fiyat-artan",
+          ]}
         >
           <App />
         </MemoryRouter>
@@ -672,7 +674,7 @@ describe("src/App.js temporary debug listing routes", () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <MemoryRouter initialEntries={["/urunlerimiz"]}>
+        <MemoryRouter initialEntries={["/kategori/led-avizeler"]}>
           <App />
         </MemoryRouter>
       </QueryClientProvider>
@@ -691,7 +693,7 @@ describe("src/App.js temporary debug listing routes", () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <MemoryRouter initialEntries={["/urunlerimiz"]}>
+        <MemoryRouter initialEntries={["/kategori/led-avizeler"]}>
           <App />
         </MemoryRouter>
       </QueryClientProvider>

@@ -882,7 +882,7 @@
       "slug": "plafonyer-siva-ustu-raduslu-kare-davul-lineer-led-aydinlatma-armatur",
       "name": "Plafonyer Sıva Üstü Radüslü Kare Davul Lineer Led Aydınlatma Armatür",
       "sku": "PBSA-70",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         419,
         417
@@ -930,7 +930,7 @@
           "id": 26189,
           "sku": "PBSA-70-2",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "siyah",
@@ -942,7 +942,7 @@
           "id": 26188,
           "sku": "PBSA-70-3",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "siyah",
@@ -954,7 +954,7 @@
           "id": 26187,
           "sku": "PBSA-70-4",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "siyah",
@@ -966,7 +966,7 @@
           "id": 26186,
           "sku": "PBSA-70-5",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "beyaz",
@@ -978,7 +978,7 @@
           "id": 26185,
           "sku": "PBSA-70-6",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "beyaz",
@@ -990,7 +990,7 @@
           "id": 26184,
           "sku": "PBSA-70-7",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "beyaz",
@@ -1002,7 +1002,7 @@
           "id": 26183,
           "sku": "PBSA-70-8",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1014,7 +1014,7 @@
           "id": 26182,
           "sku": "PBSA-70-9",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1026,7 +1026,7 @@
           "id": 26181,
           "sku": "PBSA-70-10",
           "price": 13728,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80x80cm-100w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1038,7 +1038,7 @@
           "id": 26180,
           "sku": "PBSA-70-11",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "siyah",
@@ -1050,7 +1050,7 @@
           "id": 26179,
           "sku": "PBSA-70-12",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "siyah",
@@ -1062,7 +1062,7 @@
           "id": 26178,
           "sku": "PBSA-70-18",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "siyah",
@@ -1074,7 +1074,7 @@
           "id": 26177,
           "sku": "PBSA-70-17",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "beyaz",
@@ -1086,7 +1086,7 @@
           "id": 26176,
           "sku": "PBSA-70-16",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "beyaz",
@@ -1098,7 +1098,7 @@
           "id": 26175,
           "sku": "PBSA-70-15",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "beyaz",
@@ -1110,7 +1110,7 @@
           "id": 26174,
           "sku": "PBSA-70-14",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1122,7 +1122,7 @@
           "id": 26173,
           "sku": "PBSA-70-13",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1134,7 +1134,7 @@
           "id": 26172,
           "sku": "PBSA-70-20",
           "price": 9504,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x60cm-70w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1146,7 +1146,7 @@
           "id": 26171,
           "sku": "PBSA-70-21",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "siyah",
@@ -1158,7 +1158,7 @@
           "id": 26170,
           "sku": "PBSA-70-22",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "siyah",
@@ -1170,7 +1170,7 @@
           "id": 26169,
           "sku": "PBSA-70-23",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "siyah",
@@ -1182,7 +1182,7 @@
           "id": 26168,
           "sku": "PBSA-70-24",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "beyaz",
@@ -1194,7 +1194,7 @@
           "id": 26167,
           "sku": "PBSA-70-19",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "beyaz",
@@ -1206,7 +1206,7 @@
           "id": 26166,
           "sku": "PBSA-70-25",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "beyaz",
@@ -1218,7 +1218,7 @@
           "id": 26165,
           "sku": "PBSA-70-35",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1230,7 +1230,7 @@
           "id": 26164,
           "sku": "PBSA-70-34",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1242,7 +1242,7 @@
           "id": 26163,
           "sku": "PBSA-70-33",
           "price": 5016,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "40x40cm-40w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1254,7 +1254,7 @@
           "id": 26162,
           "sku": "PBSA-70-32",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "siyah",
@@ -1266,7 +1266,7 @@
           "id": 26161,
           "sku": "PBSA-70-31",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "siyah",
@@ -1278,7 +1278,7 @@
           "id": 26160,
           "sku": "PBSA-70-30",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "siyah",
@@ -1290,7 +1290,7 @@
           "id": 26159,
           "sku": "PBSA-70-29",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "beyaz",
@@ -1302,7 +1302,7 @@
           "id": 26158,
           "sku": "PBSA-70-28",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "beyaz",
@@ -1314,7 +1314,7 @@
           "id": 26157,
           "sku": "PBSA-70-27",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "beyaz",
@@ -1326,7 +1326,7 @@
           "id": 26156,
           "sku": "PBSA-70-26",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1338,7 +1338,7 @@
           "id": 26155,
           "sku": "PBSA-70-36",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1350,7 +1350,7 @@
           "id": 26154,
           "sku": "PBSA-70-37",
           "price": 23232,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120x120cm-170w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1362,7 +1362,7 @@
           "id": 26153,
           "sku": "PBSA-70-38",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "siyah",
@@ -1374,7 +1374,7 @@
           "id": 26152,
           "sku": "PBSA-70-39",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "siyah",
@@ -1386,7 +1386,7 @@
           "id": 26151,
           "sku": "PBSA-70-40",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "siyah",
@@ -1398,7 +1398,7 @@
           "id": 26150,
           "sku": "PBSA-70-41",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "beyaz",
@@ -1410,7 +1410,7 @@
           "id": 26149,
           "sku": "PBSA-70-42",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "beyaz",
@@ -1422,7 +1422,7 @@
           "id": 26148,
           "sku": "PBSA-70-43",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "beyaz",
@@ -1434,7 +1434,7 @@
           "id": 26147,
           "sku": "PBSA-70-44",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1446,7 +1446,7 @@
           "id": 26146,
           "sku": "PBSA-70-46",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -1458,7 +1458,7 @@
           "id": 26145,
           "sku": "PBSA-70-45",
           "price": 18480,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100x100cm-135w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2440,7 +2440,7 @@
       "slug": "sarkit-dikdortgen-lineer-led-aydinlatma-armatur",
       "name": "Sarkıt Dikdörtgen Lineer Led Aydınlatma Armatür",
       "sku": "PBSA-67",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         418,
         417
@@ -2486,7 +2486,7 @@
           "id": 25916,
           "sku": "PBSA-67-2",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "siyah",
@@ -2498,7 +2498,7 @@
           "id": 25915,
           "sku": "PBSA-67-3",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "siyah",
@@ -2510,7 +2510,7 @@
           "id": 25914,
           "sku": "PBSA-67-4",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "siyah",
@@ -2522,7 +2522,7 @@
           "id": 25913,
           "sku": "PBSA-67-5",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "beyaz",
@@ -2534,7 +2534,7 @@
           "id": 25912,
           "sku": "PBSA-67-6",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "beyaz",
@@ -2546,7 +2546,7 @@
           "id": 25911,
           "sku": "PBSA-67-7",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "beyaz",
@@ -2558,7 +2558,7 @@
           "id": 25910,
           "sku": "PBSA-67-8",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2570,7 +2570,7 @@
           "id": 25909,
           "sku": "PBSA-67-9",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2582,7 +2582,7 @@
           "id": 25908,
           "sku": "PBSA-67-10",
           "price": 8536,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x90cm-65w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2594,7 +2594,7 @@
           "id": 25907,
           "sku": "PBSA-67-11",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "siyah",
@@ -2606,7 +2606,7 @@
           "id": 25906,
           "sku": "PBSA-67-13",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "siyah",
@@ -2618,7 +2618,7 @@
           "id": 25905,
           "sku": "PBSA-67-14",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "siyah",
@@ -2630,7 +2630,7 @@
           "id": 25904,
           "sku": "PBSA-67-15",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "beyaz",
@@ -2642,7 +2642,7 @@
           "id": 25903,
           "sku": "PBSA-67-12",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "beyaz",
@@ -2654,7 +2654,7 @@
           "id": 25902,
           "sku": "PBSA-67-16",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "beyaz",
@@ -2666,7 +2666,7 @@
           "id": 25901,
           "sku": "PBSA-67-17",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2678,7 +2678,7 @@
           "id": 25900,
           "sku": "PBSA-67-18",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2690,7 +2690,7 @@
           "id": 25899,
           "sku": "PBSA-67-19",
           "price": 13499,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x180cm-95w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2702,7 +2702,7 @@
           "id": 25898,
           "sku": "PBSA-67-20",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "siyah",
@@ -2714,7 +2714,7 @@
           "id": 25897,
           "sku": "PBSA-67-22",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "siyah",
@@ -2726,7 +2726,7 @@
           "id": 25896,
           "sku": "PBSA-67-23",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "siyah",
@@ -2738,7 +2738,7 @@
           "id": 25895,
           "sku": "PBSA-67-24",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "beyaz",
@@ -2750,7 +2750,7 @@
           "id": 25894,
           "sku": "PBSA-67-25",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "beyaz",
@@ -2762,7 +2762,7 @@
           "id": 25893,
           "sku": "PBSA-67-26",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "beyaz",
@@ -2774,7 +2774,7 @@
           "id": 25892,
           "sku": "PBSA-67-27",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2786,7 +2786,7 @@
           "id": 25891,
           "sku": "PBSA-67-28",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -2798,7 +2798,7 @@
           "id": 25890,
           "sku": "PBSA-67-21",
           "price": 10227,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "60x120cm-75w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -4870,7 +4870,7 @@
       "slug": "sarkit-davul-lineer-aydinlatma",
       "name": "Rozanslı Sarkıt Yuvarlak Davul Lineer Led Aydınlatma Armatür",
       "sku": "PBSA-64",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         418,
         417
@@ -4918,7 +4918,7 @@
           "id": 25495,
           "sku": "PBSA-64-2",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "siyah",
@@ -4930,7 +4930,7 @@
           "id": 25494,
           "sku": "PBSA-64-3",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "siyah",
@@ -4942,7 +4942,7 @@
           "id": 25493,
           "sku": "PBSA-64-4",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "siyah",
@@ -4954,7 +4954,7 @@
           "id": 25492,
           "sku": "PBSA-64-5",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "beyaz",
@@ -4966,7 +4966,7 @@
           "id": 25491,
           "sku": "PBSA-64-6",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "beyaz",
@@ -4978,7 +4978,7 @@
           "id": 25490,
           "sku": "PBSA-64-7",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "beyaz",
@@ -4990,7 +4990,7 @@
           "id": 25489,
           "sku": "PBSA-64-16",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5002,7 +5002,7 @@
           "id": 25488,
           "sku": "PBSA-64-15",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5014,7 +5014,7 @@
           "id": 25487,
           "sku": "PBSA-64-14",
           "price": 13089,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-90w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5026,7 +5026,7 @@
           "id": 25486,
           "sku": "PBSA-64-13",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "siyah",
@@ -5038,7 +5038,7 @@
           "id": 25485,
           "sku": "PBSA-64-8",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "siyah",
@@ -5050,7 +5050,7 @@
           "id": 25484,
           "sku": "PBSA-64-12",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "siyah",
@@ -5062,7 +5062,7 @@
           "id": 25483,
           "sku": "PBSA-64-11",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "beyaz",
@@ -5074,7 +5074,7 @@
           "id": 25482,
           "sku": "PBSA-64-10",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "beyaz",
@@ -5086,7 +5086,7 @@
           "id": 25481,
           "sku": "PBSA-64-9",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "beyaz",
@@ -5098,7 +5098,7 @@
           "id": 25480,
           "sku": "PBSA-64-18",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5110,7 +5110,7 @@
           "id": 25479,
           "sku": "PBSA-64-19",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5122,7 +5122,7 @@
           "id": 25478,
           "sku": "PBSA-64-20",
           "price": 7279,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-60w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5134,7 +5134,7 @@
           "id": 25477,
           "sku": "PBSA-64-21",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "siyah",
@@ -5146,7 +5146,7 @@
           "id": 25476,
           "sku": "PBSA-64-22",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "siyah",
@@ -5158,7 +5158,7 @@
           "id": 25475,
           "sku": "PBSA-64-23",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "siyah",
@@ -5170,7 +5170,7 @@
           "id": 25474,
           "sku": "PBSA-64-24",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "beyaz",
@@ -5182,7 +5182,7 @@
           "id": 25473,
           "sku": "PBSA-64-17",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "beyaz",
@@ -5194,7 +5194,7 @@
           "id": 25472,
           "sku": "PBSA-64-25",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "beyaz",
@@ -5206,7 +5206,7 @@
           "id": 25471,
           "sku": "PBSA-64-26",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5218,7 +5218,7 @@
           "id": 25470,
           "sku": "PBSA-64-27",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5230,7 +5230,7 @@
           "id": 25469,
           "sku": "PBSA-64-28",
           "price": 4110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-30w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5242,7 +5242,7 @@
           "id": 25468,
           "sku": "PBSA-64-29",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "siyah",
@@ -5254,7 +5254,7 @@
           "id": 25467,
           "sku": "PBSA-64-30",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "siyah",
@@ -5266,7 +5266,7 @@
           "id": 25466,
           "sku": "PBSA-64-31",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "siyah",
@@ -5278,7 +5278,7 @@
           "id": 25465,
           "sku": "PBSA-64-32",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "beyaz",
@@ -5290,7 +5290,7 @@
           "id": 25464,
           "sku": "PBSA-64-33",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "beyaz",
@@ -5302,7 +5302,7 @@
           "id": 25463,
           "sku": "PBSA-64-34",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "beyaz",
@@ -5314,7 +5314,7 @@
           "id": 25462,
           "sku": "PBSA-64-35",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5326,7 +5326,7 @@
           "id": 25461,
           "sku": "PBSA-64-42",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5338,7 +5338,7 @@
           "id": 25460,
           "sku": "PBSA-64-41",
           "price": 28399,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-160w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5350,7 +5350,7 @@
           "id": 25459,
           "sku": "PBSA-64-40",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "siyah",
@@ -5362,7 +5362,7 @@
           "id": 25458,
           "sku": "PBSA-64-39",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "siyah",
@@ -5374,7 +5374,7 @@
           "id": 25457,
           "sku": "PBSA-64-38",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "siyah",
@@ -5386,7 +5386,7 @@
           "id": 25456,
           "sku": "PBSA-64-37",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "beyaz",
@@ -5398,7 +5398,7 @@
           "id": 25455,
           "sku": "PBSA-64-36",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "beyaz",
@@ -5410,7 +5410,7 @@
           "id": 25454,
           "sku": "PBSA-64-44",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "beyaz",
@@ -5422,7 +5422,7 @@
           "id": 25453,
           "sku": "PBSA-64-45",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5434,7 +5434,7 @@
           "id": 25452,
           "sku": "PBSA-64-46",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -5446,7 +5446,7 @@
           "id": 25451,
           "sku": "PBSA-64-43",
           "price": 19685,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-130w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -6758,7 +6758,7 @@
       "slug": "duz-siva-ustu-lineer-aydinlatma-led-armatur",
       "name": "Düz Sıva Üstü Lineer Aydınlatma Led Armatür",
       "sku": "PBSA-61",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         419,
         417
@@ -6809,7 +6809,7 @@
           "id": 25116,
           "sku": "PBSA-61-2",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "siyah",
@@ -6821,7 +6821,7 @@
           "id": 25115,
           "sku": "PBSA-61-3",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "siyah",
@@ -6833,7 +6833,7 @@
           "id": 25114,
           "sku": "PBSA-61-4",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "siyah",
@@ -6845,7 +6845,7 @@
           "id": 25113,
           "sku": "PBSA-61-12",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "siyah",
@@ -6857,7 +6857,7 @@
           "id": 25112,
           "sku": "PBSA-61-11",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "siyah",
@@ -6869,7 +6869,7 @@
           "id": 25111,
           "sku": "PBSA-61-10",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "siyah",
@@ -6881,7 +6881,7 @@
           "id": 25110,
           "sku": "PBSA-61-9",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "siyah",
@@ -6893,7 +6893,7 @@
           "id": 25109,
           "sku": "PBSA-61-5",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "siyah",
@@ -6905,7 +6905,7 @@
           "id": 25108,
           "sku": "PBSA-61-8",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "siyah",
@@ -6917,7 +6917,7 @@
           "id": 25107,
           "sku": "PBSA-61-7",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "siyah",
@@ -6929,7 +6929,7 @@
           "id": 25106,
           "sku": "PBSA-61-6",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "siyah",
@@ -6941,7 +6941,7 @@
           "id": 25105,
           "sku": "PBSA-61-22",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "siyah",
@@ -6953,7 +6953,7 @@
           "id": 25104,
           "sku": "PBSA-61-13",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "siyah",
@@ -6965,7 +6965,7 @@
           "id": 25103,
           "sku": "PBSA-61-21",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "siyah",
@@ -6977,7 +6977,7 @@
           "id": 25102,
           "sku": "PBSA-61-20",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "siyah",
@@ -6989,7 +6989,7 @@
           "id": 25101,
           "sku": "PBSA-61-19",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "siyah",
@@ -7001,7 +7001,7 @@
           "id": 25100,
           "sku": "PBSA-61-18",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "siyah",
@@ -7013,7 +7013,7 @@
           "id": 25099,
           "sku": "PBSA-61-17",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "siyah",
@@ -7025,7 +7025,7 @@
           "id": 25098,
           "sku": "PBSA-61-16",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "beyaz",
@@ -7037,7 +7037,7 @@
           "id": 25097,
           "sku": "PBSA-61-15",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "beyaz",
@@ -7049,7 +7049,7 @@
           "id": 25096,
           "sku": "PBSA-61-14",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "beyaz",
@@ -7061,7 +7061,7 @@
           "id": 25095,
           "sku": "PBSA-61-24",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "beyaz",
@@ -7073,7 +7073,7 @@
           "id": 25094,
           "sku": "PBSA-61-25",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "beyaz",
@@ -7085,7 +7085,7 @@
           "id": 25093,
           "sku": "PBSA-61-26",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "beyaz",
@@ -7097,7 +7097,7 @@
           "id": 25092,
           "sku": "PBSA-61-27",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "beyaz",
@@ -7109,7 +7109,7 @@
           "id": 25091,
           "sku": "PBSA-61-28",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "beyaz",
@@ -7121,7 +7121,7 @@
           "id": 25090,
           "sku": "PBSA-61-23",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "beyaz",
@@ -7133,7 +7133,7 @@
           "id": 25089,
           "sku": "PBSA-61-29",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "beyaz",
@@ -7145,7 +7145,7 @@
           "id": 25088,
           "sku": "PBSA-61-30",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "beyaz",
@@ -7157,7 +7157,7 @@
           "id": 25087,
           "sku": "PBSA-61-31",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "beyaz",
@@ -7169,7 +7169,7 @@
           "id": 25086,
           "sku": "PBSA-61-32",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "beyaz",
@@ -7181,7 +7181,7 @@
           "id": 25085,
           "sku": "PBSA-61-42",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "beyaz",
@@ -7193,7 +7193,7 @@
           "id": 25084,
           "sku": "PBSA-61-41",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "beyaz",
@@ -7205,7 +7205,7 @@
           "id": 25083,
           "sku": "PBSA-61-40",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "beyaz",
@@ -7217,7 +7217,7 @@
           "id": 25082,
           "sku": "PBSA-61-39",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "beyaz",
@@ -7229,7 +7229,7 @@
           "id": 25081,
           "sku": "PBSA-61-43",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "beyaz",
@@ -7241,7 +7241,7 @@
           "id": 25080,
           "sku": "PBSA-61-38",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7253,7 +7253,7 @@
           "id": 25079,
           "sku": "PBSA-61-37",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7265,7 +7265,7 @@
           "id": 25078,
           "sku": "PBSA-61-36",
           "price": 1905,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "80-cm-24w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7277,7 +7277,7 @@
           "id": 25077,
           "sku": "PBSA-61-33",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7289,7 +7289,7 @@
           "id": 25076,
           "sku": "PBSA-61-35",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7301,7 +7301,7 @@
           "id": 25075,
           "sku": "PBSA-61-34",
           "price": 3825,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "200-cm-60w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7313,7 +7313,7 @@
           "id": 25074,
           "sku": "PBSA-61-53",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7325,7 +7325,7 @@
           "id": 25073,
           "sku": "PBSA-61-52",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7337,7 +7337,7 @@
           "id": 25072,
           "sku": "PBSA-61-44",
           "price": 3220,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "180-cm-54w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7349,7 +7349,7 @@
           "id": 25071,
           "sku": "PBSA-61-51",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7361,7 +7361,7 @@
           "id": 25070,
           "sku": "PBSA-61-50",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7373,7 +7373,7 @@
           "id": 25069,
           "sku": "PBSA-61-49",
           "price": 2915,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "150-cm-45w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7385,7 +7385,7 @@
           "id": 25068,
           "sku": "PBSA-61-48",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7397,7 +7397,7 @@
           "id": 25067,
           "sku": "PBSA-61-47",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7409,7 +7409,7 @@
           "id": 25066,
           "sku": "PBSA-61-46",
           "price": 2310,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "120-cm-36w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7421,7 +7421,7 @@
           "id": 25065,
           "sku": "PBSA-61-45",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7433,7 +7433,7 @@
           "id": 25064,
           "sku": "PBSA-61-55",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -7445,7 +7445,7 @@
           "id": 25063,
           "sku": "PBSA-61-54",
           "price": 2090,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "100-cm-30w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9285,7 +9285,7 @@
       "slug": "plafonyer-siva-ustu-yuvarlak-simit-lineer-aydinlatma-led-armatur",
       "name": "Plafonyer Sıva Üstü Yuvarlak Simit Lineer Aydınlatma Led Armatür",
       "sku": "PBSA-60",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         419,
         417
@@ -9335,7 +9335,7 @@
           "id": 24971,
           "sku": "PBSA-60-2",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9347,7 +9347,7 @@
           "id": 24970,
           "sku": "PBSA-60-3",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9359,7 +9359,7 @@
           "id": 24969,
           "sku": "PBSA-60-4",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9371,7 +9371,7 @@
           "id": 24968,
           "sku": "PBSA-60-5",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "beyaz",
@@ -9383,7 +9383,7 @@
           "id": 24967,
           "sku": "PBSA-60-6",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "beyaz",
@@ -9395,7 +9395,7 @@
           "id": 24966,
           "sku": "PBSA-60-7",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "beyaz",
@@ -9407,7 +9407,7 @@
           "id": 24965,
           "sku": "PBSA-60-8",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "siyah",
@@ -9419,7 +9419,7 @@
           "id": 24964,
           "sku": "PBSA-60-9",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "siyah",
@@ -9431,7 +9431,7 @@
           "id": 24963,
           "sku": "PBSA-60-10",
           "price": 16795,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-120-cm-105w",
             "lineer-kasa-rengi": "siyah",
@@ -9443,7 +9443,7 @@
           "id": 24962,
           "sku": "PBSA-60-18",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9455,7 +9455,7 @@
           "id": 24961,
           "sku": "PBSA-60-11",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9467,7 +9467,7 @@
           "id": 24960,
           "sku": "PBSA-60-17",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9479,7 +9479,7 @@
           "id": 24959,
           "sku": "PBSA-60-16",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "beyaz",
@@ -9491,7 +9491,7 @@
           "id": 24958,
           "sku": "PBSA-60-15",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "beyaz",
@@ -9503,7 +9503,7 @@
           "id": 24957,
           "sku": "PBSA-60-14",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "beyaz",
@@ -9515,7 +9515,7 @@
           "id": 24956,
           "sku": "PBSA-60-13",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "siyah",
@@ -9527,7 +9527,7 @@
           "id": 24955,
           "sku": "PBSA-60-12",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "siyah",
@@ -9539,7 +9539,7 @@
           "id": 24954,
           "sku": "PBSA-60-20",
           "price": 13100,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-100-cm-85w",
             "lineer-kasa-rengi": "siyah",
@@ -9551,7 +9551,7 @@
           "id": 24953,
           "sku": "PBSA-60-21",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9563,7 +9563,7 @@
           "id": 24952,
           "sku": "PBSA-60-22",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9575,7 +9575,7 @@
           "id": 24951,
           "sku": "PBSA-60-23",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9587,7 +9587,7 @@
           "id": 24950,
           "sku": "PBSA-60-24",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "beyaz",
@@ -9599,7 +9599,7 @@
           "id": 24949,
           "sku": "PBSA-60-19",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "beyaz",
@@ -9611,7 +9611,7 @@
           "id": 24948,
           "sku": "PBSA-60-25",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "beyaz",
@@ -9623,7 +9623,7 @@
           "id": 24947,
           "sku": "PBSA-60-26",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "siyah",
@@ -9635,7 +9635,7 @@
           "id": 24946,
           "sku": "PBSA-60-27",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "siyah",
@@ -9647,7 +9647,7 @@
           "id": 24945,
           "sku": "PBSA-60-35",
           "price": 10210,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-80-cm-70w",
             "lineer-kasa-rengi": "siyah",
@@ -9659,7 +9659,7 @@
           "id": 24944,
           "sku": "PBSA-60-34",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9671,7 +9671,7 @@
           "id": 24943,
           "sku": "PBSA-60-33",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9683,7 +9683,7 @@
           "id": 24942,
           "sku": "PBSA-60-32",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9695,7 +9695,7 @@
           "id": 24941,
           "sku": "PBSA-60-31",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "beyaz",
@@ -9707,7 +9707,7 @@
           "id": 24940,
           "sku": "PBSA-60-30",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "beyaz",
@@ -9719,7 +9719,7 @@
           "id": 24939,
           "sku": "PBSA-60-29",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "beyaz",
@@ -9731,7 +9731,7 @@
           "id": 24938,
           "sku": "PBSA-60-28",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "siyah",
@@ -9743,7 +9743,7 @@
           "id": 24937,
           "sku": "PBSA-60-36",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "siyah",
@@ -9755,7 +9755,7 @@
           "id": 24936,
           "sku": "PBSA-60-37",
           "price": 7820,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-60-cm-55w",
             "lineer-kasa-rengi": "siyah",
@@ -9767,7 +9767,7 @@
           "id": 24935,
           "sku": "PBSA-60-38",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9779,7 +9779,7 @@
           "id": 24934,
           "sku": "PBSA-60-39",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9791,7 +9791,7 @@
           "id": 24933,
           "sku": "PBSA-60-40",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "antrasit-gri",
@@ -9803,7 +9803,7 @@
           "id": 24932,
           "sku": "PBSA-60-41",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "beyaz",
@@ -9815,7 +9815,7 @@
           "id": 24931,
           "sku": "PBSA-60-42",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "beyaz",
@@ -9827,7 +9827,7 @@
           "id": 24930,
           "sku": "PBSA-60-43",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "beyaz",
@@ -9839,7 +9839,7 @@
           "id": 24929,
           "sku": "PBSA-60-44",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "siyah",
@@ -9851,7 +9851,7 @@
           "id": 24928,
           "sku": "PBSA-60-46",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "siyah",
@@ -9863,7 +9863,7 @@
           "id": 24927,
           "sku": "PBSA-60-45",
           "price": 4650,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "lineer-urun-boyutu": "cap-40-cm-36w",
             "lineer-kasa-rengi": "siyah",
@@ -10822,7 +10822,7 @@
       "slug": "pablo-aura-kare-modern-siva-ustu-plafonyer-led-avize-3-renk-dimmer-kumanda-secenekli",
       "name": "Pablo Aura Kare Modern Sıva Üstü Plafonyer Led Avize (3 Renk Dimmer Kumanda Seçenekli)",
       "sku": "PBSA-55",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -10913,7 +10913,7 @@
           "id": 22459,
           "sku": "PBSA-55-43",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10925,7 +10925,7 @@
           "id": 22458,
           "sku": "PBSA-55-42",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10937,7 +10937,7 @@
           "id": 22457,
           "sku": "PBSA-55-41",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10949,7 +10949,7 @@
           "id": 22456,
           "sku": "PBSA-55-40",
           "price": 9430,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10961,7 +10961,7 @@
           "id": 22455,
           "sku": "PBSA-55-39",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10973,7 +10973,7 @@
           "id": 22454,
           "sku": "PBSA-55-38",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10985,7 +10985,7 @@
           "id": 22453,
           "sku": "PBSA-55-37",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -10997,7 +10997,7 @@
           "id": 22452,
           "sku": "PBSA-55-36",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11009,7 +11009,7 @@
           "id": 22451,
           "sku": "PBSA-55-35",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11021,7 +11021,7 @@
           "id": 22450,
           "sku": "PBSA-55-34",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11033,7 +11033,7 @@
           "id": 22449,
           "sku": "PBSA-55-33",
           "price": 9430,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11045,7 +11045,7 @@
           "id": 22448,
           "sku": "PBSA-55-32",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11057,7 +11057,7 @@
           "id": 22447,
           "sku": "PBSA-55-31",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11069,7 +11069,7 @@
           "id": 22446,
           "sku": "PBSA-55-30",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11081,7 +11081,7 @@
           "id": 22445,
           "sku": "PBSA-55-29",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11093,7 +11093,7 @@
           "id": 22444,
           "sku": "PBSA-55-28",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11105,7 +11105,7 @@
           "id": 22443,
           "sku": "PBSA-55-27",
           "price": 11230,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11117,7 +11117,7 @@
           "id": 22442,
           "sku": "PBSA-55-26",
           "price": 9430,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11129,7 +11129,7 @@
           "id": 22441,
           "sku": "PBSA-55-25",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11141,7 +11141,7 @@
           "id": 22440,
           "sku": "PBSA-55-24",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11153,7 +11153,7 @@
           "id": 22439,
           "sku": "PBSA-55-23",
           "price": 8180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -11165,7 +11165,7 @@
           "id": 22438,
           "sku": "PBSA-55-22",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11177,7 +11177,7 @@
           "id": 22437,
           "sku": "PBSA-55-21",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11189,7 +11189,7 @@
           "id": 22436,
           "sku": "PBSA-55-20",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11201,7 +11201,7 @@
           "id": 22435,
           "sku": "PBSA-55-19",
           "price": 7180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11213,7 +11213,7 @@
           "id": 22434,
           "sku": "PBSA-55-18",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11225,7 +11225,7 @@
           "id": 22433,
           "sku": "PBSA-55-17",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11237,7 +11237,7 @@
           "id": 22432,
           "sku": "PBSA-55-16",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -11249,7 +11249,7 @@
           "id": 22431,
           "sku": "PBSA-55-15",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11261,7 +11261,7 @@
           "id": 22430,
           "sku": "PBSA-55-14",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11273,7 +11273,7 @@
           "id": 22429,
           "sku": "PBSA-55-13",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11285,7 +11285,7 @@
           "id": 22428,
           "sku": "PBSA-55-12",
           "price": 7180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11297,7 +11297,7 @@
           "id": 22427,
           "sku": "PBSA-55-11",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11309,7 +11309,7 @@
           "id": 22426,
           "sku": "PBSA-55-10",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11321,7 +11321,7 @@
           "id": 22425,
           "sku": "PBSA-55-9",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -11333,7 +11333,7 @@
           "id": 22424,
           "sku": "PBSA-55-8",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11345,7 +11345,7 @@
           "id": 22423,
           "sku": "PBSA-55-7",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11357,7 +11357,7 @@
           "id": 22422,
           "sku": "PBSA-55-6",
           "price": 8680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11369,7 +11369,7 @@
           "id": 22421,
           "sku": "PBSA-55-5",
           "price": 7180,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11381,7 +11381,7 @@
           "id": 22420,
           "sku": "PBSA-55-4",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11393,7 +11393,7 @@
           "id": 22419,
           "sku": "PBSA-55-3",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11405,7 +11405,7 @@
           "id": 22418,
           "sku": "PBSA-55-2",
           "price": 6280,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -11861,7 +11861,7 @@
       "slug": "pablo-dikdortgen-gribeyaz-plafonyer-led-avize",
       "name": "Pablo Dikdörtgen Gri&Beyaz Plafonyer Led Avize",
       "sku": "PBSA-30",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -11951,7 +11951,7 @@
           "id": 23876,
           "sku": "PBSA-30-7",
           "price": 13030,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -11963,7 +11963,7 @@
           "id": 23875,
           "sku": "PBSA-30-6",
           "price": 13030,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -11975,7 +11975,7 @@
           "id": 23874,
           "sku": "PBSA-30-5",
           "price": 13030,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -11987,7 +11987,7 @@
           "id": 21317,
           "sku": "PBSA-30-4",
           "price": 11030,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -11999,7 +11999,7 @@
           "id": 4533,
           "sku": "PBSA-30-3",
           "price": 9530,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -12011,7 +12011,7 @@
           "id": 4532,
           "sku": "PBSA-30-2",
           "price": 9530,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -12023,7 +12023,7 @@
           "id": 4531,
           "sku": "PBSA-30-1",
           "price": 9530,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -12733,7 +12733,7 @@
       "slug": "pablo-kare-2-plafonyer-led-avize",
       "name": "Pablo Kare 2 Plafonyer Led Avize",
       "sku": "PBSA-15",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -12825,7 +12825,7 @@
           "id": 23920,
           "sku": "PBSA-15-56",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -12837,7 +12837,7 @@
           "id": 23919,
           "sku": "PBSA-15-55",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -12849,7 +12849,7 @@
           "id": 23918,
           "sku": "PBSA-15-54",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -12861,7 +12861,7 @@
           "id": 23917,
           "sku": "PBSA-15-53",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -12873,7 +12873,7 @@
           "id": 23916,
           "sku": "PBSA-15-52",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -12885,7 +12885,7 @@
           "id": 23915,
           "sku": "PBSA-15-51",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -12897,7 +12897,7 @@
           "id": 23914,
           "sku": "PBSA-15-50",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -12909,7 +12909,7 @@
           "id": 23913,
           "sku": "PBSA-15-49",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -12921,7 +12921,7 @@
           "id": 23912,
           "sku": "PBSA-15-48",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -12933,7 +12933,7 @@
           "id": 23911,
           "sku": "PBSA-15-47",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -12945,7 +12945,7 @@
           "id": 23910,
           "sku": "PBSA-15-46",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -12957,7 +12957,7 @@
           "id": 23909,
           "sku": "PBSA-15-45",
           "price": 10810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -12969,7 +12969,7 @@
           "id": 23908,
           "sku": "PBSA-15-44",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -12981,7 +12981,7 @@
           "id": 23907,
           "sku": "PBSA-15-43",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -12993,7 +12993,7 @@
           "id": 23906,
           "sku": "PBSA-15-42",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -13005,7 +13005,7 @@
           "id": 23905,
           "sku": "PBSA-15-41",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13017,7 +13017,7 @@
           "id": 23904,
           "sku": "PBSA-15-40",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13029,7 +13029,7 @@
           "id": 23903,
           "sku": "PBSA-15-39",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13041,7 +13041,7 @@
           "id": 23902,
           "sku": "PBSA-15-38",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13053,7 +13053,7 @@
           "id": 23901,
           "sku": "PBSA-15-37",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13065,7 +13065,7 @@
           "id": 23900,
           "sku": "PBSA-15-36",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13077,7 +13077,7 @@
           "id": 23899,
           "sku": "PBSA-15-35",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13089,7 +13089,7 @@
           "id": 23898,
           "sku": "PBSA-15-34",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13101,7 +13101,7 @@
           "id": 23897,
           "sku": "PBSA-15-57",
           "price": 7890,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13113,7 +13113,7 @@
           "id": 21334,
           "sku": "PBSA-15-26",
           "price": 9110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -13125,7 +13125,7 @@
           "id": 21333,
           "sku": "PBSA-15-27",
           "price": 9110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13137,7 +13137,7 @@
           "id": 21332,
           "sku": "PBSA-15-28",
           "price": 9110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -13149,7 +13149,7 @@
           "id": 21331,
           "sku": "PBSA-15-29",
           "price": 9110,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -13161,7 +13161,7 @@
           "id": 21330,
           "sku": "PBSA-15-30",
           "price": 6490,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -13173,7 +13173,7 @@
           "id": 21329,
           "sku": "PBSA-15-31",
           "price": 6490,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13185,7 +13185,7 @@
           "id": 21328,
           "sku": "PBSA-15-32",
           "price": 6490,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13197,7 +13197,7 @@
           "id": 21327,
           "sku": "PBSA-15-33",
           "price": 6490,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13209,7 +13209,7 @@
           "id": 19553,
           "sku": "PBSA-15-25",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13221,7 +13221,7 @@
           "id": 19552,
           "sku": "PBSA-15-24",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13233,7 +13233,7 @@
           "id": 19551,
           "sku": "PBSA-15-23",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13245,7 +13245,7 @@
           "id": 19550,
           "sku": "PBSA-15-22",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13257,7 +13257,7 @@
           "id": 19549,
           "sku": "PBSA-15-21",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13269,7 +13269,7 @@
           "id": 19548,
           "sku": "PBSA-15-20",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -13281,7 +13281,7 @@
           "id": 19547,
           "sku": "PBSA-15-19",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13293,7 +13293,7 @@
           "id": 19546,
           "sku": "PBSA-15-18",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13305,7 +13305,7 @@
           "id": 19545,
           "sku": "PBSA-15-17",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "antrasit-gri-renk",
@@ -13317,7 +13317,7 @@
           "id": 19544,
           "sku": "PBSA-15-16",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -13329,7 +13329,7 @@
           "id": 19543,
           "sku": "PBSA-15-15",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -13341,7 +13341,7 @@
           "id": 19542,
           "sku": "PBSA-15-14",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "beyaz-renk",
@@ -13353,7 +13353,7 @@
           "id": 18248,
           "sku": "PBSA-15-7",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -13365,7 +13365,7 @@
           "id": 18247,
           "sku": "PBSA-15-6",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -13377,7 +13377,7 @@
           "id": 18246,
           "sku": "PBSA-15-5",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "gold-renk",
@@ -13389,7 +13389,7 @@
           "id": 18245,
           "sku": "PBSA-15-4",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13401,7 +13401,7 @@
           "id": 18244,
           "sku": "PBSA-15-3",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13413,7 +13413,7 @@
           "id": 18243,
           "sku": "PBSA-15-2",
           "price": 5590,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "40x40cm-75w",
             "avize-rengi": "siyah-renk",
@@ -13425,7 +13425,7 @@
           "id": 18242,
           "sku": "PBSA-15-13",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -13437,7 +13437,7 @@
           "id": 18241,
           "sku": "PBSA-15-12",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -13449,7 +13449,7 @@
           "id": 18240,
           "sku": "PBSA-15-11",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "gold-renk",
@@ -13461,7 +13461,7 @@
           "id": 18239,
           "sku": "PBSA-15-10",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -13473,7 +13473,7 @@
           "id": 18238,
           "sku": "PBSA-15-9",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -13485,7 +13485,7 @@
           "id": 18237,
           "sku": "PBSA-15-8",
           "price": 7860,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "60x60cm-105w",
             "avize-rengi": "siyah-renk",
@@ -14702,7 +14702,7 @@
       "slug": "pablo-renx-dikdortgen-plafonyer-led-avize",
       "name": "Pablo RenX Dikdörtgen Plafonyer Led Avize",
       "sku": "PBSA-35",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -14791,7 +14791,7 @@
           "id": 23807,
           "sku": "PBSA-35-29",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -14803,7 +14803,7 @@
           "id": 23806,
           "sku": "PBSA-35-28",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -14815,7 +14815,7 @@
           "id": 23805,
           "sku": "PBSA-35-27",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -14827,7 +14827,7 @@
           "id": 23804,
           "sku": "PBSA-35-26",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -14839,7 +14839,7 @@
           "id": 23803,
           "sku": "PBSA-35-25",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -14851,7 +14851,7 @@
           "id": 23802,
           "sku": "PBSA-35-24",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -14863,7 +14863,7 @@
           "id": 23801,
           "sku": "PBSA-35-23",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -14875,7 +14875,7 @@
           "id": 23800,
           "sku": "PBSA-35-22",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -14887,7 +14887,7 @@
           "id": 23799,
           "sku": "PBSA-35-21",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -14899,7 +14899,7 @@
           "id": 23798,
           "sku": "PBSA-35-20",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -14911,7 +14911,7 @@
           "id": 23797,
           "sku": "PBSA-35-19",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -14923,7 +14923,7 @@
           "id": 23796,
           "sku": "PBSA-35-18",
           "price": 12770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -14935,7 +14935,7 @@
           "id": 21371,
           "sku": "PBSA-35-17",
           "price": 10770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -14947,7 +14947,7 @@
           "id": 21370,
           "sku": "PBSA-35-16",
           "price": 10770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -14959,7 +14959,7 @@
           "id": 21369,
           "sku": "PBSA-35-15",
           "price": 10770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -14971,7 +14971,7 @@
           "id": 21368,
           "sku": "PBSA-35-14",
           "price": 10770,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -14983,7 +14983,7 @@
           "id": 19600,
           "sku": "PBSA-35-13",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -14995,7 +14995,7 @@
           "id": 19599,
           "sku": "PBSA-35-12",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -15007,7 +15007,7 @@
           "id": 19598,
           "sku": "PBSA-35-11",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "gold-renk",
@@ -15019,7 +15019,7 @@
           "id": 19581,
           "sku": "PBSA-35-9",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -15031,7 +15031,7 @@
           "id": 19580,
           "sku": "PBSA-35-8",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -15043,7 +15043,7 @@
           "id": 19579,
           "sku": "PBSA-35-7",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "antrasit-gri-renk",
@@ -15055,7 +15055,7 @@
           "id": 19578,
           "sku": "PBSA-35-6",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -15067,7 +15067,7 @@
           "id": 19577,
           "sku": "PBSA-35-5",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -15079,7 +15079,7 @@
           "id": 19576,
           "sku": "PBSA-35-4",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "beyaz-renk",
@@ -15091,7 +15091,7 @@
           "id": 4572,
           "sku": "PBSA-35-3",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -15103,7 +15103,7 @@
           "id": 4571,
           "sku": "PBSA-35-2",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -15115,7 +15115,7 @@
           "id": 4570,
           "sku": "PBSA-35-10",
           "price": 9270,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "90x60cm-115w",
             "avize-rengi": "siyah-renk",
@@ -16665,7 +16665,7 @@
       "slug": "pablo-cember-plafonyer-led-avize",
       "name": "Pablo Çember Plafonyer Led Avize",
       "sku": "PBSA-11",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -16761,7 +16761,7 @@
           "id": 23742,
           "sku": "PBSA-11-57",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -16773,7 +16773,7 @@
           "id": 23741,
           "sku": "PBSA-11-56",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -16785,7 +16785,7 @@
           "id": 23740,
           "sku": "PBSA-11-55",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -16797,7 +16797,7 @@
           "id": 23739,
           "sku": "PBSA-11-54",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -16809,7 +16809,7 @@
           "id": 23738,
           "sku": "PBSA-11-53",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -16821,7 +16821,7 @@
           "id": 23737,
           "sku": "PBSA-11-52",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -16833,7 +16833,7 @@
           "id": 23736,
           "sku": "PBSA-11-51",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -16845,7 +16845,7 @@
           "id": 23735,
           "sku": "PBSA-11-50",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -16857,7 +16857,7 @@
           "id": 23734,
           "sku": "PBSA-11-49",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -16869,7 +16869,7 @@
           "id": 23733,
           "sku": "PBSA-11-48",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -16881,7 +16881,7 @@
           "id": 23732,
           "sku": "PBSA-11-47",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -16893,7 +16893,7 @@
           "id": 23731,
           "sku": "PBSA-11-46",
           "price": 8675,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -16905,7 +16905,7 @@
           "id": 23730,
           "sku": "PBSA-11-45",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -16917,7 +16917,7 @@
           "id": 23729,
           "sku": "PBSA-11-44",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -16929,7 +16929,7 @@
           "id": 23728,
           "sku": "PBSA-11-43",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -16941,7 +16941,7 @@
           "id": 23727,
           "sku": "PBSA-11-42",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -16953,7 +16953,7 @@
           "id": 23726,
           "sku": "PBSA-11-41",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -16965,7 +16965,7 @@
           "id": 23725,
           "sku": "PBSA-11-40",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -16977,7 +16977,7 @@
           "id": 23724,
           "sku": "PBSA-11-39",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -16989,7 +16989,7 @@
           "id": 23723,
           "sku": "PBSA-11-38",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -17001,7 +17001,7 @@
           "id": 23722,
           "sku": "PBSA-11-37",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -17013,7 +17013,7 @@
           "id": 23721,
           "sku": "PBSA-11-36",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17025,7 +17025,7 @@
           "id": 23720,
           "sku": "PBSA-11-35",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17037,7 +17037,7 @@
           "id": 23719,
           "sku": "PBSA-11-34",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17049,7 +17049,7 @@
           "id": 21270,
           "sku": "PBSA-11-33",
           "price": 6975,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -17061,7 +17061,7 @@
           "id": 21269,
           "sku": "PBSA-11-32",
           "price": 6975,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17073,7 +17073,7 @@
           "id": 21268,
           "sku": "PBSA-11-31",
           "price": 6975,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -17085,7 +17085,7 @@
           "id": 21267,
           "sku": "PBSA-11-30",
           "price": 6975,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -17097,7 +17097,7 @@
           "id": 21266,
           "sku": "PBSA-11-29",
           "price": 4830,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -17109,7 +17109,7 @@
           "id": 21265,
           "sku": "PBSA-11-28",
           "price": 4830,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17121,7 +17121,7 @@
           "id": 21264,
           "sku": "PBSA-11-27",
           "price": 4830,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -17133,7 +17133,7 @@
           "id": 21263,
           "sku": "PBSA-11-26",
           "price": 4830,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17145,7 +17145,7 @@
           "id": 19633,
           "sku": "PBSA-11-25",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17157,7 +17157,7 @@
           "id": 19632,
           "sku": "PBSA-11-24",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17169,7 +17169,7 @@
           "id": 19631,
           "sku": "PBSA-11-23",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17181,7 +17181,7 @@
           "id": 19630,
           "sku": "PBSA-11-22",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -17193,7 +17193,7 @@
           "id": 19629,
           "sku": "PBSA-11-21",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -17205,7 +17205,7 @@
           "id": 19628,
           "sku": "PBSA-11-20",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "beyaz-renk",
@@ -17217,7 +17217,7 @@
           "id": 19627,
           "sku": "PBSA-11-19",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17229,7 +17229,7 @@
           "id": 19626,
           "sku": "PBSA-11-18",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17241,7 +17241,7 @@
           "id": 19625,
           "sku": "PBSA-11-17",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "antrasit-gri-renk",
@@ -17253,7 +17253,7 @@
           "id": 19624,
           "sku": "PBSA-11-16",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -17265,7 +17265,7 @@
           "id": 19623,
           "sku": "PBSA-11-15",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -17277,7 +17277,7 @@
           "id": 19622,
           "sku": "PBSA-11-14",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "beyaz-renk",
@@ -17289,7 +17289,7 @@
           "id": 18213,
           "sku": "PBSA-11-13",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -17301,7 +17301,7 @@
           "id": 18212,
           "sku": "PBSA-11-12",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -17313,7 +17313,7 @@
           "id": 18211,
           "sku": "PBSA-11-11",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "gold-renk",
@@ -17325,7 +17325,7 @@
           "id": 18210,
           "sku": "PBSA-11-10",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -17337,7 +17337,7 @@
           "id": 18209,
           "sku": "PBSA-11-9",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -17349,7 +17349,7 @@
           "id": 18208,
           "sku": "PBSA-11-8",
           "price": 5725,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -17361,7 +17361,7 @@
           "id": 18207,
           "sku": "PBSA-11-7",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -17373,7 +17373,7 @@
           "id": 18206,
           "sku": "PBSA-11-6",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -17385,7 +17385,7 @@
           "id": 18205,
           "sku": "PBSA-11-5",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "gold-renk",
@@ -17397,7 +17397,7 @@
           "id": 18204,
           "sku": "PBSA-11-4",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17409,7 +17409,7 @@
           "id": 18203,
           "sku": "PBSA-11-3",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17421,7 +17421,7 @@
           "id": 18202,
           "sku": "PBSA-11-2",
           "price": 3930,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -17946,7 +17946,7 @@
       "slug": "pablo-cember-gribeyaz-plafonyer-led-avize",
       "name": "Pablo Çember Gri&Beyaz Plafonyer Led Avize",
       "sku": "PBSA-28",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -18035,7 +18035,7 @@
           "id": 23962,
           "sku": "PBSA-28-15",
           "price": 9705,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18047,7 +18047,7 @@
           "id": 23961,
           "sku": "PBSA-28-14",
           "price": 9705,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18059,7 +18059,7 @@
           "id": 23960,
           "sku": "PBSA-28-13",
           "price": 9705,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18071,7 +18071,7 @@
           "id": 23959,
           "sku": "PBSA-28-12",
           "price": 7010,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -18083,7 +18083,7 @@
           "id": 23958,
           "sku": "PBSA-28-11",
           "price": 7010,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -18095,7 +18095,7 @@
           "id": 23957,
           "sku": "PBSA-28-10",
           "price": 7010,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -18107,7 +18107,7 @@
           "id": 21390,
           "sku": "PBSA-28-9",
           "price": 8005,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18119,7 +18119,7 @@
           "id": 21389,
           "sku": "PBSA-28-8",
           "price": 5710,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -18131,7 +18131,7 @@
           "id": 18182,
           "sku": "PBSA-28-7",
           "price": 6755,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18143,7 +18143,7 @@
           "id": 18181,
           "sku": "PBSA-28-6",
           "price": 6755,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18155,7 +18155,7 @@
           "id": 18180,
           "sku": "PBSA-28-5",
           "price": 6755,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap60cm-75w",
             "avize-rengi": "siyah-renk",
@@ -18167,7 +18167,7 @@
           "id": 18179,
           "sku": "PBSA-28-4",
           "price": 4810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -18179,7 +18179,7 @@
           "id": 18178,
           "sku": "PBSA-28-3",
           "price": 4810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -18191,7 +18191,7 @@
           "id": 18177,
           "sku": "PBSA-28-2",
           "price": 4810,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "cap-40cm-55w",
             "avize-rengi": "siyah-renk",
@@ -20419,7 +20419,7 @@
       "slug": "pablo-bar-model-modern-plafonyer-led-avize",
       "name": "Pablo Bar Modern Plafonyer Led Avize",
       "sku": "PBSA-36",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -20509,7 +20509,7 @@
           "id": 22339,
           "sku": "PBSA-36-43",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20521,7 +20521,7 @@
           "id": 22338,
           "sku": "PBSA-36-42",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20533,7 +20533,7 @@
           "id": 22337,
           "sku": "PBSA-36-41",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20545,7 +20545,7 @@
           "id": 22336,
           "sku": "PBSA-36-40",
           "price": 5680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20557,7 +20557,7 @@
           "id": 22335,
           "sku": "PBSA-36-39",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20569,7 +20569,7 @@
           "id": 22334,
           "sku": "PBSA-36-38",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20581,7 +20581,7 @@
           "id": 22333,
           "sku": "PBSA-36-37",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "gold-renk",
@@ -20593,7 +20593,7 @@
           "id": 22332,
           "sku": "PBSA-36-36",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20605,7 +20605,7 @@
           "id": 22331,
           "sku": "PBSA-36-35",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20617,7 +20617,7 @@
           "id": 22330,
           "sku": "PBSA-36-34",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20629,7 +20629,7 @@
           "id": 22329,
           "sku": "PBSA-36-33",
           "price": 5680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20641,7 +20641,7 @@
           "id": 22328,
           "sku": "PBSA-36-32",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20653,7 +20653,7 @@
           "id": 22327,
           "sku": "PBSA-36-31",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20665,7 +20665,7 @@
           "id": 22326,
           "sku": "PBSA-36-30",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20677,7 +20677,7 @@
           "id": 22325,
           "sku": "PBSA-36-29",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20689,7 +20689,7 @@
           "id": 22324,
           "sku": "PBSA-36-28",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20701,7 +20701,7 @@
           "id": 22323,
           "sku": "PBSA-36-27",
           "price": 9115,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20713,7 +20713,7 @@
           "id": 22322,
           "sku": "PBSA-36-26",
           "price": 5680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20725,7 +20725,7 @@
           "id": 22321,
           "sku": "PBSA-36-25",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20737,7 +20737,7 @@
           "id": 22320,
           "sku": "PBSA-36-24",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20749,7 +20749,7 @@
           "id": 22319,
           "sku": "PBSA-36-23",
           "price": 4680,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x100cm-75w",
             "avize-rengi": "siyah-renk",
@@ -20761,7 +20761,7 @@
           "id": 22318,
           "sku": "PBSA-36-22",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20773,7 +20773,7 @@
           "id": 22317,
           "sku": "PBSA-36-21",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20785,7 +20785,7 @@
           "id": 22316,
           "sku": "PBSA-36-20",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20797,7 +20797,7 @@
           "id": 22315,
           "sku": "PBSA-36-19",
           "price": 4855,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20809,7 +20809,7 @@
           "id": 22314,
           "sku": "PBSA-36-18",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20821,7 +20821,7 @@
           "id": 22313,
           "sku": "PBSA-36-17",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20833,7 +20833,7 @@
           "id": 22312,
           "sku": "PBSA-36-16",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "gold-renk",
@@ -20845,7 +20845,7 @@
           "id": 22311,
           "sku": "PBSA-36-15",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20857,7 +20857,7 @@
           "id": 22310,
           "sku": "PBSA-36-14",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20869,7 +20869,7 @@
           "id": 22309,
           "sku": "PBSA-36-13",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20881,7 +20881,7 @@
           "id": 22308,
           "sku": "PBSA-36-12",
           "price": 4855,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20893,7 +20893,7 @@
           "id": 22307,
           "sku": "PBSA-36-11",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20905,7 +20905,7 @@
           "id": 22306,
           "sku": "PBSA-36-10",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20917,7 +20917,7 @@
           "id": 22305,
           "sku": "PBSA-36-9",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "antrasit-gri-renk",
@@ -20929,7 +20929,7 @@
           "id": 22304,
           "sku": "PBSA-36-8",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -20941,7 +20941,7 @@
           "id": 22303,
           "sku": "PBSA-36-7",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -20953,7 +20953,7 @@
           "id": 22302,
           "sku": "PBSA-36-6",
           "price": 8064,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -20965,7 +20965,7 @@
           "id": 22301,
           "sku": "PBSA-36-5",
           "price": 4855,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -20977,7 +20977,7 @@
           "id": 22300,
           "sku": "PBSA-36-4",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -20989,7 +20989,7 @@
           "id": 22299,
           "sku": "PBSA-36-3",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -21001,7 +21001,7 @@
           "id": 22298,
           "sku": "PBSA-36-2",
           "price": 3955,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "urun-boyutu": "15x80cm-60w",
             "avize-rengi": "siyah-renk",
@@ -21471,7 +21471,7 @@
       "slug": "dikdortgen-plafonyer-led-avize",
       "name": "Dikdörtgen Plafonyer Led Avize",
       "sku": "PBSA-04",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -21548,7 +21548,7 @@
           "id": 23867,
           "sku": "PBSA-04-06",
           "price": 12790,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "6500k-isletme-premium-seri"
           },
@@ -21558,7 +21558,7 @@
           "id": 23866,
           "sku": "PBSA-04-05",
           "price": 12790,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "4000k-isletme-premium-seri"
           },
@@ -21568,7 +21568,7 @@
           "id": 23865,
           "sku": "PBSA-04-04",
           "price": 12790,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "3000k-isletme-premium-seri"
           },
@@ -21578,7 +21578,7 @@
           "id": 3795,
           "sku": "PBSA-04-01",
           "price": 10290,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "3000k"
           },
@@ -21588,7 +21588,7 @@
           "id": 3344,
           "sku": "PBSA-04-03",
           "price": 10290,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "6500k"
           },
@@ -21598,7 +21598,7 @@
           "id": 3343,
           "sku": "PBSA-04-02",
           "price": 10290,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "4000k"
           },
@@ -21916,7 +21916,7 @@
       "slug": "sezar-2li-modern-u-model-dekoratif-sarkit-led-avize",
       "name": "Sezar 2’li Modern U Model Dekoratif Sarkıt Led Avize",
       "sku": "PBSA-23",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -21991,7 +21991,7 @@
           "id": 20441,
           "sku": "PBSA-23-13",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "6500k"
@@ -22002,7 +22002,7 @@
           "id": 20440,
           "sku": "PBSA-23-12",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "4000k"
@@ -22013,7 +22013,7 @@
           "id": 20439,
           "sku": "PBSA-23-11",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "3000k"
@@ -22024,7 +22024,7 @@
           "id": 20438,
           "sku": "PBSA-23-10",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "6500k"
@@ -22035,7 +22035,7 @@
           "id": 20437,
           "sku": "PBSA-23-9",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "4000k"
@@ -22046,7 +22046,7 @@
           "id": 20436,
           "sku": "PBSA-23-8",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "3000k"
@@ -22057,7 +22057,7 @@
           "id": 20435,
           "sku": "PBSA-23-7",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "6500k"
@@ -22068,7 +22068,7 @@
           "id": 20434,
           "sku": "PBSA-23-6",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "4000k"
@@ -22079,7 +22079,7 @@
           "id": 20433,
           "sku": "PBSA-23-5",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "3000k"
@@ -22090,7 +22090,7 @@
           "id": 20432,
           "sku": "PBSA-23-4",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "6500k"
@@ -22101,7 +22101,7 @@
           "id": 20431,
           "sku": "PBSA-23-3",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "4000k"
@@ -22112,7 +22112,7 @@
           "id": 20430,
           "sku": "PBSA-23-2",
           "price": 4260,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "3000k"
@@ -22550,7 +22550,7 @@
       "slug": "3lu-cember-sarkit-led-avize",
       "name": "3’lü Çember Sarkıt Led Avize",
       "sku": "PBSA-05",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -22627,7 +22627,7 @@
           "id": 20483,
           "sku": "PBSA-05-13",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "6500k"
@@ -22638,7 +22638,7 @@
           "id": 20482,
           "sku": "PBSA-05-12",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "4000k"
@@ -22649,7 +22649,7 @@
           "id": 20481,
           "sku": "PBSA-05-11",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "3000k"
@@ -22660,7 +22660,7 @@
           "id": 20480,
           "sku": "PBSA-05-10",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "6500k"
@@ -22671,7 +22671,7 @@
           "id": 20479,
           "sku": "PBSA-05-9",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "4000k"
@@ -22682,7 +22682,7 @@
           "id": 20478,
           "sku": "PBSA-05-8",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "3000k"
@@ -22693,7 +22693,7 @@
           "id": 20477,
           "sku": "PBSA-05-7",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "6500k"
@@ -22704,7 +22704,7 @@
           "id": 20476,
           "sku": "PBSA-05-6",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "4000k"
@@ -22715,7 +22715,7 @@
           "id": 20475,
           "sku": "PBSA-05-5",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "3000k"
@@ -22726,7 +22726,7 @@
           "id": 20474,
           "sku": "PBSA-05-4",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "6500k"
@@ -22737,7 +22737,7 @@
           "id": 20473,
           "sku": "PBSA-05-3",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "4000k"
@@ -22748,7 +22748,7 @@
           "id": 20472,
           "sku": "PBSA-05-2",
           "price": 6538,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "3000k"
@@ -23072,7 +23072,7 @@
       "slug": "sezar-6li-cember-sarkit-led-avize",
       "name": "Sezar 6’lı Çember Sarkıt Led Avize",
       "sku": "PBSA-21",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -23131,7 +23131,7 @@
           "id": 3837,
           "sku": "PBSA-21-03",
           "price": 14010,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "6500k"
           },
@@ -23141,7 +23141,7 @@
           "id": 3836,
           "sku": "PBSA-21-02",
           "price": 14010,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "4000k"
           },
@@ -23151,7 +23151,7 @@
           "id": 3835,
           "sku": "PBSA-21-01",
           "price": 14010,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "3000k"
           },
@@ -23586,7 +23586,7 @@
       "slug": "sezar-3lu-cember-sarkit-led-avize-ice-yonlu-isik",
       "name": "Sezar 3’lü Çember Sarkıt Led Avize, İçe Yönlü Işık",
       "sku": "PBSA-52",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -23663,7 +23663,7 @@
           "id": 20324,
           "sku": "PBSA-52-13",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "6500k"
@@ -23674,7 +23674,7 @@
           "id": 20323,
           "sku": "PBSA-52-12",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "4000k"
@@ -23685,7 +23685,7 @@
           "id": 20322,
           "sku": "PBSA-52-11",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "3000k"
@@ -23696,7 +23696,7 @@
           "id": 20321,
           "sku": "PBSA-52-10",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "6500k"
@@ -23707,7 +23707,7 @@
           "id": 20320,
           "sku": "PBSA-52-9",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "4000k"
@@ -23718,7 +23718,7 @@
           "id": 20319,
           "sku": "PBSA-52-8",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "3000k"
@@ -23729,7 +23729,7 @@
           "id": 20318,
           "sku": "PBSA-52-7",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "6500k"
@@ -23740,7 +23740,7 @@
           "id": 20317,
           "sku": "PBSA-52-6",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "4000k"
@@ -23751,7 +23751,7 @@
           "id": 20316,
           "sku": "PBSA-52-5",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "3000k"
@@ -23762,7 +23762,7 @@
           "id": 20315,
           "sku": "PBSA-52-4",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "6500k"
@@ -23773,7 +23773,7 @@
           "id": 20314,
           "sku": "PBSA-52-3",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "4000k"
@@ -23784,7 +23784,7 @@
           "id": 20313,
           "sku": "PBSA-52-2",
           "price": 6130,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "3000k"
@@ -24529,7 +24529,7 @@
       "slug": "sezar-3lu-cember-sarkit-led-avize",
       "name": "Sezar 3’lü Çember Sarkıt Led Avize",
       "sku": "PBSA-49",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -24606,7 +24606,7 @@
           "id": 20288,
           "sku": "PBSA-49-12",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "6500k"
@@ -24617,7 +24617,7 @@
           "id": 20287,
           "sku": "PBSA-49-11",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "4000k"
@@ -24628,7 +24628,7 @@
           "id": 20286,
           "sku": "PBSA-49-10",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "3000k"
@@ -24639,7 +24639,7 @@
           "id": 20285,
           "sku": "PBSA-49-9",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "6500k"
@@ -24650,7 +24650,7 @@
           "id": 20284,
           "sku": "PBSA-49-8",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "4000k"
@@ -24661,7 +24661,7 @@
           "id": 20283,
           "sku": "PBSA-49-7",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "3000k"
@@ -24672,7 +24672,7 @@
           "id": 20282,
           "sku": "PBSA-49-6",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "6500k"
@@ -24683,7 +24683,7 @@
           "id": 20281,
           "sku": "PBSA-49-5",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "4000k"
@@ -24694,7 +24694,7 @@
           "id": 20280,
           "sku": "PBSA-49-4",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "3000k"
@@ -24705,7 +24705,7 @@
           "id": 20279,
           "sku": "PBSA-49-3",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "6500k"
@@ -24716,7 +24716,7 @@
           "id": 20278,
           "sku": "PBSA-49-1",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "4000k"
@@ -24727,7 +24727,7 @@
           "id": 20277,
           "sku": "PBSA-49-2",
           "price": 11215,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "3000k"
@@ -25157,7 +25157,7 @@
       "slug": "2li-cember-sarkit-led-avize",
       "name": "2’li Çember Sarkıt Led Avize",
       "sku": "PBSA-07",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -25232,7 +25232,7 @@
           "id": 20541,
           "sku": "PBSA-07-13",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "6500k"
@@ -25243,7 +25243,7 @@
           "id": 20540,
           "sku": "PBSA-07-12",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "4000k"
@@ -25254,7 +25254,7 @@
           "id": 20539,
           "sku": "PBSA-07-11",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "3000k"
@@ -25265,7 +25265,7 @@
           "id": 20538,
           "sku": "PBSA-07-10",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "6500k"
@@ -25276,7 +25276,7 @@
           "id": 20537,
           "sku": "PBSA-07-9",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "4000k"
@@ -25287,7 +25287,7 @@
           "id": 20536,
           "sku": "PBSA-07-8",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "3000k"
@@ -25298,7 +25298,7 @@
           "id": 20535,
           "sku": "PBSA-07-7",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "6500k"
@@ -25309,7 +25309,7 @@
           "id": 20534,
           "sku": "PBSA-07-6",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "4000k"
@@ -25320,7 +25320,7 @@
           "id": 20533,
           "sku": "PBSA-07-5",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "3000k"
@@ -25331,7 +25331,7 @@
           "id": 20532,
           "sku": "PBSA-07-4",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "6500k"
@@ -25342,7 +25342,7 @@
           "id": 20531,
           "sku": "PBSA-07-3",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "4000k"
@@ -25353,7 +25353,7 @@
           "id": 20530,
           "sku": "PBSA-07-2",
           "price": 4080,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "3000k"
@@ -25779,7 +25779,7 @@
       "slug": "yay-model-modern-sarkit-led-avize",
       "name": "Yay Model Modern Sarkıt Led Avize",
       "sku": "PBSA-02",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         185,
         328,
@@ -25852,7 +25852,7 @@
           "id": 20569,
           "sku": "PBSA-02-4",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "6500k"
@@ -25863,7 +25863,7 @@
           "id": 20568,
           "sku": "PBSA-02-3",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "4000k"
@@ -25874,7 +25874,7 @@
           "id": 20567,
           "sku": "PBSA-02-2",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "siyah-renk",
             "aydinlatma-rengi": "3000k"
@@ -25885,7 +25885,7 @@
           "id": 20566,
           "sku": "PBSA-02-13",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "6500k"
@@ -25896,7 +25896,7 @@
           "id": 20565,
           "sku": "PBSA-02-12",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "4000k"
@@ -25907,7 +25907,7 @@
           "id": 20564,
           "sku": "PBSA-02-11",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "gold-renk",
             "aydinlatma-rengi": "3000k"
@@ -25918,7 +25918,7 @@
           "id": 20563,
           "sku": "PBSA-02-7",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "6500k"
@@ -25929,7 +25929,7 @@
           "id": 20562,
           "sku": "PBSA-02-6",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "4000k"
@@ -25940,7 +25940,7 @@
           "id": 20561,
           "sku": "PBSA-02-5",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "beyaz-renk",
             "aydinlatma-rengi": "3000k"
@@ -25951,7 +25951,7 @@
           "id": 20560,
           "sku": "PBSA-02-10",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "6500k"
@@ -25962,7 +25962,7 @@
           "id": 20559,
           "sku": "PBSA-02-9",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "4000k"
@@ -25973,7 +25973,7 @@
           "id": 20558,
           "sku": "PBSA-02-8",
           "price": 5025,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "avize-rengi": "antrasit-gri-renk",
             "aydinlatma-rengi": "3000k"
@@ -26219,7 +26219,7 @@
       "slug": "led-avizeler-icin-ac-kapat-on-off-kumandasi",
       "name": "LED Avizeler İçin Aç/Kapat (On-Off) Kumandası",
       "sku": "PBSA-54",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         392
       ],
@@ -26536,7 +26536,7 @@
       "slug": "parbek-tekli-retro-sarkit-avize-gemici-eskitme-baslik-salon-restoran-cafe-aydinlatma-lambasi",
       "name": "Parbek Tekli Retro Sarkıt Avize Gemici Eskitme Başlık Salon Restoran Cafe Aydınlatma Lambası",
       "sku": "PBSA-47",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         257,
         366,
@@ -26590,7 +26590,7 @@
           "id": 16907,
           "sku": "PBSA-47-10",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-bakir-ic-sari"
           },
@@ -26600,7 +26600,7 @@
           "id": 16906,
           "sku": "PBSA-47-9",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-mint-yesil-ic-beyaz"
           },
@@ -26610,7 +26610,7 @@
           "id": 16905,
           "sku": "PBSA-47-8",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-turuncu-ic-beyaz"
           },
@@ -26620,7 +26620,7 @@
           "id": 16904,
           "sku": "PBSA-47-7",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-kirmizi-ic-beyaz"
           },
@@ -26630,7 +26630,7 @@
           "id": 16903,
           "sku": "PBSA-47-6",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-sari-ic-beyaz"
           },
@@ -26640,7 +26640,7 @@
           "id": 16902,
           "sku": "PBSA-47-5",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-gri-ic-beyaz"
           },
@@ -26650,7 +26650,7 @@
           "id": 16901,
           "sku": "PBSA-47-4",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-beyaz-ic-sari"
           },
@@ -26660,7 +26660,7 @@
           "id": 16900,
           "sku": "PBSA-47-3",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-beyaz-ic-beyaz"
           },
@@ -26670,7 +26670,7 @@
           "id": 16899,
           "sku": "PBSA-47-2",
           "price": 3359,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-siyah-ic-sari"
           },
@@ -26968,7 +26968,7 @@
       "slug": "parbek-modern-tekli-sarkit-avize-ahsap-mantar-sapka-retro-salon-mutfak-cafe-tekli-aydinlatma-lambasi",
       "name": "Parbek Modern Tekli Sarkıt Avize Ahşap Mantar Şapka Retro Salon Mutfak Cafe Tekli Aydınlatma Lambası",
       "sku": "PBSA-43",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         257,
         366,
@@ -27020,7 +27020,7 @@
           "id": 16754,
           "sku": "PBSA-43-9",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-bakir-ic-sari"
           },
@@ -27030,7 +27030,7 @@
           "id": 16753,
           "sku": "PBSA-43-8",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-mint-yesil-ic-beyaz"
           },
@@ -27040,7 +27040,7 @@
           "id": 16752,
           "sku": "PBSA-43-7",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-kirmizi-ic-beyaz"
           },
@@ -27050,7 +27050,7 @@
           "id": 16751,
           "sku": "PBSA-43-6",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-sari-ic-beyaz"
           },
@@ -27060,7 +27060,7 @@
           "id": 16750,
           "sku": "PBSA-43-5",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-gri-ic-beyaz"
           },
@@ -27070,7 +27070,7 @@
           "id": 16749,
           "sku": "PBSA-43-4",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-beyaz-ic-sari"
           },
@@ -27080,7 +27080,7 @@
           "id": 16748,
           "sku": "PBSA-43-3",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-beyaz-ic-beyaz"
           },
@@ -27090,7 +27090,7 @@
           "id": 16747,
           "sku": "PBSA-43-2",
           "price": 2039,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-siyah-ic-sari"
           },
@@ -27364,7 +27364,7 @@
       "slug": "parbek-modern-tekli-sarkit-avize-ahsap-boncuklu-retro-salon-mutfak-cafe-tekli-aydinlatma-lambasi",
       "name": "Parbek Modern Tekli Sarkıt Avize Ahşap Boncuklu Retro Salon Mutfak Cafe Tekli Aydınlatma Lambası",
       "sku": "PBSA-40",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         257,
         366,
@@ -27406,7 +27406,7 @@
           "id": 16639,
           "sku": "PBSA-40-4",
           "price": 1919,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-kirmizi-ic-beyaz"
           },
@@ -27416,7 +27416,7 @@
           "id": 16635,
           "sku": "PBSA-40-3",
           "price": 1919,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-beyaz-ic-sari"
           },
@@ -27426,7 +27426,7 @@
           "id": 16633,
           "sku": "PBSA-40-2",
           "price": 1919,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "sarkit-avize-rengi": "dis-siyah-ic-sari"
           },
@@ -27681,7 +27681,7 @@
       "slug": "firma-ve-kisiye-ozel-tasarim-rgb-led-masa-lambasi",
       "name": "Firma ve Kişiye Özel Tasarım Rgb Led Masa Lambası",
       "sku": "PBKO-02",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -27778,7 +27778,7 @@
       "slug": "bozkurt-model-rgb-led-masa-lambasi",
       "name": "Bozkurt Model Kumandalı Rgb Led Masa Lambası",
       "sku": "PBH-13",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -27873,7 +27873,7 @@
       "slug": "kedi-cat-model-rgb-led-masa-lambasi",
       "name": "Kedi (Cat) Hayvan Figürlü Kumandalı Rgb Led Masa Lambası",
       "sku": "PBH-10",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -27968,7 +27968,7 @@
       "slug": "turkiye-haritasi-model-rgb-led-masa-lambasi",
       "name": "Türkiye Haritası Kumandalı Rgb Led Masa Lambası",
       "sku": "PBHA-01",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -28062,7 +28062,7 @@
       "slug": "anne-ve-bebek-model-rgb-led-masa-lambasi",
       "name": "Anne ve Bebek Model Kumandalı Rgb Led Masa Lambası",
       "sku": "PBA-03",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -28256,7 +28256,7 @@
       "slug": "boga-model-rgb-led-masa-lambasi",
       "name": "Boğa Model Kumandalı Rgb Led Masa Lambası",
       "sku": "PBH-08",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -28352,7 +28352,7 @@
       "slug": "ataturk-model-rgb-led-masa-lambasi",
       "name": "Atatürk Model Kumandalı Rgb Led Masa Lambası",
       "sku": "PBK-01",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -28451,7 +28451,7 @@
       "slug": "mutlu-aile-model-rgb-led-masa-lambasi",
       "name": "Mutlu Aile Çocuk Odası Kumandalı Rgb Led Masa Lambası",
       "sku": "PBA-01",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         89
       ],
@@ -28615,7 +28615,7 @@
       "slug": "solo-daire-duvar-led-aplik-siyahbeyaz",
       "name": "Solo Daire Duvar Led Aplik Siyah&Beyaz",
       "sku": "PBAP-02",
-      "inStock": true,
+      "inStock": false,
       "categoryIds": [
         159,
         367
@@ -28650,7 +28650,7 @@
           "id": 4140,
           "sku": "PBAP-02-3",
           "price": 2980,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "6500k"
           },
@@ -28660,7 +28660,7 @@
           "id": 4139,
           "sku": "PBAP-02-2",
           "price": 2980,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "4000k"
           },
@@ -28670,7 +28670,7 @@
           "id": 4138,
           "sku": "PBAP-02-1",
           "price": 2980,
-          "inStock": true,
+          "inStock": false,
           "terms": {
             "aydinlatma-rengi": "3000k"
           },

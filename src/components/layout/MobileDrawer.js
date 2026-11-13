@@ -64,15 +64,6 @@ export default function MobileDrawer({ isOpen = false, onClose }) {
                 Anasayfa
               </Link>
             </li>
-            <li>
-              <Link
-                to="/urunlerimiz"
-                onClick={() => onClose?.()}
-                className="block rounded-md px-2 py-1.5 text-sm font-medium text-stone-800 hover:bg-stone-100"
-              >
-                Tüm Ürünler
-              </Link>
-            </li>
             {MAIN_NAV_CATEGORIES.map((category) => (
               <li key={category.slug} className="pt-1">
                 <Link

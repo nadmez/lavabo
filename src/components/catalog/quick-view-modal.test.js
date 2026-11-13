@@ -254,7 +254,7 @@ describe("QuickViewModal component", () => {
     const onClose = vi.fn();
 
     render(
-      <MemoryRouter initialEntries={["/urunlerimiz"]}>
+      <MemoryRouter initialEntries={["/kategori/led-avizeler"]}>
         <QuickViewModal
           isOpen={true}
           product={product}
@@ -579,7 +579,7 @@ describe("ProductCard quick view trigger and integration", () => {
 
     // 1. With custom onQuickView callback outside QueryClientProvider
     const { unmount } = render(
-      <MemoryRouter initialEntries={["/urunlerimiz"]}>
+      <MemoryRouter initialEntries={["/kategori/led-avizeler"]}>
         <ul>
           <ProductCard product={product} onQuickView={onQuickView} />
         </ul>
@@ -604,14 +604,14 @@ describe("ProductCard quick view trigger and integration", () => {
     expect(onQuickView).toHaveBeenCalledTimes(1);
     expect(onQuickView).toHaveBeenCalledWith(product);
     expect(screen.getByTestId("location-probe")).toHaveTextContent(
-      "/urunlerimiz"
+      "/kategori/led-avizeler"
     );
     expect(screen.queryByTestId("quick-view-modal")).not.toBeInTheDocument();
     unmount();
 
     // 2. Without onQuickView prop outside QueryClientProvider -> manages its own QuickViewModal state
     render(
-      <MemoryRouter initialEntries={["/urunlerimiz"]}>
+      <MemoryRouter initialEntries={["/kategori/led-avizeler"]}>
         <ul>
           <ProductCard product={product} />
         </ul>
@@ -625,7 +625,7 @@ describe("ProductCard quick view trigger and integration", () => {
     fireEvent.click(internalTrigger);
 
     expect(screen.getByTestId("location-probe")).toHaveTextContent(
-      "/urunlerimiz"
+      "/kategori/led-avizeler"
     );
     const modal = screen.getByTestId("quick-view-modal");
     expect(modal).toBeInTheDocument();
@@ -638,16 +638,16 @@ describe("ProductCard quick view trigger and integration", () => {
     expect(screen.queryByTestId("quick-view-modal")).not.toBeInTheDocument();
   });
 
-  it("opens QuickViewModal with resolved Turkish attribute/term names from /urunlerimiz, /kategori/:slug, and /urun/:slug similar products inside App, and never renders omitted e-commerce terms", async () => {
+  it("opens QuickViewModal with resolved Turkish attribute/term names from /kategori/led-avizeler, /kategori/:slug, and /urun/:slug similar products inside App, and never renders omitted e-commerce terms", async () => {
     const indexed = indexCatalog(createQuickViewFixtureCatalog());
     const queryClient = createTestQueryClient();
     queryClient.setQueryData(["catalog"], indexed);
 
-    // 1. On /urunlerimiz
+    // 1. On /kategori/led-avizeler
     const { container, unmount: unmountListing } = renderWithProviders(
       <App />,
       {
-        initialEntries: ["/urunlerimiz"],
+        initialEntries: ["/kategori/led-avizeler"],
         queryClient,
         includeLocationProbe: true,
       }

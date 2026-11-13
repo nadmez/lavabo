@@ -66,9 +66,9 @@ export default function ProductCard({ product, catalog = null, onQuickView }) {
         <div className="flex flex-1 flex-col justify-between p-4">
           <div>
             <p className="text-xs text-stone-500">{product.sku}</p>
-            <h2 className="mt-1 text-base font-semibold text-stone-900 group-hover:text-amber-700">
+            <h3 className="mt-1 text-base font-semibold text-stone-900 group-hover:text-amber-700">
               {product.name}
-            </h2>
+            </h3>
           </div>
 
           <p

@@ -258,17 +258,15 @@ describe("Header component", () => {
     expect(logo).toHaveTextContent(/Lavabo/i);
   });
 
-  it("renders desktop-mega-menu nav with 'Tüm Ürünler', all 6 top-level categories, and all 11 child categories", () => {
+  it("renders desktop-mega-menu nav with all 6 top-level categories and all 11 child categories, without Tüm Ürünler", () => {
     renderWithProviders(<Header />);
 
     const nav = screen.getByTestId("desktop-mega-menu");
     expect(nav.tagName).toBe("NAV");
     expect(nav).toHaveAttribute("aria-label", "Ana navigasyon");
-
-    const allProductsLink = within(nav).getByRole("link", {
-      name: /Tüm Ürünler/i,
-    });
-    expect(allProductsLink).toHaveAttribute("href", "/urunlerimiz");
+    expect(
+      within(nav).queryByRole("link", { name: /Tüm Ürünler/i })
+    ).not.toBeInTheDocument();
 
     FLAT_MAIN_CATEGORIES.forEach((category) => {
       const link = within(nav).getByRole("link", { name: category.name });
@@ -276,7 +274,7 @@ describe("Header component", () => {
     });
   });
 
-  it("renders header-search-trigger with aria-label='Ürün ara' that navigates to '/arama' when clicked", () => {
+  it("puts the logo and circular search icon on the first row and keeps menu titles on one line", () => {
     render(
       <MemoryRouter initialEntries={["/"]}>
         <Header />
@@ -287,11 +285,48 @@ describe("Header component", () => {
       </MemoryRouter>
     );
 
+    const header = screen.getByTestId("site-header");
+    expect(header).not.toHaveClass("sticky", "fixed");
+
+    const topRow = screen.getByTestId("header-top-row");
+    const menuRow = screen.getByTestId("header-menu-row");
+    expect(topRow).toContainElement(screen.getByTestId("brand-logo"));
+    expect(topRow).toContainElement(
+      screen.getByTestId("header-search-trigger")
+    );
+    expect(menuRow).toContainElement(screen.getByTestId("desktop-mega-menu"));
+    expect(topRow).toHaveClass("items-center", "pr-5", "h-[120px]");
+
     const searchTrigger = screen.getByTestId("header-search-trigger");
     expect(searchTrigger).toHaveAttribute("aria-label", "Ürün ara");
+    expect(searchTrigger).toHaveClass("rounded-full", "h-[42px]", "w-[42px]");
 
+    const nav = screen.getByTestId("desktop-mega-menu");
+    expect(nav).toHaveClass("flex-nowrap");
+    expect(
+      within(nav).queryByRole("link", { name: /Tüm Ürünler/i })
+    ).not.toBeInTheDocument();
+    MAIN_NAV_CATEGORIES.forEach((category) => {
+      expect(
+        within(nav).getByRole("link", { name: category.name })
+      ).toHaveClass("whitespace-nowrap");
+    });
+
+    const input = screen.getByTestId("header-search-input");
+    expect(input).not.toBeVisible();
     fireEvent.click(searchTrigger);
-    expect(screen.getByTestId("route-search")).toBeInTheDocument();
+    expect(input).toBeVisible();
+    const panel = screen.getByTestId("header-search-panel");
+    expect(panel).toHaveClass("right-full");
+    expect(panel).not.toHaveClass("fixed");
+    expect(
+      input.compareDocumentPosition(searchTrigger) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
+    fireEvent.change(input, { target: { value: "plafonyer" } });
+    expect(input).toHaveValue("plafonyer");
+    expect(screen.queryByTestId("route-search")).not.toBeInTheDocument();
+    expect(screen.getByTestId("route-home")).toBeInTheDocument();
   });
 
   it("renders mobile-menu-open button with aria-expanded='false' initially and 'true' after clicking", () => {
@@ -342,11 +377,9 @@ describe("MobileDrawer component", () => {
 
     const homeLink = within(drawer).getByRole("link", { name: "Anasayfa" });
     expect(homeLink).toHaveAttribute("href", "/");
-
-    const allProductsLink = within(drawer).getByRole("link", {
-      name: "Tüm Ürünler",
-    });
-    expect(allProductsLink).toHaveAttribute("href", "/urunlerimiz");
+    expect(
+      within(drawer).queryByRole("link", { name: "Tüm Ürünler" })
+    ).not.toBeInTheDocument();
 
     MAIN_NAV_CATEGORIES.forEach((cat) => {
       const catLink = within(drawer).getByRole("link", { name: cat.name });
@@ -421,11 +454,9 @@ describe("Footer component", () => {
     );
 
     expect(footer).toHaveTextContent(/Kategoriler/i);
-
-    const productsLink = within(footer).getByRole("link", {
-      name: "Ürünlerimiz",
-    });
-    expect(productsLink).toHaveAttribute("href", "/urunlerimiz");
+    expect(
+      within(footer).queryByRole("link", { name: "Ürünlerimiz" })
+    ).not.toBeInTheDocument();
 
     MAIN_NAV_CATEGORIES.forEach((cat) => {
       const catLink = within(footer).getByRole("link", { name: cat.name });
@@ -481,28 +512,18 @@ describe("Layout and App route table", () => {
     expect(screen.getByTestId("site-footer")).toBeInTheDocument();
   });
 
-  it("renders home route '/' with Header, layout-main, Lavabo Aydınlatma Katalog heading, scss-demo-box, and Footer", () => {
+  it("renders home route '/' with Header, layout-main, and Footer without home-hero", () => {
     renderWithProviders(<App />, { initialEntries: ["/"] });
 
     expect(screen.getByTestId("site-header")).toBeInTheDocument();
     const main = screen.getByTestId("layout-main");
     expect(main).toBeInTheDocument();
-
-    expect(
-      within(main).getByRole("heading", {
-        level: 1,
-        name: /Lavabo Aydınlatma Katalog/i,
-      })
-    ).toBeInTheDocument();
-
-    const scssBox = within(main).getByTestId("scss-demo-box");
-    expect(scssBox).toHaveClass("scss-demo-box");
-    expect(scssBox).toHaveTextContent(/Yerli Üretim LED Aydınlatma Kataloğu/i);
+    expect(within(main).queryByTestId("home-hero")).not.toBeInTheDocument();
 
     expect(screen.getByTestId("site-footer")).toBeInTheDocument();
   });
 
-  it("renders catalogue listing inside Layout on /urunlerimiz and /kategori/:slug", async () => {
+  it("renders catalogue listing inside Layout on /kategori/:slug", async () => {
     const queryClient = createTestQueryClient();
     queryClient.setQueryData(["catalog"], indexCatalog(createFixtureCatalog()));
 
@@ -559,8 +580,8 @@ describe("Layout and App route table", () => {
     expect(whitespaceQuery.textContent).not.toMatch(/undefined|null/i);
   });
 
-  it("renders not-found-page with 'Sayfa Bulunamadı' and 'Anasayfaya Dön' link to '/' on unknown routes", () => {
-    renderWithProviders(<App />, {
+  it("renders not-found-page with 'Sayfa Bulunamadı' and 'Anasayfaya Dön' link to '/' on unknown routes and /urunlerimiz", () => {
+    const { unmount } = renderWithProviders(<App />, {
       initialEntries: ["/olmayan-sayfa-xyz"],
     });
 
@@ -577,5 +598,15 @@ describe("Layout and App route table", () => {
       screen.queryByRole("heading", { name: /Lavabo Aydınlatma Katalog/i })
     ).not.toBeInTheDocument();
     expect(screen.getByTestId("site-footer")).toBeInTheDocument();
+    unmount();
+
+    renderWithProviders(<App />, {
+      initialEntries: ["/urunlerimiz"],
+    });
+
+    expect(screen.getByTestId("not-found-page")).toHaveTextContent(
+      /Sayfa Bulunamadı/i
+    );
+    expect(screen.queryByTestId("debug-product-list")).not.toBeInTheDocument();
   });
 });
