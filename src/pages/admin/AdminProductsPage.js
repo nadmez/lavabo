@@ -1,7 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router";
+import { Copy, Pencil, Plus, Trash2 } from "lucide-react";
 import { adminFetch } from "@/admin/api";
 import { useAdminCatalog } from "@/admin/use-admin-catalog";
+import AdminConfirmDialog from "@/components/admin/AdminConfirmDialog";
+import IconButton from "@/components/admin/IconButton";
+import { StockBadge } from "@/components/admin/AdminChip";
 
 export default function AdminProductsPage() {
   const navigate = useNavigate();
@@ -16,6 +20,7 @@ export default function AdminProductsPage() {
   const [categoryId, setCategoryId] = useState("");
   const [stock, setStock] = useState("");
   const [message, setMessage] = useState("");
+  const [pendingDelete, setPendingDelete] = useState(null);
 
   const products = useMemo(() => {
     const query = search.trim().toLocaleLowerCase("tr");
@@ -55,10 +60,10 @@ export default function AdminProductsPage() {
     }
   }
 
-  async function deleteProduct(product) {
-    if (!window.confirm(`"${product.name}" silinsin mi?`)) return;
+  async function deleteProduct() {
+    if (!pendingDelete) return;
     try {
-      await adminFetch(`/api/admin/products/${product.id}`, {
+      await adminFetch(`/api/admin/products/${pendingDelete.id}`, {
         method: "DELETE",
       });
       await invalidate();
@@ -76,9 +81,10 @@ export default function AdminProductsPage() {
         <h1 className="text-2xl font-bold">Ürünler</h1>
         <Link
           to="/admin/urunler/yeni"
-          className="rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white"
+          className="inline-flex items-center gap-2 rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white"
         >
-          Yeni Ürün Ekle
+          <Plus className="h-4 w-4" />
+          Yeni Ürün
         </Link>
       </div>
       <div className="flex flex-wrap gap-2">
@@ -114,10 +120,17 @@ export default function AdminProductsPage() {
         </select>
       </div>
       <div className="overflow-x-auto rounded-lg border border-stone-200 bg-white">
-        <table className="min-w-full text-left text-sm">
+        <table className="min-w-full table-fixed text-left text-sm">
+          <colgroup>
+            <col className="w-[35%]" />
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
           <thead className="bg-stone-50 text-xs uppercase text-stone-500">
             <tr>
-              <th className="px-3 py-2">Ürün</th>
+              <th className="w-[35%] px-3 py-2">Ürün</th>
               <th className="px-3 py-2">Stok kodu</th>
               <th className="px-3 py-2">Fiyat</th>
               <th className="px-3 py-2">Stok</th>
@@ -131,37 +144,42 @@ export default function AdminProductsPage() {
                 data-testid={`admin-product-row-${product.slug}`}
                 className="border-t border-stone-100"
               >
-                <td className="px-3 py-2 font-medium">{product.name}</td>
-                <td className="px-3 py-2">{product.sku}</td>
-                <td className="px-3 py-2">
+                <td className="px-3 py-2 align-top font-medium break-words whitespace-normal">
+                  {product.name}
+                </td>
+                <td className="px-3 py-2 align-top">{product.sku}</td>
+                <td className="px-3 py-2 align-top">
                   {product.priceMin === product.priceMax
                     ? product.priceMin
                     : `${product.priceMin} – ${product.priceMax}`}
                 </td>
-                <td className="px-3 py-2">
-                  {product.inStock ? "Stokta" : "Stokta yok"}
+                <td className="px-3 py-2 align-top">
+                  <StockBadge inStock={product.inStock === true} />
                 </td>
-                <td className="px-3 py-2 text-right">
-                  <Link
-                    to={`/admin/urunler/${product.id}`}
-                    className="mr-3 underline"
-                  >
-                    Düzenle
-                  </Link>
-                  <button
-                    type="button"
-                    onClick={() => duplicateProduct(product)}
-                    className="mr-3 underline"
-                  >
-                    Çoğalt
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => deleteProduct(product)}
-                    className="text-red-700 underline"
-                  >
-                    Sil
-                  </button>
+                <td className="px-3 py-2 text-right align-top">
+                  <div className="flex justify-end gap-1">
+                    <Link
+                      to={`/admin/urunler/${product.id}`}
+                      aria-label="Düzenle"
+                      title="Düzenle"
+                      className="rounded-md p-2 text-stone-700 hover:bg-stone-100"
+                    >
+                      <Pencil className="h-4 w-4" />
+                    </Link>
+                    <IconButton
+                      label="Çoğalt"
+                      onClick={() => duplicateProduct(product)}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </IconButton>
+                    <IconButton
+                      label="Sil"
+                      danger
+                      onClick={() => setPendingDelete(product)}
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </IconButton>
+                  </div>
                 </td>
               </tr>
             ))}
@@ -169,6 +187,19 @@ export default function AdminProductsPage() {
         </table>
       </div>
       {message ? <p className="text-sm text-red-700">{message}</p> : null}
+
+      <AdminConfirmDialog
+        open={!!pendingDelete}
+        onOpenChange={(open) => {
+          if (!open) setPendingDelete(null);
+        }}
+        title="Ürünü Sil"
+        description={
+          pendingDelete ? `"${pendingDelete.name}" silinsin mi?` : ""
+        }
+        confirmLabel="Sil"
+        onConfirm={deleteProduct}
+      />
     </div>
   );
 }

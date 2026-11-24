@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Download, Sparkles, Trash2, Upload } from "lucide-react";
 import { adminFetch } from "@/admin/api";
 import { useAdminCatalog } from "@/admin/use-admin-catalog";
+import AdminConfirmDialog from "@/components/admin/AdminConfirmDialog";
 
 export default function AdminDashboardPage() {
   const {
@@ -13,9 +14,15 @@ export default function AdminDashboardPage() {
   } = useAdminCatalog();
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [resetOpen, setResetOpen] = useState(false);
 
   const products = catalog?.products || [];
   const inStock = products.filter((product) => product.inStock === true).length;
+  const outStock = products.length - inStock;
+  const inStockPercent = products.length
+    ? Math.round((inStock / products.length) * 100)
+    : 0;
+  const outStockPercent = products.length ? 100 - inStockPercent : 0;
 
   async function run(task) {
     setBusy(true);
@@ -46,10 +53,14 @@ export default function AdminDashboardPage() {
     const file = event.target.files?.[0];
     event.target.value = "";
     if (!file) return;
-    const text = await file.text();
-    const json = JSON.parse(text);
-    await adminFetch("/api/admin/catalog", { method: "PUT", body: json });
-    setMessage("Katalog içe aktarıldı.");
+    try {
+      const text = await file.text();
+      const json = JSON.parse(text);
+      await adminFetch("/api/admin/catalog", { method: "PUT", body: json });
+      setMessage("Katalog içe aktarıldı.");
+    } catch (err) {
+      setMessage(err.message || "İşlem başarısız.");
+    }
   }
 
   if (isPending) return <p>Yükleniyor...</p>;
@@ -64,7 +75,7 @@ export default function AdminDashboardPage() {
   return (
     <div data-testid="admin-dashboard" className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold">Özet</h1>
+        <h1 className="text-2xl font-bold">Dashboard</h1>
         <p className="mt-1 text-sm text-stone-600">
           {catalog.siteSettings?.siteName || "Katalog"} verilerini buradan
           yönetin.
@@ -80,6 +91,27 @@ export default function AdminDashboardPage() {
           <p className="text-xs text-stone-500">
             {inStock} stokta / {products.length - inStock} stokta yok
           </p>
+          <div className="mt-3 flex items-center gap-3">
+            <div
+              data-testid="admin-stock-pie"
+              role="img"
+              aria-label={`Stok durumu: %${inStockPercent} stokta, %${outStockPercent} stokta yok`}
+              className="h-20 w-20 shrink-0 rounded-full"
+              style={{
+                background: `conic-gradient(#047857 0% ${inStockPercent}%, #a8a29e ${inStockPercent}% 100%)`,
+              }}
+            />
+            <ul className="space-y-1 text-xs text-stone-600">
+              <li className="flex items-center gap-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-700" />%
+                {inStockPercent} Stokta ({inStock})
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-stone-400" />%
+                {outStockPercent} Stokta yok ({outStock})
+              </li>
+            </ul>
+          </div>
         </article>
         <article
           data-testid="admin-metric-categories"
@@ -101,27 +133,17 @@ export default function AdminDashboardPage() {
         </article>
       </div>
       <div className="flex flex-wrap gap-3">
-        <Link
-          to="/admin/urunler/yeni"
-          className="rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white"
-        >
-          Yeni Ürün Ekle
-        </Link>
-        <Link
-          to="/admin/kategoriler"
-          className="rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium"
-        >
-          Yeni Kategori Ekle
-        </Link>
         <button
           type="button"
           data-testid="admin-export-json"
           onClick={exportCatalog}
-          className="rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium"
+          className="inline-flex items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium"
         >
+          <Download className="h-4 w-4" />
           JSON Dışa Aktar
         </button>
-        <label className="rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium">
+        <label className="inline-flex items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium">
+          <Upload className="h-4 w-4" />
           JSON İçe Aktar
           <input
             data-testid="admin-import-json"
@@ -144,32 +166,19 @@ export default function AdminDashboardPage() {
               setMessage("Örnek veriler yüklendi.");
             })
           }
-          className="rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium"
+          className="inline-flex items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium"
         >
+          <Sparkles className="h-4 w-4" />
           Örnek Verileri Yükle
         </button>
         <button
           type="button"
           data-testid="admin-reset-empty"
           disabled={busy}
-          onClick={() =>
-            run(async () => {
-              if (
-                !window.confirm(
-                  "Katalog boşaltılsın mı? Bu işlem ürün, kategori ve nitelikleri siler."
-                )
-              ) {
-                return;
-              }
-              await adminFetch("/api/admin/reset", {
-                method: "POST",
-                body: { mode: "empty" },
-              });
-              setMessage("Katalog sıfırlandı.");
-            })
-          }
-          className="rounded-md border border-red-300 bg-white px-4 py-2 text-sm font-medium text-red-800"
+          onClick={() => setResetOpen(true)}
+          className="inline-flex items-center gap-2 rounded-md border border-red-300 bg-white px-4 py-2 text-sm font-medium text-red-800"
         >
+          <Trash2 className="h-4 w-4" />
           Kataloğu Sıfırla (Boş Katalog)
         </button>
       </div>
@@ -181,6 +190,22 @@ export default function AdminDashboardPage() {
           {message}
         </p>
       ) : null}
+      <AdminConfirmDialog
+        open={resetOpen}
+        onOpenChange={setResetOpen}
+        title="Kataloğu Sıfırla"
+        description="Katalog boşaltılsın mı? Bu işlem ürün, kategori ve nitelikleri siler."
+        confirmLabel="Sıfırla"
+        onConfirm={() =>
+          run(async () => {
+            await adminFetch("/api/admin/reset", {
+              method: "POST",
+              body: { mode: "empty" },
+            });
+            setMessage("Katalog sıfırlandı.");
+          })
+        }
+      />
     </div>
   );
 }

@@ -1,8 +1,13 @@
 import { useMemo, useState } from "react";
+import { Pencil, Plus, Trash2 } from "lucide-react";
 import { adminFetch } from "@/admin/api";
 import { useAdminCatalog } from "@/admin/use-admin-catalog";
 import { collectDescendantIds } from "@/data/catalog-validation";
 import { toKebabSlug } from "@/utils/slugify";
+import AdminDialog from "@/components/admin/AdminDialog";
+import AdminConfirmDialog from "@/components/admin/AdminConfirmDialog";
+import AdminChip from "@/components/admin/AdminChip";
+import IconButton from "@/components/admin/IconButton";
 
 function flattenCategories(categories) {
   const byParent = new Map();
@@ -41,6 +46,9 @@ export default function AdminCategoriesPage() {
   const [form, setForm] = useState(emptyForm);
   const [slugTouched, setSlugTouched] = useState(false);
   const [message, setMessage] = useState("");
+  const [dialogError, setDialogError] = useState("");
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [pendingDelete, setPendingDelete] = useState(null);
 
   const rows = useMemo(
     () => flattenCategories(catalog?.categories || []),
@@ -54,6 +62,25 @@ export default function AdminCategoriesPage() {
     ]);
   }, [catalog, form.id]);
 
+  function closeDialog() {
+    setDialogOpen(false);
+    setForm(emptyForm);
+    setSlugTouched(false);
+    setDialogError("");
+  }
+
+  function handleDialogChange(open) {
+    if (open) setDialogOpen(true);
+    else closeDialog();
+  }
+
+  function openNew() {
+    setForm(emptyForm);
+    setSlugTouched(false);
+    setDialogError("");
+    setDialogOpen(true);
+  }
+
   function editCategory(category) {
     setForm({
       id: category.id,
@@ -63,11 +90,13 @@ export default function AdminCategoriesPage() {
       descriptionHtml: category.descriptionHtml || "",
     });
     setSlugTouched(true);
+    setDialogError("");
+    setDialogOpen(true);
   }
 
   async function saveCategory(event) {
     event.preventDefault();
-    setMessage("");
+    setDialogError("");
     const payload = {
       name: form.name,
       slug: form.slug || toKebabSlug(form.name),
@@ -86,22 +115,21 @@ export default function AdminCategoriesPage() {
           body: payload,
         });
       }
-      setForm(emptyForm);
-      setSlugTouched(false);
+      closeDialog();
       await invalidate();
       setMessage("Kategori kaydedildi.");
     } catch (err) {
-      setMessage(err.message);
+      setDialogError(err.message);
     }
   }
 
-  async function deleteCategory(category) {
-    if (!window.confirm(`"${category.name}" silinsin mi?`)) return;
+  async function deleteCategory() {
+    if (!pendingDelete) return;
+    const category = pendingDelete;
     try {
       await adminFetch(`/api/admin/categories/${category.id}`, {
         method: "DELETE",
       });
-      if (form.id === category.id) setForm(emptyForm);
       await invalidate();
     } catch (err) {
       setMessage(err.message);
@@ -112,141 +140,159 @@ export default function AdminCategoriesPage() {
   if (isError) return <p role="alert">{error.message}</p>;
 
   return (
-    <div
-      data-testid="admin-categories"
-      className="grid gap-8 lg:grid-cols-[1fr_320px]"
-    >
-      <div>
-        <h1 className="text-2xl font-bold">Kategoriler</h1>
-        <ul className="mt-4 divide-y divide-stone-200 rounded-lg border border-stone-200 bg-white">
-          {rows.length === 0 ? (
-            <li className="p-4 text-sm text-stone-500">Henüz kategori yok.</li>
-          ) : null}
-          {rows.map(({ category, depth }) => (
-            <li
-              key={category.id}
-              className="flex items-center justify-between gap-3 px-4 py-3"
-              style={{ paddingLeft: `${16 + depth * 20}px` }}
-            >
-              <div>
-                <p className="font-medium">{category.name}</p>
-                <p className="text-xs text-stone-500">
-                  {category.slug} · {category.count} ürün
-                </p>
-              </div>
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={() => editCategory(category)}
-                  className="text-sm text-stone-700 underline"
-                >
-                  Düzenle
-                </button>
-                <button
-                  type="button"
-                  onClick={() => deleteCategory(category)}
-                  className="text-sm text-red-700 underline"
-                >
-                  Sil
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <form
-        data-testid="admin-category-form"
-        onSubmit={saveCategory}
-        className="h-fit space-y-3 rounded-lg border border-stone-200 bg-white p-4"
-      >
-        <h2 className="font-semibold">
-          {form.id ? "Kategoriyi düzenle" : "Yeni kategori"}
-        </h2>
-        <label className="block text-sm">
-          Ad
-          <input
-            data-testid="admin-category-name"
-            value={form.name}
-            onChange={(event) => {
-              const name = event.target.value;
-              setForm((current) => ({
-                ...current,
-                name,
-                slug: slugTouched ? current.slug : toKebabSlug(name),
-              }));
-            }}
-            className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
-          />
-        </label>
-        <label className="block text-sm">
-          Kısa ad
-          <input
-            data-testid="admin-category-slug"
-            value={form.slug}
-            onChange={(event) => {
-              setSlugTouched(true);
-              setForm((current) => ({ ...current, slug: event.target.value }));
-            }}
-            className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
-          />
-        </label>
-        <label className="block text-sm">
-          Üst kategori
-          <select
-            data-testid="admin-category-parent"
-            value={form.parentId}
-            onChange={(event) =>
-              setForm((current) => ({
-                ...current,
-                parentId: event.target.value,
-              }))
-            }
-            className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
-          >
-            <option value="">Yok</option>
-            {(catalog.categories || [])
-              .filter((category) => !excludedParents.has(category.id))
-              .map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-          </select>
-        </label>
-        <label className="block text-sm">
-          Açıklama
-          <textarea
-            value={form.descriptionHtml}
-            onChange={(event) =>
-              setForm((current) => ({
-                ...current,
-                descriptionHtml: event.target.value,
-              }))
-            }
-            rows={5}
-            className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
-          />
-        </label>
+    <div data-testid="admin-categories" className="space-y-4">
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <h1 className="text-2xl font-bold">Kategoriler</h1>
+          <AdminChip>{`${catalog?.categories?.length || 0} kategori`}</AdminChip>
+        </div>
         <button
-          type="submit"
-          className="w-full rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white"
+          type="button"
+          onClick={openNew}
+          className="inline-flex items-center gap-2 rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white"
         >
-          Kaydet
+          <Plus className="h-4 w-4" />
+          Yeni Kategori
         </button>
-        {form.id ? (
-          <button
-            type="button"
-            onClick={() => {
-              setForm(emptyForm);
-              setSlugTouched(false);
-            }}
-            className="w-full text-sm text-stone-600 underline"
-          >
-            Yeni kategori
-          </button>
+      </div>
+      {message ? <p className="text-sm text-stone-700">{message}</p> : null}
+      <ul className="divide-y divide-stone-200 rounded-lg border border-stone-200 bg-white">
+        {rows.length === 0 ? (
+          <li className="p-4 text-sm text-stone-500">Henüz kategori yok.</li>
         ) : null}
-        {message ? <p className="text-sm text-stone-700">{message}</p> : null}
-      </form>
+        {rows.map(({ category, depth }) => (
+          <li
+            key={category.id}
+            className="flex items-center justify-between gap-3 px-4 py-3"
+            style={{ paddingLeft: `${16 + depth * 20}px` }}
+          >
+            <div>
+              <p className="font-medium">{category.name}</p>
+              <p className="text-xs text-stone-500">{category.slug}</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <AdminChip>{`${category.count} ürün`}</AdminChip>
+              <IconButton
+                label="Düzenle"
+                onClick={() => editCategory(category)}
+              >
+                <Pencil className="h-4 w-4" />
+              </IconButton>
+              <IconButton
+                label="Sil"
+                danger
+                onClick={() => setPendingDelete(category)}
+              >
+                <Trash2 className="h-4 w-4" />
+              </IconButton>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <AdminDialog
+        open={dialogOpen}
+        onOpenChange={handleDialogChange}
+        title={form.id ? "Kategoriyi düzenle" : "Yeni Kategori"}
+        size="md"
+      >
+        <form
+          data-testid="admin-category-form"
+          onSubmit={saveCategory}
+          className="space-y-3"
+        >
+          <label className="block text-sm">
+            Ad
+            <input
+              data-testid="admin-category-name"
+              value={form.name}
+              onChange={(event) => {
+                const name = event.target.value;
+                setForm((current) => ({
+                  ...current,
+                  name,
+                  slug: slugTouched ? current.slug : toKebabSlug(name),
+                }));
+              }}
+              className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
+            />
+          </label>
+          <label className="block text-sm">
+            Kısa ad
+            <input
+              data-testid="admin-category-slug"
+              value={form.slug}
+              onChange={(event) => {
+                setSlugTouched(true);
+                setForm((current) => ({
+                  ...current,
+                  slug: event.target.value,
+                }));
+              }}
+              className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
+            />
+          </label>
+          <label className="block text-sm">
+            Üst kategori
+            <select
+              data-testid="admin-category-parent"
+              value={form.parentId}
+              onChange={(event) =>
+                setForm((current) => ({
+                  ...current,
+                  parentId: event.target.value,
+                }))
+              }
+              className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
+            >
+              <option value="">Yok</option>
+              {(catalog.categories || [])
+                .filter((category) => !excludedParents.has(category.id))
+                .map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name}
+                  </option>
+                ))}
+            </select>
+          </label>
+          <label className="block text-sm">
+            Açıklama
+            <textarea
+              value={form.descriptionHtml}
+              onChange={(event) =>
+                setForm((current) => ({
+                  ...current,
+                  descriptionHtml: event.target.value,
+                }))
+              }
+              rows={5}
+              className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2"
+            />
+          </label>
+          <button
+            type="submit"
+            className="w-full rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white"
+          >
+            Kaydet
+          </button>
+          {dialogError ? (
+            <p className="text-sm text-red-700">{dialogError}</p>
+          ) : null}
+        </form>
+      </AdminDialog>
+
+      <AdminConfirmDialog
+        open={!!pendingDelete}
+        onOpenChange={(open) => {
+          if (!open) setPendingDelete(null);
+        }}
+        title="Kategoriyi Sil"
+        description={
+          pendingDelete ? `"${pendingDelete.name}" silinsin mi?` : ""
+        }
+        confirmLabel="Sil"
+        onConfirm={deleteCategory}
+      />
     </div>
   );
 }

@@ -7,9 +7,11 @@ import { useCachedCatalog } from "@/hooks/use-cached-catalog";
 import AdminAttributesPage from "@/pages/admin/AdminAttributesPage";
 import AdminCategoriesPage from "@/pages/admin/AdminCategoriesPage";
 import AdminDashboardPage from "@/pages/admin/AdminDashboardPage";
+import AdminMenuCategoriesPage from "@/pages/admin/AdminMenuCategoriesPage";
 import AdminProductEditorPage from "@/pages/admin/AdminProductEditorPage";
 import AdminProductsPage from "@/pages/admin/AdminProductsPage";
 import AdminSettingsPage from "@/pages/admin/AdminSettingsPage";
+import AdminShowcasePage from "@/pages/admin/AdminShowcasePage";
 import HomePage from "@/pages/HomePage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import ProductListingPage from "@/pages/ProductListingPage";
@@ -63,6 +65,11 @@ export default function App() {
         <Route path="urunler/yeni" element={<AdminProductEditorPage />} />
         <Route path="urunler/:id" element={<AdminProductEditorPage />} />
         <Route path="ayarlar" element={<AdminSettingsPage />} />
+        <Route
+          path="ayarlar/menu-kategorileri"
+          element={<AdminMenuCategoriesPage />}
+        />
+        <Route path="ayarlar/vitrin" element={<AdminShowcasePage />} />
       </Route>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
