@@ -1,27 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Link2, ListPlus, Save, Trash2 } from "lucide-react";
 import { adminFetch } from "@/admin/api";
+import CategoryCheckboxList from "@/components/admin/CategoryCheckboxList";
 import { generateVariantRows } from "@/admin/variants";
 import { toKebabSlug } from "@/utils/slugify";
 import { resolveAssetUrl } from "@/utils/image-url";
-
-function categoryRows(categories) {
-  const byParent = new Map();
-  for (const category of categories) {
-    const key = category.parentId ?? null;
-    if (!byParent.has(key)) byParent.set(key, []);
-    byParent.get(key).push(category);
-  }
-  const rows = [];
-  const walk = (parentId, depth) => {
-    for (const category of byParent.get(parentId) || []) {
-      rows.push({ category, depth });
-      walk(category.id, depth + 1);
-    }
-  };
-  walk(null, 0);
-  return rows;
-}
 
 function emptyState() {
   return {
@@ -300,8 +283,6 @@ export default function AdminProductForm({
   if (productId != null && !product && currentId === productId)
     return <p>Ürün bulunamadı.</p>;
 
-  const rows = categoryRows(catalog.categories || []);
-
   return (
     <form
       data-testid="admin-product-form"
@@ -390,31 +371,12 @@ export default function AdminProductForm({
           </label>
         </div>
       ) : null}
-      <fieldset>
-        <legend className="text-sm font-medium">Kategoriler</legend>
-        <div className="mt-2 space-y-1">
-          {rows.map(({ category, depth }) => (
-            <label
-              key={category.id}
-              className="flex items-center gap-2 text-sm"
-              style={{ marginLeft: depth * 16 }}
-            >
-              <input
-                type="checkbox"
-                checked={form.categoryIds.includes(category.id)}
-                onChange={(event) =>
-                  patch({
-                    categoryIds: event.target.checked
-                      ? [...form.categoryIds, category.id]
-                      : form.categoryIds.filter((item) => item !== category.id),
-                  })
-                }
-              />
-              {category.name}
-            </label>
-          ))}
-        </div>
-      </fieldset>
+      <CategoryCheckboxList
+        categories={catalog.categories || []}
+        selectedIds={form.categoryIds}
+        onChange={(categoryIds) => patch({ categoryIds })}
+        legend="Kategoriler"
+      />
       <section className="space-y-3">
         <h2 className="text-sm font-medium">Görseller</h2>
         <div className="flex flex-wrap gap-3">

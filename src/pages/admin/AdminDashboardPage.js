@@ -81,7 +81,7 @@ export default function AdminDashboardPage() {
           yönetin.
         </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-[15fr_11fr_11fr_11fr]">
         <article
           data-testid="admin-metric-products"
           className="rounded-lg border border-stone-200 bg-white p-4"

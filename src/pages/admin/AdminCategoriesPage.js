@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Pencil, Plus, Trash2 } from "lucide-react";
 import { adminFetch } from "@/admin/api";
 import { useAdminCatalog } from "@/admin/use-admin-catalog";
+import { normalizeTurkishSearch } from "@/data/catalog-query";
 import { collectDescendantIds } from "@/data/catalog-validation";
 import { toKebabSlug } from "@/utils/slugify";
 import AdminDialog from "@/components/admin/AdminDialog";
@@ -49,11 +50,18 @@ export default function AdminCategoriesPage() {
   const [dialogError, setDialogError] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [pendingDelete, setPendingDelete] = useState(null);
+  const [query, setQuery] = useState("");
 
   const rows = useMemo(
     () => flattenCategories(catalog?.categories || []),
     [catalog]
   );
+  const foldedQuery = normalizeTurkishSearch(query.trim());
+  const visibleRows = foldedQuery
+    ? rows.filter(({ category }) =>
+        normalizeTurkishSearch(category.name).includes(foldedQuery)
+      )
+    : rows;
   const excludedParents = useMemo(() => {
     if (!form.id) return new Set();
     return new Set([
@@ -156,11 +164,22 @@ export default function AdminCategoriesPage() {
         </button>
       </div>
       {message ? <p className="text-sm text-stone-700">{message}</p> : null}
+      <input
+        type="search"
+        aria-label="Kategori ara"
+        placeholder="Kategori ara"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        className="w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm"
+      />
       <ul className="divide-y divide-stone-200 rounded-lg border border-stone-200 bg-white">
         {rows.length === 0 ? (
           <li className="p-4 text-sm text-stone-500">Henüz kategori yok.</li>
         ) : null}
-        {rows.map(({ category, depth }) => (
+        {rows.length > 0 && visibleRows.length === 0 ? (
+          <li className="p-4 text-sm text-stone-500">Kategori bulunamadı.</li>
+        ) : null}
+        {visibleRows.map(({ category, depth }) => (
           <li
             key={category.id}
             className="flex items-center justify-between gap-3 px-4 py-3"

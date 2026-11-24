@@ -109,6 +109,27 @@ describe("admin categories modal", () => {
     ).not.toBeInTheDocument();
   });
 
+  it("filters the list with a Turkish case-insensitive search", async () => {
+    mockCatalog(createSampleCatalog());
+    renderPage(<AdminCategoriesPage />);
+    await screen.findByText("Örnek Koleksiyon");
+    const search = screen.getByRole("searchbox", { name: "Kategori ara" });
+
+    fireEvent.change(search, { target: { value: "KLASIK" } });
+    expect(screen.getByText("Klasik Seri")).toBeInTheDocument();
+    expect(screen.queryByText("Örnek Koleksiyon")).not.toBeInTheDocument();
+    expect(screen.queryByText("Yeni Ürünler")).not.toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: "Düzenle" })).toHaveLength(1);
+
+    fireEvent.change(search, { target: { value: "ornek" } });
+    expect(screen.getByText("Örnek Koleksiyon")).toBeInTheDocument();
+    expect(screen.queryByText("Klasik Seri")).not.toBeInTheDocument();
+
+    fireEvent.change(search, { target: { value: "" } });
+    expect(screen.getByText("Yeni Ürünler")).toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: "Düzenle" })).toHaveLength(6);
+  });
+
   it("opens a create dialog over the still-visible list", async () => {
     mockCatalog(createSampleCatalog());
     renderPage(<AdminCategoriesPage />);

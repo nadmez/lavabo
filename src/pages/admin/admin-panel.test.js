@@ -138,6 +138,9 @@ describe("admin dashboard", () => {
     expect(screen.getByTestId("admin-metric-products")).toHaveTextContent(
       "2 stokta / 1 stokta yok"
     );
+    expect(
+      screen.getByTestId("admin-metric-products").parentElement.className
+    ).toContain("lg:grid-cols-[15fr_11fr_11fr_11fr]");
     expect(screen.getByTestId("admin-metric-categories")).toHaveTextContent(
       "6"
     );
