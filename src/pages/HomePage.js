@@ -1,51 +1,55 @@
 import { Link } from "react-router";
 import LoadingSkeleton from "@/components/catalog/LoadingSkeleton";
 import ProductCard from "@/components/catalog/ProductCard";
-import { queryProducts } from "@/data/catalog-query";
+import { getHomeShowcaseSections, queryProducts } from "@/data/catalog-query";
+import { HOME_SHOWCASE_SECTIONS } from "@/data/home-sections";
 import {
   DEFAULT_META_DESCRIPTION,
   DEFAULT_PAGE_TITLE,
+  brandMetaProps,
   usePageMeta,
 } from "@/hooks/use-page-meta";
 import { useCatalog } from "@/hooks/use-products";
 
-export const HOME_SHOWCASE_SECTIONS = [
-  {
-    key: "plafonyer",
-    categorySlug: "plafonyer-led-avize",
-    title: "Plafonyer Led Avize Modelleri",
-    intro:
-      "Plafonyer led avize modern sarkıt led avize modellerimiz sizin için sürekli güncellenmektedir.",
-    ctaLabel: "Diğer Led Avize Ürünleri",
-    limit: 8,
-  },
-  {
-    key: "lineer",
-    categorySlug: "lineer-aydinlatma",
-    title: "Sarkıt ve Sıva Üstü Lineer Led Armatürler",
-    intro:
-      "Modern ofis ve mimari aydınlatma projeleriniz için sarkıt ve sıva üstü lineer led armatür modellerimiz sizin için sürekli güncellenmektedir.",
-    ctaLabel: "Diğer Lineer Ürünleri",
-    limit: 8,
-  },
-  {
-    key: "aplik",
-    categorySlug: "aplikler",
-    title: "Led Aplik Lamba Ürünleri",
-    intro:
-      "Telefon tutucu özellikli başucu led aydınlatma aplik lamba modelleri sadece Lavabo Aydınlatma'da!",
-    ctaLabel: "Diğer Aplik Ürünleri",
-    limit: 4,
-  },
-];
+export { HOME_SHOWCASE_SECTIONS };
+
+function productsForSection(catalog, section) {
+  if (section.uncategorized) {
+    return (catalog.products || [])
+      .filter(
+        (product) =>
+          !Array.isArray(product?.categoryIds) ||
+          product.categoryIds.length === 0
+      )
+      .slice(0, section.limit);
+  }
+  const allowed = [9, 12, 18, 24];
+  const perPage = allowed.find((size) => size >= section.limit) || 24;
+  const result = queryProducts(catalog, {
+    categorySlug: section.categorySlug,
+    perPage,
+  });
+  return Array.isArray(result?.items)
+    ? result.items.slice(0, section.limit)
+    : [];
+}
 
 export default function HomePage() {
+  const { data: catalog, isPending, isError, error, refetch } = useCatalog();
+  const settings = catalog?.siteSettings;
+
   usePageMeta({
-    title: DEFAULT_PAGE_TITLE,
-    description: DEFAULT_META_DESCRIPTION,
+    title: settings?.metaTitle || DEFAULT_PAGE_TITLE,
+    description: settings?.metaDescription || DEFAULT_META_DESCRIPTION,
+    ...brandMetaProps(catalog),
   });
 
-  const { data: catalog, isPending, isError, error, refetch } = useCatalog();
+  const categories = Array.isArray(catalog?.categories)
+    ? catalog.categories
+    : [];
+  const products = Array.isArray(catalog?.products) ? catalog.products : [];
+  const isEmptyCatalog = categories.length === 0 && products.length === 0;
+  const sections = catalog ? getHomeShowcaseSections(catalog) : [];
 
   return (
     <div className="mx-auto max-w-6xl space-y-12 px-6 py-10">
@@ -69,18 +73,32 @@ export default function HomePage() {
             Tekrar Dene
           </button>
         </div>
+      ) : isEmptyCatalog ? (
+        <section
+          data-testid="empty-catalog-state"
+          className="rounded-lg border border-stone-200 bg-white p-10 text-center"
+        >
+          <h1 className="text-2xl font-bold text-stone-900">
+            Katalog henüz boş
+          </h1>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-stone-600">
+            Kategori, nitelik ve ürün ekleyerek bu vitrini doldurabilirsiniz.
+          </p>
+          <Link
+            to="/admin"
+            className="mt-6 inline-flex items-center rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
+          >
+            Yönetim paneline git
+          </Link>
+        </section>
       ) : (
         <div className="space-y-14">
-          {HOME_SHOWCASE_SECTIONS.map((section) => {
-            const result = catalog
-              ? queryProducts(catalog, {
-                  categorySlug: section.categorySlug,
-                  perPage: 12,
-                })
-              : null;
-            const items = Array.isArray(result?.items)
-              ? result.items.slice(0, section.limit)
-              : [];
+          {sections.map((section) => {
+            const items = productsForSection(catalog, section);
+            const href =
+              section.uncategorized || !section.categorySlug
+                ? "/arama"
+                : `/kategori/${section.categorySlug}`;
 
             return (
               <section
@@ -94,12 +112,14 @@ export default function HomePage() {
                     <h2 className="text-2xl font-bold tracking-tight text-stone-900">
                       {section.title}
                     </h2>
-                    <p className="mt-2 max-w-3xl text-sm text-stone-600">
-                      {section.intro}
-                    </p>
+                    {section.intro ? (
+                      <p className="mt-2 max-w-3xl text-sm text-stone-600">
+                        {section.intro}
+                      </p>
+                    ) : null}
                   </div>
                   <Link
-                    to={`/kategori/${section.categorySlug}`}
+                    to={href}
                     data-testid={`home-section-link-${section.key}`}
                     className="inline-flex shrink-0 items-center rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-medium text-stone-800 transition hover:border-stone-400 hover:bg-stone-100"
                   >

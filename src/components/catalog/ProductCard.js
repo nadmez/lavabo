@@ -2,7 +2,7 @@ import { QueryClientContext } from "@tanstack/react-query";
 import { useContext, useState } from "react";
 import { Link } from "react-router";
 import QuickViewModal from "@/components/catalog/QuickViewModal";
-import { formatProductPriceRange } from "@/utils/format-price";
+import { formatCatalogPriceRange } from "@/utils/format-price";
 import { handleImageError, resolveAssetUrl } from "@/utils/image-url";
 
 export default function ProductCard({ product, catalog = null, onQuickView }) {
@@ -75,7 +75,11 @@ export default function ProductCard({ product, catalog = null, onQuickView }) {
             data-testid="product-card-price"
             className="mt-3 text-base font-bold text-stone-900"
           >
-            {formatProductPriceRange(product.priceMin, product.priceMax)}
+            {formatCatalogPriceRange(
+              product.priceMin,
+              product.priceMax,
+              catalog
+            )}
           </p>
         </div>
       </Link>

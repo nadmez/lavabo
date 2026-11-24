@@ -2,7 +2,7 @@ import { QueryClientContext } from "@tanstack/react-query";
 import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { resolveAttributeTerm } from "@/components/catalog/VariantSelector";
-import { formatProductPriceRange } from "@/utils/format-price";
+import { formatCatalogPriceRange } from "@/utils/format-price";
 import { handleImageError, resolveAssetUrl } from "@/utils/image-url";
 
 const FOCUSABLE_SELECTOR =
@@ -202,7 +202,11 @@ export default function QuickViewModal({
                   data-testid="quick-view-price"
                   className="mt-2 text-xl font-bold text-stone-900"
                 >
-                  {formatProductPriceRange(product.priceMin, product.priceMax)}
+                  {formatCatalogPriceRange(
+                    product.priceMin,
+                    product.priceMax,
+                    resolvedCatalog
+                  )}
                 </p>
               </div>
 

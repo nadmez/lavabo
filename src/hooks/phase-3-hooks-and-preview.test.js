@@ -534,7 +534,8 @@ describe("src/hooks/use-products.js", () => {
 
       const indexed = await options.queryFn();
       expect(fetchMock).toHaveBeenCalledWith(
-        `${import.meta.env.BASE_URL}data/catalog.json`
+        `${import.meta.env.BASE_URL}data/catalog.json`,
+        { cache: "no-store" }
       );
       expect(indexed.productsBySlug).toBeInstanceOf(Map);
       expect(indexed.productsBySlug.size).toBe(6);

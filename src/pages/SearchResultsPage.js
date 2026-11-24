@@ -9,7 +9,7 @@ import Pagination from "@/components/catalog/Pagination";
 import ProductCard from "@/components/catalog/ProductCard";
 import { queryProducts } from "@/data/catalog-query";
 import { useCatalogSearchParams } from "@/hooks/use-catalog-search-params";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { brandMetaProps, usePageMeta } from "@/hooks/use-page-meta";
 import { useCatalog, useProducts } from "@/hooks/use-products";
 
 export default function SearchResultsPage() {
@@ -52,6 +52,7 @@ export default function SearchResultsPage() {
 
   usePageMeta({
     title: metaTitle,
+    ...brandMetaProps(catalog),
   });
 
   if (isPending && !data) {

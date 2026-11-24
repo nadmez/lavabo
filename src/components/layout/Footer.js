@@ -1,7 +1,17 @@
 import { Link } from "react-router";
-import { MAIN_NAV_CATEGORIES, SHOWROOM_CONTACT } from "@/data/navigation";
+import { getNavigationTree } from "@/data/catalog-query";
+import { useCachedCatalog } from "@/hooks/use-cached-catalog";
 
 export default function Footer() {
+  const catalog = useCachedCatalog();
+  const navCategories = catalog ? getNavigationTree(catalog) : [];
+  const brandName = catalog?.siteSettings?.siteName || "";
+  const tagline = catalog?.siteSettings?.tagline || "";
+  const contact = catalog?.siteSettings?.contact || {};
+  const phones = Array.isArray(contact.phones) ? contact.phones : [];
+  const hasContact = Boolean(
+    contact.address || phones.length > 0 || contact.mapUrl
+  );
   return (
     <footer
       data-testid="site-footer"
@@ -10,12 +20,13 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <h2 className="text-lg font-bold tracking-tight text-white">
-            Lavabo Aydınlatma
+            {brandName}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-stone-400">
-            Yerli üretim modern LED avize, plafonyer, lineer aydınlatma, aplik
-            ve masa lambası koleksiyonları.
-          </p>
+          {tagline ? (
+            <p className="mt-3 text-sm leading-relaxed text-stone-400">
+              {tagline}
+            </p>
+          ) : null}
         </div>
 
         <div>
@@ -23,7 +34,7 @@ export default function Footer() {
             Kategoriler
           </h2>
           <ul className="mt-4 space-y-2 text-sm">
-            {MAIN_NAV_CATEGORIES.map((category) => (
+            {navCategories.map((category) => (
               <li key={category.slug}>
                 <Link
                   to={category.href}
@@ -36,42 +47,52 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h2 className="text-sm font-semibold tracking-wider text-white uppercase">
-            Showroom & İmalat
-          </h2>
-          <address className="mt-4 space-y-3 text-sm not-italic">
-            <p className="leading-relaxed text-stone-300">
-              {SHOWROOM_CONTACT.address}
-            </p>
-            <ul className="space-y-1.5">
-              {SHOWROOM_CONTACT.phones.map((phone) => (
-                <li key={phone.href}>
+        {hasContact ? (
+          <div>
+            <h2 className="text-sm font-semibold tracking-wider text-white uppercase">
+              Showroom & İmalat
+            </h2>
+            <address className="mt-4 space-y-3 text-sm not-italic">
+              {contact.address ? (
+                <p className="leading-relaxed text-stone-300">
+                  {contact.address}
+                </p>
+              ) : null}
+              {phones.length > 0 ? (
+                <ul className="space-y-1.5">
+                  {phones.map((phone) => (
+                    <li key={phone.href || phone.display}>
+                      <a
+                        href={phone.href || undefined}
+                        className="transition-colors hover:text-white"
+                      >
+                        {phone.display}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+              {contact.mapUrl ? (
+                <p className="pt-1">
                   <a
-                    href={phone.href}
-                    className="transition-colors hover:text-white"
+                    href={contact.mapUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center font-medium text-amber-400 transition-colors hover:text-amber-300"
                   >
-                    {phone.display}
+                    {contact.mapLabel || contact.mapUrl}
                   </a>
-                </li>
-              ))}
-            </ul>
-            <p className="pt-1">
-              <a
-                href={SHOWROOM_CONTACT.mapUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center font-medium text-amber-400 transition-colors hover:text-amber-300"
-              >
-                {SHOWROOM_CONTACT.mapLabel}
-              </a>
-            </p>
-          </address>
-        </div>
+                </p>
+              ) : null}
+            </address>
+          </div>
+        ) : (
+          <div />
+        )}
       </div>
 
       <div className="border-t border-stone-800 py-6 text-center text-xs text-stone-500">
-        © {new Date().getFullYear()} Lavabo Aydınlatma. Tüm hakları saklıdır.
+        © {new Date().getFullYear()} {brandName}. Tüm hakları saklıdır.
       </div>
     </footer>
   );

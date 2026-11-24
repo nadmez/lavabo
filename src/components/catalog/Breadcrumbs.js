@@ -1,9 +1,20 @@
 import { Link } from "react-router";
 import { FLAT_MAIN_CATEGORIES } from "@/data/navigation";
+import { getNavigationTree } from "@/data/catalog-query";
 
-const MAIN_CATEGORY_SLUGS = new Set(
-  FLAT_MAIN_CATEGORIES.map((cat) => cat.slug)
-);
+function preferredCategorySlugs(catalog) {
+  if (catalog?.siteSettings) {
+    const slugs = new Set();
+    for (const category of getNavigationTree(catalog)) {
+      if (category?.slug) slugs.add(category.slug);
+      for (const child of category.children || []) {
+        if (child?.slug) slugs.add(child.slug);
+      }
+    }
+    return slugs;
+  }
+  return new Set(FLAT_MAIN_CATEGORIES.map((cat) => cat.slug));
+}
 
 function buildAncestorChain(category, categoriesById) {
   const chain = [];
@@ -27,7 +38,7 @@ function buildAncestorChain(category, categoriesById) {
   return chain;
 }
 
-function selectPrimaryProductCategory(product, categoriesById) {
+function selectPrimaryProductCategory(product, categoriesById, preferredSlugs) {
   if (!product || !(categoriesById instanceof Map)) {
     return null;
   }
@@ -38,7 +49,7 @@ function selectPrimaryProductCategory(product, categoriesById) {
 
   for (const id of categoryIds) {
     const cat = categoriesById.get(id);
-    if (cat && MAIN_CATEGORY_SLUGS.has(cat.slug)) {
+    if (cat && preferredSlugs.has(cat.slug)) {
       return cat;
     }
   }
@@ -70,7 +81,8 @@ export default function Breadcrumbs({
   if (product) {
     const primaryCategory = selectPrimaryProductCategory(
       product,
-      categoriesById
+      categoriesById,
+      preferredCategorySlugs(catalog)
     );
     if (primaryCategory) {
       ancestors = [

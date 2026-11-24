@@ -1,8 +1,18 @@
 import { useEffect } from "react";
 import { Link } from "react-router";
-import { MAIN_NAV_CATEGORIES } from "@/data/navigation";
+import { getNavigationTree } from "@/data/catalog-query";
+import { useCachedCatalog } from "@/hooks/use-cached-catalog";
 
-export default function MobileDrawer({ isOpen = false, onClose }) {
+export default function MobileDrawer({
+  isOpen = false,
+  onClose,
+  navCategories,
+  brandName,
+}) {
+  const catalog = useCachedCatalog();
+  const categories =
+    navCategories || (catalog ? getNavigationTree(catalog) : []);
+  const brand = brandName || catalog?.siteSettings?.siteName || "";
   useEffect(() => {
     if (!isOpen) {
       return undefined;
@@ -40,7 +50,7 @@ export default function MobileDrawer({ isOpen = false, onClose }) {
       >
         <div className="flex items-center justify-between border-b border-stone-200 pb-4">
           <span className="text-lg font-bold tracking-tight text-stone-900">
-            Lavabo Aydınlatma
+            {brand}
           </span>
           <button
             type="button"
@@ -64,7 +74,7 @@ export default function MobileDrawer({ isOpen = false, onClose }) {
                 Anasayfa
               </Link>
             </li>
-            {MAIN_NAV_CATEGORIES.map((category) => (
+            {categories.map((category) => (
               <li key={category.slug} className="pt-1">
                 <Link
                   to={category.href}

@@ -3,7 +3,7 @@ import { QueryClientContext } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router";
 import { queryProducts } from "@/data/catalog-query";
 import { catalogQueryOptions } from "@/hooks/use-products";
-import { formatProductPriceRange } from "@/utils/format-price";
+import { formatCatalogPriceRange } from "@/utils/format-price";
 import { handleImageError, resolveAssetUrl } from "@/utils/image-url";
 
 export default function HeaderSearch() {
@@ -229,9 +229,10 @@ export default function HeaderSearch() {
                         <p className="text-xs text-stone-500">{product.sku}</p>
                       </div>
                       <span className="shrink-0 text-xs font-semibold text-stone-900">
-                        {formatProductPriceRange(
+                        {formatCatalogPriceRange(
                           product.priceMin,
-                          product.priceMax
+                          product.priceMax,
+                          catalog
                         )}
                       </span>
                     </Link>

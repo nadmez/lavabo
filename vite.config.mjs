@@ -3,8 +3,31 @@ import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
+import { createCatalogMiddleware } from "./server/catalog-middleware.js";
+import { loadEnvFile } from "./server/env.js";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
+loadEnvFile(path.join(root, ".env"));
+
+function catalogDevApi() {
+  const catalogPath =
+    process.env.CATALOG_DATA_PATH ||
+    path.join(root, "public", "data", "catalog.json");
+  const assetsDir =
+    process.env.CATALOG_ASSETS_DIR || path.join(root, "public", "assets");
+  return {
+    name: "catalog-dev-api",
+    configureServer(server) {
+      server.middlewares.use(
+        createCatalogMiddleware({
+          catalogPath,
+          assetsDir,
+          serveStatic: false,
+        })
+      );
+    },
+  };
+}
 
 function jsAsJsx() {
   return {
@@ -39,7 +62,12 @@ function jsAsJsx() {
 }
 
 export default defineConfig({
-  plugins: [jsAsJsx(), tailwindcss(), react({ include: /\.(jsx|js)$/ })],
+  plugins: [
+    catalogDevApi(),
+    jsAsJsx(),
+    tailwindcss(),
+    react({ include: /\.(jsx|js)$/ }),
+  ],
   esbuild: {
     loader: "jsx",
     include: /src\/.*\.jsx?$/,

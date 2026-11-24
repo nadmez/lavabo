@@ -8,11 +8,11 @@ import ProductGallery from "@/components/catalog/ProductGallery";
 import VariantSelector, {
   resolveAttributeTerm,
 } from "@/components/catalog/VariantSelector";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { brandMetaProps, usePageMeta } from "@/hooks/use-page-meta";
 import { useCatalog } from "@/hooks/use-products";
 import {
-  formatProductPriceRange,
-  formatTryCurrency,
+  formatCatalogPrice,
+  formatCatalogPriceRange,
 } from "@/utils/format-price";
 
 function stripEmbedShortcodes(rawHtml) {
@@ -105,18 +105,19 @@ function ProductDetailContent({ product, catalog }) {
 
   let formattedPrice = "";
   if (matchedVariant) {
-    formattedPrice = formatTryCurrency(matchedVariant.price);
+    formattedPrice = formatCatalogPrice(matchedVariant.price, catalog);
   } else if (activeSelectedEntries.length > 0 && matchingVariants.length > 0) {
     const prices = matchingVariants
       .map((v) => v.price)
       .filter((p) => typeof p === "number" && Number.isFinite(p));
     const minPrice = prices.length > 0 ? Math.min(...prices) : product.priceMin;
     const maxPrice = prices.length > 0 ? Math.max(...prices) : product.priceMax;
-    formattedPrice = formatProductPriceRange(minPrice, maxPrice);
+    formattedPrice = formatCatalogPriceRange(minPrice, maxPrice, catalog);
   } else {
-    formattedPrice = formatProductPriceRange(
+    formattedPrice = formatCatalogPriceRange(
       product.priceMin,
-      product.priceMax
+      product.priceMax,
+      catalog
     );
   }
 
@@ -417,6 +418,7 @@ export default function ProductDetailPage() {
   usePageMeta({
     title: pageTitle,
     description: firstHighlight || plainProductDescription || undefined,
+    ...brandMetaProps(catalog),
   });
 
   if (isPending && !catalog) {

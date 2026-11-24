@@ -20,6 +20,10 @@ export function resolveAssetUrl(relativePath, options = {}) {
     return getPicsumFallbackUrl(options);
   }
 
+  if (/^(https?:\/\/|data:|blob:)/i.test(trimmed)) {
+    return trimmed;
+  }
+
   const cleanPath = trimmed.replace(/^\/+/, "").replace(/^assets\/+/, "");
   if (!cleanPath) {
     return getPicsumFallbackUrl(options);

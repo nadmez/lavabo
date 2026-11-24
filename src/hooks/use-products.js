@@ -11,7 +11,8 @@ export function catalogQueryOptions() {
     staleTime: Infinity,
     queryFn: async () => {
       const response = await fetch(
-        `${import.meta.env.BASE_URL}data/catalog.json`
+        `${import.meta.env.BASE_URL}data/catalog.json`,
+        { cache: "no-store" }
       );
       if (!response.ok) {
         throw new Error(

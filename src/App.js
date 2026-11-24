@@ -1,6 +1,15 @@
 import { Link, Route, Routes } from "react-router";
+import AdminAuthGate from "@/components/admin/AdminAuthGate";
+import AdminLayout from "@/components/admin/AdminLayout";
 import Layout from "@/components/layout/Layout";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { brandMetaProps, usePageMeta } from "@/hooks/use-page-meta";
+import { useCachedCatalog } from "@/hooks/use-cached-catalog";
+import AdminAttributesPage from "@/pages/admin/AdminAttributesPage";
+import AdminCategoriesPage from "@/pages/admin/AdminCategoriesPage";
+import AdminDashboardPage from "@/pages/admin/AdminDashboardPage";
+import AdminProductEditorPage from "@/pages/admin/AdminProductEditorPage";
+import AdminProductsPage from "@/pages/admin/AdminProductsPage";
+import AdminSettingsPage from "@/pages/admin/AdminSettingsPage";
 import HomePage from "@/pages/HomePage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import ProductListingPage from "@/pages/ProductListingPage";
@@ -8,8 +17,10 @@ import SearchResultsPage from "@/pages/SearchResultsPage";
 import "./styles/placeholder.scss";
 
 function NotFoundPage() {
+  const catalog = useCachedCatalog();
   usePageMeta({
     title: "Sayfa Bulunamadı",
+    ...brandMetaProps(catalog),
   });
 
   return (
@@ -33,9 +44,26 @@ function NotFoundPage() {
   );
 }
 
+function AdminShell() {
+  return (
+    <AdminAuthGate>
+      <AdminLayout />
+    </AdminAuthGate>
+  );
+}
+
 export default function App() {
   return (
     <Routes>
+      <Route path="/admin" element={<AdminShell />}>
+        <Route index element={<AdminDashboardPage />} />
+        <Route path="kategoriler" element={<AdminCategoriesPage />} />
+        <Route path="nitelikler" element={<AdminAttributesPage />} />
+        <Route path="urunler" element={<AdminProductsPage />} />
+        <Route path="urunler/yeni" element={<AdminProductEditorPage />} />
+        <Route path="urunler/:id" element={<AdminProductEditorPage />} />
+        <Route path="ayarlar" element={<AdminSettingsPage />} />
+      </Route>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/kategori/:slug" element={<ProductListingPage />} />

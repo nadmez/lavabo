@@ -1,14 +1,18 @@
 import { Fragment, useState } from "react";
 import { Link, NavLink } from "react-router";
-import { MAIN_NAV_CATEGORIES } from "@/data/navigation";
+import { getNavigationTree } from "@/data/catalog-query";
 import HeaderSearch from "@/components/layout/HeaderSearch";
 import MobileDrawer from "@/components/layout/MobileDrawer";
+import { useCachedCatalog } from "@/hooks/use-cached-catalog";
 
 const menuLinkClass =
   "flex h-[42px] items-center whitespace-nowrap rounded-[5px] font-[Lato,Arial,Helvetica,sans-serif] text-[13px] leading-[18.2px] font-bold text-[#333] uppercase hover:text-black";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const catalog = useCachedCatalog();
+  const navCategories = catalog ? getNavigationTree(catalog) : [];
+  const brandName = catalog?.siteSettings?.siteName || "";
 
   return (
     <header
@@ -35,7 +39,7 @@ export default function Header() {
           data-testid="brand-logo"
           className="text-[22px] font-bold tracking-tight text-[#333] lg:absolute lg:left-1/2 lg:-translate-x-1/2"
         >
-          Lavabo Aydınlatma
+          {brandName}
         </Link>
 
         <div className="ml-auto flex items-center">
@@ -52,7 +56,7 @@ export default function Header() {
           data-testid="desktop-mega-menu"
           className="flex h-[42px] flex-nowrap items-center"
         >
-          {MAIN_NAV_CATEGORIES.map((category, index) => (
+          {navCategories.map((category, index) => (
             <Fragment key={category.slug}>
               {index > 0 ? (
                 <span
@@ -90,6 +94,8 @@ export default function Header() {
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
+        navCategories={navCategories}
+        brandName={brandName}
       />
     </header>
   );

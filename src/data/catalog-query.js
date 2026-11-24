@@ -1,3 +1,8 @@
+import {
+  HOME_SHOWCASE_SECTIONS,
+  LEGACY_SHOWCASE_SLUGS,
+} from "@/data/home-sections";
+
 const ALLOWED_PER_PAGE = new Set([9, 12, 18, 24]);
 
 const TURKISH_CHAR_MAP = {
@@ -130,7 +135,7 @@ export function indexCatalog(rawCatalog) {
     });
   }
 
-  return {
+  const indexed = {
     version,
     categories,
     attributes,
@@ -143,6 +148,10 @@ export function indexCatalog(rawCatalog) {
     descendantCategoryIdsBySlug,
     attributesBySlug,
   };
+  if (rawCatalog?.siteSettings && typeof rawCatalog.siteSettings === "object") {
+    indexed.siteSettings = rawCatalog.siteSettings;
+  }
+  return indexed;
 }
 
 function parseActiveAttributes(attributesParam) {
@@ -410,4 +419,147 @@ export function queryProducts(catalog, params = {}) {
       inStockCount,
     },
   };
+}
+
+export function getNavigationTree(catalog) {
+  const categories = Array.isArray(catalog?.categories)
+    ? catalog.categories
+    : [];
+  const navIds = catalog?.siteSettings?.navCategoryIds;
+  let roots = [];
+  if (Array.isArray(navIds) && navIds.length > 0) {
+    const byId = new Map(categories.map((category) => [category.id, category]));
+    roots = navIds.map((id) => byId.get(id)).filter(Boolean);
+  } else {
+    roots = categories.filter(
+      (category) => category && category.parentId == null
+    );
+  }
+
+  return roots.map((category) => ({
+    name: category.name,
+    slug: category.slug,
+    href: `/kategori/${category.slug}`,
+    children: categories
+      .filter((child) => child && child.parentId === category.id)
+      .map((child) => ({
+        name: child.name,
+        slug: child.slug,
+        href: `/kategori/${child.slug}`,
+      })),
+  }));
+}
+
+function categoryHasProducts(catalog, category) {
+  const descendantIds =
+    catalog?.descendantCategoryIdsBySlug instanceof Map
+      ? catalog.descendantCategoryIdsBySlug.get(category.slug)
+      : null;
+  const ids = descendantIds
+    ? descendantIds
+    : collectIdsFromList(catalog?.categories || [], category.id);
+  return (catalog?.products || []).some(
+    (product) =>
+      Array.isArray(product?.categoryIds) &&
+      product.categoryIds.some((id) => ids.has(id))
+  );
+}
+
+function collectIdsFromList(categories, rootId) {
+  const childrenByParent = new Map();
+  for (const category of categories) {
+    const key = category?.parentId ?? null;
+    if (!childrenByParent.has(key)) childrenByParent.set(key, []);
+    childrenByParent.get(key).push(category);
+  }
+  const ids = new Set([rootId]);
+  const stack = [rootId];
+  while (stack.length > 0) {
+    const current = stack.pop();
+    for (const child of childrenByParent.get(current) || []) {
+      if (!ids.has(child.id)) {
+        ids.add(child.id);
+        stack.push(child.id);
+      }
+    }
+  }
+  return ids;
+}
+
+function dynamicSection(category, index) {
+  return {
+    key: category.slug || `kategori-${index + 1}`,
+    categorySlug: category.slug,
+    title: category.name,
+    intro: "",
+    ctaLabel: "Tümünü gör",
+    limit: 8,
+  };
+}
+
+export function getHomeShowcaseSections(catalog) {
+  const categories = Array.isArray(catalog?.categories)
+    ? catalog.categories
+    : [];
+  const products = Array.isArray(catalog?.products) ? catalog.products : [];
+  const slugs = new Set(categories.map((category) => category.slug));
+  const settings = catalog?.siteSettings;
+
+  if (!settings && LEGACY_SHOWCASE_SLUGS.every((slug) => slugs.has(slug))) {
+    return HOME_SHOWCASE_SECTIONS;
+  }
+
+  if (
+    Array.isArray(settings?.showcaseSections) &&
+    settings.showcaseSections.length > 0
+  ) {
+    return settings.showcaseSections.map((section, index) => ({
+      key: section.key || section.categorySlug || `vitrin-${index + 1}`,
+      categorySlug: section.categorySlug || "",
+      title: section.title || "Ürünler",
+      intro: section.intro || "",
+      ctaLabel: section.ctaLabel || "Tümünü gör",
+      limit:
+        Number.isFinite(Number(section.limit)) && Number(section.limit) > 0
+          ? Math.floor(Number(section.limit))
+          : 8,
+    }));
+  }
+
+  const roots = categories.filter(
+    (category) => category && category.parentId == null
+  );
+  const sections = roots
+    .filter((category) => categoryHasProducts(catalog, category))
+    .map((category, index) => dynamicSection(category, index));
+
+  const uncategorized = products.filter(
+    (product) =>
+      !Array.isArray(product?.categoryIds) || product.categoryIds.length === 0
+  );
+  if (uncategorized.length > 0) {
+    sections.push({
+      key: "urunlerimiz",
+      categorySlug: "",
+      title: "Ürünlerimiz",
+      intro: "",
+      ctaLabel: "Tümünü gör",
+      limit: 8,
+      uncategorized: true,
+    });
+  }
+
+  if (sections.length === 0 && products.length > 0 && roots.length === 0) {
+    sections.push({
+      key: "urunlerimiz",
+      categorySlug: "",
+      title: "Ürünlerimiz",
+      intro: "",
+      ctaLabel: "Tümünü gör",
+      limit: 8,
+      uncategorized: false,
+    });
+  }
+
+  return sections;
 }

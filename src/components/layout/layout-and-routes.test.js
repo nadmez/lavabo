@@ -64,6 +64,65 @@ function renderWithProviders(ui, { initialEntries = ["/"], queryClient } = {}) {
   );
 }
 
+function createChromeCatalog() {
+  let nextId = 1;
+  const categories = [];
+  for (const category of MAIN_NAV_CATEGORIES) {
+    const id = nextId;
+    nextId += 1;
+    categories.push({
+      id,
+      slug: category.slug,
+      name: category.name,
+      parentId: null,
+      count: 0,
+      descriptionHtml: "",
+    });
+    for (const child of category.children) {
+      categories.push({
+        id: nextId,
+        slug: child.slug,
+        name: child.name,
+        parentId: id,
+        count: 0,
+        descriptionHtml: "",
+      });
+      nextId += 1;
+    }
+  }
+  return {
+    version: "chrome",
+    siteSettings: {
+      siteName: "Lavabo Aydınlatma",
+      tagline:
+        "Yerli üretim modern LED avize, plafonyer, lineer aydınlatma, aplik ve masa lambası koleksiyonları.",
+      metaTitle: "Lavabo Aydınlatma",
+      metaDescription: "",
+      currency: "TRY",
+      locale: "tr-TR",
+      contact: SHOWROOM_CONTACT,
+      navCategoryIds: [],
+      showcaseSections: [],
+    },
+    categories,
+    attributes: [],
+    products: [],
+  };
+}
+
+function createChromeQueryClient() {
+  const queryClient = createTestQueryClient();
+  queryClient.setQueryData(["catalog"], indexCatalog(createChromeCatalog()));
+  return queryClient;
+}
+
+function renderChrome(ui, options = {}) {
+  return renderWithProviders(ui, {
+    ...options,
+    queryClient: createChromeQueryClient(),
+  });
+}
+
 afterEach(() => {
   vi.restoreAllMocks();
 });
@@ -248,7 +307,7 @@ describe("src/data/navigation.js", () => {
 
 describe("Header component", () => {
   it("renders site-header and brand-logo linking to '/' with text containing 'Lavabo'", () => {
-    renderWithProviders(<Header />);
+    renderChrome(<Header />);
 
     const header = screen.getByTestId("site-header");
     expect(header.tagName).toBe("HEADER");
@@ -259,7 +318,7 @@ describe("Header component", () => {
   });
 
   it("renders desktop-mega-menu nav with all 6 top-level categories and all 11 child categories, without Tüm Ürünler", () => {
-    renderWithProviders(<Header />);
+    renderChrome(<Header />);
 
     const nav = screen.getByTestId("desktop-mega-menu");
     expect(nav.tagName).toBe("NAV");
@@ -276,13 +335,15 @@ describe("Header component", () => {
 
   it("puts the logo and circular search icon on the first row and keeps menu titles on one line", () => {
     render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Header />
-        <Routes>
-          <Route path="/" element={<div data-testid="route-home" />} />
-          <Route path="/arama" element={<div data-testid="route-search" />} />
-        </Routes>
-      </MemoryRouter>
+      <QueryClientProvider client={createChromeQueryClient()}>
+        <MemoryRouter initialEntries={["/"]}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<div data-testid="route-home" />} />
+            <Route path="/arama" element={<div data-testid="route-search" />} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>
     );
 
     const header = screen.getByTestId("site-header");
@@ -330,7 +391,7 @@ describe("Header component", () => {
   });
 
   it("renders mobile-menu-open button with aria-expanded='false' initially and 'true' after clicking", () => {
-    renderWithProviders(<Header />);
+    renderChrome(<Header />);
 
     const openBtn = screen.getByTestId("mobile-menu-open");
     expect(openBtn).toHaveAttribute("aria-label", "Menüyü aç");
@@ -363,7 +424,7 @@ describe("MobileDrawer component", () => {
 
   it("renders dialog with navigation links when isOpen is true", () => {
     const onClose = vi.fn();
-    renderWithProviders(<MobileDrawer isOpen={true} onClose={onClose} />);
+    renderChrome(<MobileDrawer isOpen={true} onClose={onClose} />);
 
     const drawer = screen.getByTestId("mobile-menu-drawer");
     expect(drawer).toHaveAttribute("role", "dialog");
@@ -388,7 +449,7 @@ describe("MobileDrawer component", () => {
   });
 
   it("closes via Header when clicking mobile-menu-close, mobile-menu-backdrop, pressing Escape, or clicking a category link", () => {
-    renderWithProviders(<Header />);
+    renderChrome(<Header />);
     const openBtn = screen.getByTestId("mobile-menu-open");
 
     // 1. Close via close button
@@ -426,7 +487,7 @@ describe("MobileDrawer component", () => {
 
 describe("Footer component", () => {
   it("renders site-footer with showroom address, both tel links, Google Maps link, and category links", () => {
-    renderWithProviders(<Footer />);
+    renderChrome(<Footer />);
 
     const footer = screen.getByTestId("site-footer");
     expect(footer.tagName).toBe("FOOTER");
