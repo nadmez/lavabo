@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ListPlus, Pencil, Plus, Trash2 } from "lucide-react";
 import { adminFetch } from "@/admin/api";
 import { useAdminCatalog } from "@/admin/use-admin-catalog";
+import { normalizeTurkishSearch } from "@/data/catalog-query";
 import { toKebabSlug } from "@/utils/slugify";
 import AdminDialog from "@/components/admin/AdminDialog";
 import AdminConfirmDialog from "@/components/admin/AdminConfirmDialog";
@@ -29,6 +30,7 @@ export default function AdminAttributesPage() {
   const [dialogError, setDialogError] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [pendingDelete, setPendingDelete] = useState(null);
+  const [query, setQuery] = useState("");
 
   function resetDraft() {
     setEditingSlug("");
@@ -139,6 +141,14 @@ export default function AdminAttributesPage() {
   if (isPending) return <p>Yükleniyor...</p>;
   if (isError) return <p role="alert">{error.message}</p>;
 
+  const attributes = catalog.attributes || [];
+  const foldedQuery = normalizeTurkishSearch(query.trim());
+  const visibleAttributes = foldedQuery
+    ? attributes.filter((attribute) =>
+        normalizeTurkishSearch(attribute.name).includes(foldedQuery)
+      )
+    : attributes;
+
   return (
     <div data-testid="admin-attributes" className="space-y-4">
       <div className="flex items-center justify-between gap-3">
@@ -153,8 +163,19 @@ export default function AdminAttributesPage() {
         </button>
       </div>
       {message ? <p className="text-sm text-stone-700">{message}</p> : null}
+      <input
+        type="search"
+        aria-label="Nitelik ara"
+        placeholder="Nitelik ara"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        className="w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm"
+      />
+      {attributes.length > 0 && visibleAttributes.length === 0 ? (
+        <p className="text-sm text-stone-500">Nitelik bulunamadı.</p>
+      ) : null}
       <ul className="space-y-3">
-        {(catalog.attributes || []).map((attribute) => (
+        {visibleAttributes.map((attribute) => (
           <li
             key={attribute.slug}
             className="rounded-lg border border-stone-200 bg-white p-4"

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { Copy, Pencil, Plus, Trash2 } from "lucide-react";
+import { Copy, Layers, Pencil, Plus, Trash2 } from "lucide-react";
 import { adminFetch } from "@/admin/api";
 import { useAdminCatalog } from "@/admin/use-admin-catalog";
 import AdminConfirmDialog from "@/components/admin/AdminConfirmDialog";
@@ -19,6 +19,7 @@ export default function AdminProductsPage() {
   const [search, setSearch] = useState("");
   const [categoryId, setCategoryId] = useState("");
   const [stock, setStock] = useState("");
+  const [variant, setVariant] = useState("");
   const [message, setMessage] = useState("");
   const [pendingDelete, setPendingDelete] = useState(null);
 
@@ -29,6 +30,9 @@ export default function AdminProductsPage() {
         return false;
       if (stock === "in" && product.inStock !== true) return false;
       if (stock === "out" && product.inStock === true) return false;
+      const isVariant = product.variants?.length > 0;
+      if (variant === "variant" && !isVariant) return false;
+      if (variant === "simple" && isVariant) return false;
       if (!query) return true;
       return (
         product.name.toLocaleLowerCase("tr").includes(query) ||
@@ -37,7 +41,7 @@ export default function AdminProductsPage() {
           .includes(query)
       );
     });
-  }, [catalog, search, categoryId, stock]);
+  }, [catalog, search, categoryId, stock, variant]);
 
   async function duplicateProduct(product) {
     const copy = {
@@ -118,11 +122,23 @@ export default function AdminProductsPage() {
           <option value="in">Stokta</option>
           <option value="out">Stokta yok</option>
         </select>
+        <select
+          data-testid="admin-product-variant-filter"
+          aria-label="Ürün Tipi"
+          value={variant}
+          onChange={(event) => setVariant(event.target.value)}
+          className="rounded-md border border-stone-300 px-3 py-2 text-sm"
+        >
+          <option value="">Tüm ürünler</option>
+          <option value="variant">Varyasyonlu</option>
+          <option value="simple">Basit</option>
+        </select>
       </div>
       <div className="overflow-x-auto rounded-lg border border-stone-200 bg-white">
         <table className="min-w-full table-fixed text-left text-sm">
           <colgroup>
             <col className="w-[35%]" />
+            <col />
             <col />
             <col />
             <col />
@@ -134,6 +150,7 @@ export default function AdminProductsPage() {
               <th className="px-3 py-2">Stok kodu</th>
               <th className="px-3 py-2">Fiyat</th>
               <th className="px-3 py-2">Stok</th>
+              <th className="px-3 py-2">Ürün Tipi</th>
               <th className="px-3 py-2" />
             </tr>
           </thead>
@@ -155,6 +172,18 @@ export default function AdminProductsPage() {
                 </td>
                 <td className="px-3 py-2 align-top">
                   <StockBadge inStock={product.inStock === true} />
+                </td>
+                <td className="px-3 py-2 align-top">
+                  {product.variants?.length > 0 ? (
+                    <span
+                      role="img"
+                      aria-label="Varyasyonlu ürün"
+                      title="Varyasyonlu ürün"
+                      className="inline-flex text-stone-700"
+                    >
+                      <Layers className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                  ) : null}
                 </td>
                 <td className="px-3 py-2 text-right align-top">
                   <div className="flex justify-end gap-1">

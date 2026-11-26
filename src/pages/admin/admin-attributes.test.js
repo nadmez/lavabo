@@ -96,6 +96,29 @@ describe("admin attributes modal", () => {
     ).not.toBeInTheDocument();
   });
 
+  it("filters the list by attribute name with Turkish case-insensitive search", async () => {
+    mockCatalog(createSampleCatalog());
+    renderPage(<AdminAttributesPage />);
+    await screen.findByText("Renk");
+    const search = screen.getByRole("searchbox", { name: "Nitelik ara" });
+
+    fireEvent.change(search, { target: { value: "BOYUT" } });
+    expect(screen.getByText("Boyut")).toBeInTheDocument();
+    expect(screen.queryByText("Renk")).not.toBeInTheDocument();
+    expect(screen.queryByText("Malzeme")).not.toBeInTheDocument();
+    expect(screen.queryByText("Siyah")).not.toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: "Düzenle" })).toHaveLength(1);
+
+    fireEvent.change(search, { target: { value: "siyah" } });
+    expect(screen.queryByText("Renk")).not.toBeInTheDocument();
+    expect(screen.getByText("Nitelik bulunamadı.")).toBeInTheDocument();
+
+    fireEvent.change(search, { target: { value: "" } });
+    expect(screen.getByText("Renk")).toBeInTheDocument();
+    expect(screen.getByText("Malzeme")).toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: "Düzenle" })).toHaveLength(3);
+  });
+
   it("opens a create dialog over the still-visible list and auto-derives slug until touched", async () => {
     mockCatalog(createSampleCatalog());
     renderPage(<AdminAttributesPage />);

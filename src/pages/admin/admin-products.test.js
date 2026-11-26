@@ -128,6 +128,42 @@ describe("admin products page", () => {
     expect(row101).toHaveTextContent("Stokta");
     expect(row101).not.toHaveTextContent("Stokta yok");
     expect(row103).toHaveTextContent("Stokta yok");
+
+    expect(
+      screen.getByRole("columnheader", { name: "Ürün Tipi" })
+    ).toBeInTheDocument();
+    expect(
+      within(row101)
+        .getByRole("img", { name: "Varyasyonlu ürün" })
+        .querySelector("svg")
+    ).not.toBeNull();
+    expect(
+      within(
+        screen.getByTestId("admin-product-row-minimalist-seri-urun-02")
+      ).getByRole("img", { name: "Varyasyonlu ürün" })
+    ).toBeInTheDocument();
+    expect(
+      within(row103).queryByRole("img", { name: "Varyasyonlu ürün" })
+    ).not.toBeInTheDocument();
+  });
+
+  it("filters the list to variant products or simple products", async () => {
+    mockCatalog(createSampleCatalog());
+    renderPage(<AdminProductsPage />);
+    await screen.findByTestId("admin-product-row-klasik-tasarim-urun-01");
+    const filter = screen.getByRole("combobox", { name: "Ürün Tipi" });
+
+    fireEvent.change(filter, { target: { value: "variant" } });
+    expect(rows()).toHaveLength(2);
+    expect(
+      screen.queryByTestId("admin-product-row-premium-koleksiyon-urun-03")
+    ).not.toBeInTheDocument();
+
+    fireEvent.change(filter, { target: { value: "simple" } });
+    expect(rows()).toHaveLength(1);
+    expect(
+      screen.getByTestId("admin-product-row-premium-koleksiyon-urun-03")
+    ).toBeInTheDocument();
   });
 
   it("filters by search, category and stock; empty result keeps filters and shows no rows", async () => {
